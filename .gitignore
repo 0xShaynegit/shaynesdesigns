@@ -2,6 +2,9 @@
 research/
 .claude/
 
+# Keep fonts directory
+!fonts/
+
 # Environment
 .env
 .env.local

@@ -603,7 +603,7 @@
         </article>
 
         <article class="portfolio-card reveal reveal-delay-2" aria-label="Foundation Build project" role="listitem">
-          <video class="portfolio-video" muted playsinline>
+          <video class="portfolio-video" muted playsinline loading="lazy">
             <source src="./images/globalpetsits.mp4" type="video/mp4">
           </video>
           <div class="portfolio-card-visual" aria-hidden="true"></div>
@@ -615,7 +615,7 @@
         </article>
 
         <article class="portfolio-card reveal reveal-delay-4" aria-label="Premium Service Brand project" role="listitem">
-          <video class="portfolio-video" muted playsinline>
+          <video class="portfolio-video" muted playsinline loading="lazy">
             <source src="./images/khuncamp.mp4" type="video/mp4">
           </video>
           <div class="portfolio-card-visual" aria-hidden="true"></div>
@@ -1293,11 +1293,8 @@
       });
     }
 
-    if (window.requestIdleCallback) {
-      requestIdleCallback(initPortfolioVideos);
-    } else {
-      setTimeout(initPortfolioVideos, 1);
-    }
+    // Defer until well after LCP (3+ seconds)
+    setTimeout(initPortfolioVideos, 3500);
 
     // ============================================
     // TESTIMONIALS SLIDER
@@ -1310,6 +1307,7 @@
       var cards = track.querySelectorAll('.testimonial-card');
       var cardCount = cards.length;
       var currentSlide = 0;
+      var autoRotateTimer = null;
 
       // Create dots
       for (var i = 0; i < cardCount; i++) {
@@ -1319,6 +1317,9 @@
           return function() {
             currentSlide = index;
             updateSlider();
+            // Clear and restart auto-rotate on user interaction
+            clearInterval(autoRotateTimer);
+            startAutoRotate();
           };
         }(i));
         dotsContainer.appendChild(dot);
@@ -1332,11 +1333,15 @@
         });
       }
 
-      // Auto-advance slides every 8 seconds
-      setInterval(function() {
-        currentSlide = (currentSlide + 1) % cardCount;
-        updateSlider();
-      }, 8000);
+      function startAutoRotate() {
+        autoRotateTimer = setInterval(function() {
+          currentSlide = (currentSlide + 1) % cardCount;
+          updateSlider();
+        }, 8000);
+      }
+
+      // Start auto-rotate only after delay to avoid blocking initial render
+      setTimeout(startAutoRotate, 3000);
     }
 
     if (window.requestIdleCallback) {

@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  "name": "shaynesdesigns",
+  "compatibility_date": "2026-04-03",
+
+  "assets": {
+    "directory": "./"
+  }
+}

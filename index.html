@@ -1,0 +1,3425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shayne's Designs. Premium Static Websites.</title>
+  <meta name="description" content="Shayne's Designs builds premium static websites that look elevated, load fast, and convert with clarity. Custom HTML, CSS, and JavaScript. Zero frameworks. Zero bloat.">
+  <meta name="keywords" content="premium web design, static website, HTML CSS JavaScript, WordPress migration, custom websites">
+  <meta property="og:title" content="Shayne's Designs. Premium Static Websites.">
+  <meta property="og:description" content="Premium static websites for brands that want to look sharper and convert better.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://shaynesdesigns.com">
+  <link rel="sitemap" type="application/xml" href="https://shaynesdesigns.com/sitemap.xml">
+  <link rel="icon" type="image/png" href="images/shaynesdesigns-shaynes-designs-favicon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Shayne's Designs",
+    "description": "Premium static website design service. Custom HTML, CSS, and JavaScript builds. 90+ Lighthouse scores, 100% Core Web Vitals, sub-2 second load times.",
+    "url": "https://shaynesdesigns.com",
+    "priceRange": "$$$",
+    "serviceType": ["Web Design", "WordPress Migration", "Static Website Development"],
+    "areaServed": "Worldwide",
+    "founder": {
+      "@type": "Person",
+      "name": "Shayne"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "availableLanguage": "English"
+    },
+    "knowsAbout": ["Static Web Design", "Performance Optimization", "Conversion Optimization", "WordPress Migration", "Web Development"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Shayne's Designs",
+    "description": "Premium static website design for brands that want to look elevated, load fast, and convert with clarity.",
+    "url": "https://shaynesdesigns.com",
+    "image": "https://shaynesdesigns.com/images/shaynesdesigns-shaynes-designs-logo-primary.webp",
+    "areaServed": ["AU", "TH", "SG", "US", "GB"],
+    "serviceArea": "Worldwide",
+    "founder": {
+      "@type": "Person",
+      "name": "Shayne"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://shaynesdesigns.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://shaynesdesigns.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Process",
+        "item": "https://shaynesdesigns.com/#process"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Contact",
+        "item": "https://shaynesdesigns.com/#cta-message"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes Shayne's Designs different from other web designers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We build premium static websites with zero frameworks, zero bloat, and zero technical debt. Every site achieves 90+ Lighthouse scores, 100% Core Web Vitals, and sub-2 second load times. You own the code outright from day one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our streamlined process means your site launches in days, not weeks. The timeline depends on project scope, but delivery is quick because we focus on what matters: strategy, messaging, and performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I own the code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely. You receive the full codebase, documentation, and everything you need to edit and maintain the site yourself. No vendor lock-in, no proprietary templates. It's your code."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you migrate my WordPress site?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We audit your current site, restructure the content, and rebuild it as a fast, secure static site. Zero plugin vulnerabilities, instant 90+ Lighthouse scores, and complete knowledge transfer included."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       DESIGN TOKENS
+    ============================================ */
+    :root {
+      --navy:        #110076;
+      --navy-deep:   #0b004f;
+      --navy-mid:    #1a0090;
+      --gold:        #c2aa69;
+      --gold-light:  #d4bc7a;
+      --gold-dark:   #a08840;
+      --white:       #F9F9F9;
+      --off-white:   #f2f0ea;
+      --grey-100:    #ebebeb;
+      --grey-200:    #d8d8d8;
+      --grey-500:    #888888;
+      --dark:        #111111;
+      --darkest:     #080808;
+
+      --font-display: 'Syne', sans-serif;
+      --font-editorial: 'Cormorant Garamond', serif;
+      --font-body:    'DM Sans', sans-serif;
+
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out:   cubic-bezier(0.76, 0, 0.24, 1);
+      --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+
+      --max-width: 1380px;
+      --gutter: clamp(1.5rem, 5vw, 4rem);
+    }
+
+    /* ============================================
+       RESET & BASE
+    ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      background: var(--white);
+      color: var(--dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    ::selection {
+      background: var(--navy);
+      color: var(--gold);
+    }
+
+    /* ============================================
+       CURTAIN REVEAL
+    ============================================ */
+    #curtain {
+      position: fixed;
+      inset: 0;
+      background: var(--navy);
+      z-index: 9999;
+      transform: translateY(0);
+      transition: transform 1.3s var(--ease-in-out);
+      pointer-events: none;
+    }
+
+    #curtain.risen {
+      transform: translateY(-100%);
+    }
+
+    /* ============================================
+       CUSTOM CURSOR
+    ============================================ */
+    .cursor-dot {
+      position: fixed;
+      width: 32px;
+      height: 32px;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease, opacity 0.3s ease;
+    }
+
+    .cursor-dot::before,
+    .cursor-dot::after {
+      content: '';
+      position: absolute;
+      background: var(--gold);
+    }
+
+    .cursor-dot::before {
+      width: 18px;
+      height: 1px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .cursor-dot::after {
+      width: 1px;
+      height: 18px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .cursor-ring {
+      position: fixed;
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid rgba(194, 170, 105, 0.5);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9997;
+      transform: translate(-50%, -50%);
+      transition: transform 0.25s var(--ease-out-expo), width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+    }
+
+    body:hover .cursor-dot { opacity: 1; }
+
+    /* ============================================
+       NAVIGATION
+    ============================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.75rem var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s ease, padding 0.4s ease, backdrop-filter 0.4s ease;
+    }
+
+    .nav.scrolled {
+      background: rgba(11, 0, 79, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-logo-mark {
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      transition: background 0.3s ease;
+    }
+
+    .nav-logo:hover .nav-logo-mark {
+      background: var(--gold);
+      color: rgba(17, 0, 118, 0.75);
+    }
+
+    .nav-logo-mark.nav-logo-image {
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid var(--gold);
+      position: relative;
+      padding: 0;
+    }
+
+    .nav-logo-mark.nav-logo-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+      box-sizing: border-box;
+      position: absolute;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-logo-mark.nav-logo-image .logo-main {
+      opacity: 1;
+    }
+
+    .nav-logo-mark.nav-logo-image .logo-hover {
+      opacity: 0;
+    }
+
+    .nav-logo:hover .nav-logo-mark {
+      background: var(--gold);
+      color: rgba(17, 0, 118, 0.75);
+    }
+
+    .nav-logo:hover .nav-logo-mark.nav-logo-image .logo-main {
+      opacity: 0;
+    }
+
+    .nav-logo:hover .nav-logo-mark.nav-logo-image .logo-hover {
+      opacity: 1;
+    }
+
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: rgba(249, 249, 249, 1);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: rgba(249, 249, 249, 0.95);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--navy-deep);
+      border: 1.5px solid var(--gold);
+      padding: 0.75rem 2rem;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease, filter 0.4s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-5px) scale(1.08);
+      box-shadow: 0 18px 36px rgba(194, 170, 105, 0.5);
+      filter: brightness(1.15);
+    }
+
+    .nav-cta:active {
+      transform: scale(0.96);
+      box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    /* ============================================
+       SECTION UTILITIES
+    ============================================ */
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 1.075rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-label.dark-label {
+      color: var(--gold);
+    }
+
+    .section-label.light-label {
+      color: rgba(17, 0, 118, 1);
+    }
+
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-6 { transition-delay: 0.6s; }
+
+    /* Letter-spacing reveal (Gold Standard Intersection) */
+    .heading-reveal {
+      display: inline-block;
+      letter-spacing: 0.4em;
+      opacity: 0;
+      transition: letter-spacing 0.8s var(--ease-out-expo), opacity 0.8s ease;
+    }
+
+    .heading-reveal.visible {
+      letter-spacing: 0.02em;
+      opacity: 1;
+    }
+
+    /* ============================================
+       BUTTONS
+    ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+      box-shadow: inset 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy-deep);
+      padding: 1rem 2.25rem;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+    }
+
+    .btn-outline-gold {
+      background: transparent;
+      color: var(--gold);
+      border: 1.5px solid var(--gold);
+      padding: 0.9rem 2.25rem;
+    }
+
+    .btn-outline-gold:hover {
+      background: rgba(194, 170, 105, 0.1);
+    }
+
+    .btn-outline-navy {
+      background: transparent;
+      color: rgba(17, 0, 118, 0.9);
+      border: 1.5px solid var(--navy);
+      padding: 0.9rem 2.25rem;
+    }
+
+    .btn-outline-navy:hover {
+      background: var(--navy);
+      color: rgba(249, 249, 249, 0.75);
+    }
+
+    .btn-arrow::after {
+      display: none;
+    }
+
+    /* ============================================
+       01. HERO
+    ============================================ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Subtle grid background */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(194, 170, 105, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(194, 170, 105, 0.06) 1px, transparent 1px);
+      background-size: 72px 72px;
+      pointer-events: none;
+    }
+
+    /* Large decorative "SD" background mark */
+    #hero::after {
+      content: 'SD';
+      position: absolute;
+      right: -0.1em;
+      bottom: -0.25em;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(12rem, 28vw, 28rem);
+      color: rgba(255,255,255,0.025);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: calc(var(--gutter) * 2 + 2rem) var(--gutter) calc(var(--gutter) * 2);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-content { max-width: 760px; }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s var(--ease-out-expo) 1.5s forwards;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.8rem, 6vw, 6rem);
+      line-height: 1.0;
+      color: rgba(249, 249, 249, 1);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s var(--ease-out-expo) 1.7s forwards;
+    }
+
+    .accent {
+      color: var(--gold);
+      font-style: italic;
+      font-family: var(--font-editorial);
+      font-weight: 300;
+      font-size: 1.3em;
+    }
+
+    .hero-body {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.4vw, 1.125rem);
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(249, 249, 249, 1);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s var(--ease-out-expo) 1.9s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s var(--ease-out-expo) 2.1s forwards;
+    }
+
+    /* Hero stats sidebar */
+    .hero-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      opacity: 0;
+      animation: fadeIn 0.8s ease 2.3s forwards;
+    }
+
+    .hero-stat {
+      text-align: right;
+      padding-right: 1.5rem;
+      border-right: 1px solid rgba(194, 170, 105, 0.3);
+    }
+
+    .hero-stat-number {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3vw, 2.75rem);
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-stat-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(249, 249, 249, 1);
+      margin-top: 0.3rem;
+    }
+
+    /* Scroll indicator */
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeIn 1s ease 2.5s forwards;
+    }
+
+    .hero-scroll-hint span {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(249, 249, 249, 0.35);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out 3s infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.2); }
+    }
+
+    /* ============================================
+       KEYFRAMES
+    ============================================ */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* ============================================
+       02. PROBLEM
+    ============================================ */
+    #problem {
+      background: var(--white);
+      padding: clamp(5rem, 10vw, 10rem) var(--gutter);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-bg-number {
+      position: absolute;
+      top: -0.15em;
+      right: -0.05em;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(10rem, 22vw, 22rem);
+      color: rgba(17, 0, 118, 0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .problem-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .problem-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .problem-top-left {}
+
+    .problem-top-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Cat reveal mockup */
+    .slow-browser {
+      width: 100%;
+      max-width: 624px;
+      background: #1a1a2e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    }
+
+    .slow-browser-bar {
+      background: #2a2a3e;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .slow-browser-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .slow-browser-dots span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .slow-browser-url {
+      flex: 1;
+      background: rgba(255,255,255,0.07);
+      border-radius: 4px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+    }
+
+    .slow-browser-url-text {
+      height: 6px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 2px;
+      animation: urlType 8s ease-in-out infinite;
+      width: 0;
+    }
+
+    .slow-progress {
+      height: 3px;
+      background: rgba(255,255,255,0.05);
+      overflow: hidden;
+    }
+
+    .slow-progress-bar {
+      height: 100%;
+      background: var(--gold);
+      animation: slowLoad 8s ease-in-out infinite;
+      width: 0;
+    }
+
+    .slow-browser-body {
+      position: relative;
+      height: 432px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .slow-cat-wrap {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.15s ease-out;
+    }
+
+    .slow-cat-img {
+      width: 100%;
+      height: 432px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slow-spinner-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 2;
+      transition: opacity 0.4s ease;
+    }
+
+    .slow-spinner-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .slow-spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(255,255,255,0.1);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .slow-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      font-family: var(--font-body);
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes catReveal {
+      0%   { height: 0; }
+      8%   { height: 0; }
+      12%  { height: 7%; }
+      18%  { height: 7%; }
+      22%  { height: 42%; }
+      32%  { height: 42%; }
+      36%  { height: 50%; }
+      42%  { height: 50%; }
+      46%  { height: 57%; }
+      52%  { height: 57%; }
+      56%  { height: 100%; }
+      80%  { height: 100%; }
+      88%  { height: 0; }
+      100% { height: 0; }
+    }
+
+    @keyframes spinnerFadeOut {
+      0%   { opacity: 1; }
+      15%  { opacity: 1; }
+      30%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes slowLoad {
+      0%   { width: 0%; }
+      15%  { width: 10%; }
+      30%  { width: 22%; }
+      50%  { width: 41%; }
+      70%  { width: 68%; }
+      88%  { width: 95%; }
+      100% { width: 95%; }
+    }
+
+    @keyframes urlType {
+      0%   { width: 0%; }
+      30%  { width: 65%; }
+      100% { width: 65%; }
+    }
+
+    .problem-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 4.5vw, 4.5rem);
+      line-height: 1.05;
+      color: rgba(17, 0, 118, 1);
+      letter-spacing: -0.02em;
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .problem-sub {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: rgba(17, 0, 118, 0.75);
+      max-width: 520px;
+      margin-bottom: 4rem;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .problem-card {
+      background: var(--navy);
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .problem-card:first-child { background: var(--navy-deep); }
+    .problem-card:last-child { background: var(--navy-mid); }
+
+    .problem-card-number {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 3.5rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .problem-card-unit {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .problem-card-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: rgba(249, 249, 249, 0.75);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .problem-card-text {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: rgba(249, 249, 249, 0.9);
+    }
+
+    /* ============================================
+       03. REFRAME
+    ============================================ */
+    #reframe {
+      background: var(--darkest);
+      padding: clamp(6rem, 12vw, 14rem) var(--gutter);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #reframe::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(194, 170, 105, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(194, 170, 105, 0.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+      pointer-events: none;
+    }
+
+    .reframe-inner {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .reframe-label {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.875rem;
+      margin-bottom: 3rem;
+    }
+
+    .reframe-quote {
+      font-family: var(--font-editorial);
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1.75rem, 4vw, 3.75rem);
+      line-height: 1.25;
+      color: rgba(249, 249, 249, 0.75);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    .reframe-quote em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .reframe-body {
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: rgba(249, 249, 249, 0.55);
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       04. SOLUTION
+    ============================================ */
+    #solution {
+      background: var(--white);
+      padding: clamp(5rem, 10vw, 10rem) var(--gutter);
+      position: relative;
+    }
+
+    .solution-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: start;
+    }
+
+    .solution-left { position: sticky; top: 8rem; }
+
+    .solution-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      line-height: 1.05;
+      color: rgba(17, 0, 118, 1);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .solution-body {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(17, 0, 118, 0.9);
+      margin-bottom: 2rem;
+    }
+
+    .solution-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .solution-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--grey-100);
+      transition: padding-left 0.3s ease;
+    }
+
+    .solution-item:hover {
+      padding-left: 0.5rem;
+    }
+
+    .solution-item-num {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.825rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      min-width: 2rem;
+      padding-top: 0.125rem;
+    }
+
+    .solution-item-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: rgba(17, 0, 118, 0.9);
+      margin-bottom: 0.25rem;
+    }
+
+    .solution-item-desc {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: rgba(17, 0, 118, 0.9);
+    }
+
+    /* ============================================
+       05. SERVICES
+    ============================================ */
+    #services {
+      background: var(--navy);
+      padding: clamp(5rem, 10vw, 10rem) var(--gutter);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #services::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(194, 170, 105, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(194, 170, 105, 0.05) 1px, transparent 1px);
+      background-size: 72px 72px;
+      pointer-events: none;
+    }
+
+    .services-inner {
+      position: relative;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .services-header {
+      margin-bottom: 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .services-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      line-height: 1.05;
+      color: rgba(249, 249, 249, 1);
+      letter-spacing: -0.02em;
+      max-width: 500px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(194, 170, 105, 0.15);
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.4s ease, border-color 0.4s ease, transform 0.4s var(--ease-out-expo);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s var(--ease-out-expo);
+    }
+
+    .service-card:hover {
+      background: rgba(194, 170, 105, 0.06);
+      border-color: rgba(194, 170, 105, 0.35);
+      transform: translateY(-4px);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-tag {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.5rem, 2.5vw, 1.95rem);
+      color: rgba(249, 249, 249, 1);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 2;
+      max-width: 95%;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-desc {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: rgba(249, 249, 249, 0.9);
+      margin-bottom: 2rem;
+    }
+
+    .service-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .service-points li {
+      font-size: 0.875rem;
+      color: rgba(249, 249, 249, 0.9);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .service-points li::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 1px;
+      background: var(--gold);
+      margin-top: 0.7em;
+      flex-shrink: 0;
+    }
+
+    .service-price {
+      border-top: 1px solid rgba(194, 170, 105, 0.2);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .service-price-amount {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.75rem;
+      color: var(--gold);
+      letter-spacing: -0.02em;
+    }
+
+    .service-price-note {
+      font-size: 0.8125rem;
+      color: rgba(249, 249, 249, 0.45);
+    }
+
+    /* ============================================
+       06. PROCESS
+    ============================================ */
+    #process {
+      background: var(--off-white);
+      padding: clamp(5rem, 10vw, 10rem) var(--gutter);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .process-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      line-height: 1.05;
+      color: rgba(17, 0, 118, 1);
+      letter-spacing: -0.02em;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative;
+    }
+
+    /* Connecting line between steps */
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 2.25rem;
+      left: calc(33.33% / 2);
+      right: calc(33.33% / 2);
+      height: 1px;
+      background: linear-gradient(to right, var(--navy) 0%, transparent 40%, transparent 60%, var(--navy) 100%);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .process-step {
+      padding: 0 2.5rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .process-step-num {
+      width: 4.5rem;
+      height: 4.5rem;
+      border: 1.5px solid var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.0625rem;
+      color: rgba(17, 0, 118, 0.9);
+      margin: 0 auto 1.75rem;
+      position: relative;
+      background: var(--off-white);
+      z-index: 1;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .process-step:hover .process-step-num {
+      background: var(--navy);
+      color: var(--gold);
+      border-color: var(--navy);
+    }
+
+    .process-step-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1875rem;
+      color: rgba(17, 0, 118, 0.9);
+      margin-bottom: 0.875rem;
+      letter-spacing: -0.01em;
+    }
+
+    .process-step-desc {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: rgba(17, 0, 118, 0.9);
+    }
+
+    /* ============================================
+       07. DELIVERABLES
+    ============================================ */
+    #deliverables {
+      background: var(--white);
+      padding: clamp(5rem, 10vw, 10rem) var(--gutter);
+    }
+
+    .deliverables-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .deliverables-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+
+    .deliverables-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      line-height: 1.05;
+      color: rgba(17, 0, 118, 1);
+      letter-spacing: -0.02em;
+    }
+
+    .deliverables-sub {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(17, 0, 118, 0.75);
+    }
+
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+
+    .deliverable-item {
+      padding: 1.625rem 0;
+      border-bottom: 1px solid var(--grey-100);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      transition: padding-left 0.3s ease;
+    }
+
+    .deliverable-item:nth-child(odd) {
+      padding-right: 3rem;
+      border-right: 1px solid var(--grey-100);
+    }
+
+    .deliverable-item:nth-child(even) {
+      padding-left: 3rem;
+    }
+
+    .deliverable-item:hover {
+      padding-left: 0.75rem;
+    }
+
+    .deliverable-item:nth-child(even):hover {
+      padding-left: 3.75rem;
+    }
+
+    .deliverable-icon {
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid rgba(17, 0, 118, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .deliverable-item:hover .deliverable-icon {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .deliverable-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--navy);
+      fill: none;
+      transition: stroke 0.3s ease;
+    }
+
+    .deliverable-item:hover .deliverable-icon svg {
+      stroke: var(--gold);
+    }
+
+    .deliverable-text {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 400;
+      color: var(--dark);
+    }
+
+    /* ============================================
+       08. PORTFOLIO
+    ============================================ */
+    #portfolio {
+      background: var(--darkest);
+      padding: clamp(5rem, 10vw, 10rem) var(--gutter);
+      position: relative;
+    }
+
+    .portfolio-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+    }
+
+    .portfolio-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      line-height: 1.05;
+      color: rgba(249, 249, 249, 1);
+      letter-spacing: -0.02em;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .portfolio-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4/5;
+      background: var(--navy-deep);
+    }
+
+    /* Gold border draw on hover */
+    .portfolio-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 2px solid var(--gold);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .portfolio-card:hover::after {
+      opacity: 1;
+    }
+
+    .portfolio-card-visual {
+      position: absolute;
+      inset: 0;
+      transition: filter 0.5s ease, transform 0.6s var(--ease-out-expo);
+    }
+
+    .portfolio-card:hover .portfolio-card-visual {
+      filter: grayscale(70%) brightness(0.7);
+      transform: scale(1.03);
+    }
+
+    /* Visual placeholders as intentional design elements */
+    .portfolio-card:nth-child(1) .portfolio-card-visual {
+      background: linear-gradient(135deg, #0b004f 0%, #1a0090 40%, #c2aa69 100%);
+    }
+
+    .portfolio-card:nth-child(2) .portfolio-card-visual {
+      background: linear-gradient(160deg, #080808 0%, #110076 60%, #a08840 100%);
+    }
+
+    .portfolio-card:nth-child(3) .portfolio-card-visual {
+      background: linear-gradient(120deg, #0f0060 0%, #080830 50%, #c2aa69 100%);
+    }
+
+    /* Card geometry decoration */
+    .portfolio-card-visual::before {
+      content: '';
+      position: absolute;
+      inset: 15%;
+      border: 1px solid rgba(194, 170, 105, 0.2);
+      transition: opacity 0.4s ease;
+    }
+
+    .portfolio-card-visual::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      border: 1px solid rgba(194, 170, 105, 0.3);
+      border-radius: 50%;
+    }
+
+    .portfolio-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+      z-index: 2;
+      transform: translateY(1rem);
+      opacity: 0;
+      transition: transform 0.4s var(--ease-out-expo), opacity 0.4s ease;
+    }
+
+    .portfolio-card:hover .portfolio-card-content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .portfolio-card-tag {
+      font-size: 0.775rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-card-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1875rem;
+      color: rgba(249, 249, 249, 0.75);
+      letter-spacing: -0.01em;
+    }
+
+    .portfolio-card-label {
+      position: absolute;
+      top: 1.75rem;
+      left: 1.75rem;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: rgba(249,249,249,0.06);
+      line-height: 1;
+      pointer-events: none;
+      z-index: 1;
+      letter-spacing: -0.03em;
+    }
+
+    /* ============================================
+       09. TRUST / AUTHORITY
+    ============================================ */
+    #trust {
+      background: var(--navy);
+      padding: clamp(4rem, 8vw, 8rem) var(--gutter);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #trust::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(194, 170, 105, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(194, 170, 105, 0.05) 1px, transparent 1px);
+      background-size: 72px 72px;
+      pointer-events: none;
+    }
+
+    .trust-inner {
+      position: relative;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+    }
+
+    .trust-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.75rem, 3vw, 3rem);
+      line-height: 1.1;
+      color: rgba(249, 249, 249, 1);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .trust-headline .gold { color: var(--gold); }
+
+    .trust-body {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      color: rgba(249, 249, 249, 0.9);
+      margin-bottom: 2rem;
+    }
+
+    .trust-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .trust-pillar {
+      padding: 1.5rem;
+      border: 1px solid rgba(194, 170, 105, 0.15);
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .trust-pillar:hover {
+      border-color: rgba(194, 170, 105, 0.4);
+      background: rgba(194, 170, 105, 0.04);
+    }
+
+    .trust-pillar-icon {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .trust-pillar-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: rgba(249, 249, 249, 0.75);
+      margin-bottom: 0.375rem;
+    }
+
+    .trust-pillar-text {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: rgba(249, 249, 249, 0.65);
+    }
+
+    /* ============================================
+       10. FAQ
+    ============================================ */
+    #faq {
+      background: var(--off-white);
+      padding: clamp(5rem, 10vw, 10rem) var(--gutter);
+    }
+
+    .faq-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .faq-left {
+      position: sticky;
+      top: 8rem;
+    }
+
+    .faq-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.75rem, 3vw, 3rem);
+      line-height: 1.1;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-intro {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      color: rgba(17, 0, 118, 0.9);
+      margin-bottom: 2rem;
+    }
+
+    .faq-list-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(17, 0, 118, 0.1);
+      padding: 1.5rem 0;
+      position: relative;
+    }
+
+    .faq-item:first-child {
+      border-bottom: 1px solid rgba(17, 0, 118, 0.1);
+      padding: 1.5rem 0;
+    }
+
+    .faq-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.3s ease;
+      background: transparent;
+      border: none;
+      padding: 0;
+      width: 100%;
+      text-align: left;
+    }
+
+    .faq-header:hover {
+      color: var(--gold);
+    }
+
+    .faq-toggle {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: var(--navy);
+      transition: transform 0.3s ease;
+      margin-left: auto;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-question {
+      font-family: var(--font-base);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--navy);
+      line-height: 1.4;
+      margin: 0;
+      flex: 1;
+    }
+
+    .faq-item:hover .faq-question {
+      color: var(--navy);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      opacity: 1;
+      padding-top: 1rem;
+    }
+
+    .faq-answer-text {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: rgba(17, 0, 118, 0.85);
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .faq-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .faq-left {
+        position: static;
+      }
+
+      .faq-static {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .faq-item {
+        padding: 1.25rem 0;
+      }
+
+      .faq-question {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* ============================================
+       11. FINAL CTA
+    ============================================ */
+    #cta {
+      background: var(--darkest);
+      padding: clamp(6rem, 12vw, 14rem) var(--gutter);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(194, 170, 105, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(194, 170, 105, 0.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+      pointer-events: none;
+    }
+
+    /* Large decorative background text */
+    #cta::after {
+      content: 'START';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(8rem, 18vw, 20rem);
+      color: rgba(255,255,255,0.02);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cta-headline {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.25rem, 5vw, 5rem);
+      line-height: 1.05;
+      color: rgba(249, 249, 249, 1);
+      letter-spacing: -0.025em;
+      margin-bottom: 1.75rem;
+    }
+
+    .cta-headline .cta-line {
+      display: block;
+      margin-bottom: 0.4em;
+    }
+
+    .cta-headline .gold-text {
+      color: var(--gold);
+    }
+
+    .cta-sub {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
+      color: rgba(249,249,249,0.9);
+      margin-bottom: 3.5rem;
+      line-height: 1.6;
+      scroll-margin-top: 34vh;
+    }
+
+    /* Contact Form */
+    .cta-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    .form-label {
+      font-size: 0.775rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(249,249,249,0.9);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(194, 170, 105, 0.2);
+      color: rgba(249, 249, 249, 0.75);
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      font-weight: 300;
+      padding: 0.875rem 1rem;
+      outline: none;
+      transition: border-color 0.3s ease, background 0.3s ease;
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: rgba(249,249,249,0.9);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--gold);
+      background: rgba(194, 170, 105, 0.05);
+    }
+
+    .form-select option {
+      background: var(--darkest);
+      color: rgba(249, 249, 249, 0.75);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-submit {
+      grid-column: span 2;
+      background: var(--gold);
+      color: var(--navy-deep);
+      font-family: var(--font-body);
+      font-size: 0.925rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 1.125rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
+      margin-top: 0.5rem;
+    }
+
+    .form-submit:hover {
+      background: var(--gold-light);
+    }
+
+    .form-submit:active {
+      transform: scale(0.97);
+      box-shadow: inset 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .form-disclaimer {
+      font-size: 0.875rem;
+      color: rgba(249,249,249,0.75);
+      margin-top: 1.25rem;
+      grid-column: span 2;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    footer {
+      background: var(--navy-deep);
+      padding: 4rem var(--gutter) 2.5rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(194, 170, 105, 0.1);
+    }
+
+    .footer-brand {
+      max-width: 360px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-logo-mark {
+      width: 48px;
+      height: 48px;
+      border: 1.5px solid var(--gold);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .footer-logo-mark.footer-logo-image {
+      width: 48px;
+      height: 48px;
+      border: 1.5px solid var(--gold);
+      position: relative;
+      padding: 0;
+    }
+
+    .footer-logo-mark.footer-logo-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+      box-sizing: border-box;
+      position: absolute;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-logo-mark.footer-logo-image .logo-main {
+      opacity: 1;
+    }
+
+    .footer-logo-mark.footer-logo-image .logo-hover {
+      opacity: 0;
+    }
+
+    .footer-logo:hover .footer-logo-mark {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .footer-logo:hover .footer-logo-mark.footer-logo-image .logo-main {
+      opacity: 0;
+    }
+
+    .footer-logo:hover .footer-logo-mark.footer-logo-image .logo-hover {
+      opacity: 1;
+    }
+
+    .footer-logo-text {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: rgba(249, 249, 249, 1);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-size: 1.3125rem;
+      color: rgba(249,249,249,0.75);
+      line-height: 1.6;
+    }
+
+    .footer-nav-groups {
+      display: flex;
+      gap: 4rem;
+    }
+
+    .footer-nav-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .footer-nav-links a {
+      font-size: 1.125rem;
+      color: rgba(249,249,249,0.75);
+      transition: color 0.2s ease, transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .footer-nav-links a:hover {
+      color: var(--gold);
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-legal {
+      font-size: 1rem;
+      color: rgba(249,249,249,0.9);
+    }
+
+    .footer-perf {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-score {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      color: rgba(249,249,249,0.9);
+    }
+
+    .footer-score-num {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--gold);
+    }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-stats { display: none; }
+      .solution-inner { grid-template-columns: 1fr; }
+      .solution-left { position: static; }
+      .trust-inner { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .problem-top { grid-template-columns: 1fr; }
+      .slow-browser { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .services-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .process-steps { grid-template-columns: 1fr; }
+      .process-steps::before { display: none; }
+      .deliverables-header { grid-template-columns: 1fr; }
+      .deliverables-grid { grid-template-columns: 1fr; }
+      .deliverable-item:nth-child(odd) { padding-right: 0; border-right: none; }
+      .deliverable-item:nth-child(even) { padding-left: 0; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .portfolio-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .cta-form { grid-template-columns: 1fr; }
+      .form-group.full-width,
+      .form-submit,
+      .form-disclaimer { grid-column: span 1; }
+      .footer-top { flex-direction: column; gap: 3rem; }
+      .footer-nav-groups { flex-direction: column; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .cursor-dot, .cursor-ring { display: none; }
+    }
+
+    /* ============================================
+       REDUCED MOTION
+    ============================================ */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .heading-reveal { opacity: 1; letter-spacing: 0.02em; }
+      #curtain { transform: translateY(-100%); }
+    }
+
+    /* ============================================
+       MOBILE NAV TOGGLE
+    ============================================ */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--gold);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; }
+    }
+
+    /* Mobile nav overlay */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--navy-deep);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .nav-mobile.open {
+      display: flex;
+    }
+
+    .nav-mobile a {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 2rem;
+      color: rgba(249, 249, 249, 0.75);
+      letter-spacing: -0.02em;
+      transition: color 0.2s ease;
+    }
+
+    .nav-mobile a:hover {
+      color: var(--gold);
+    }
+
+    .nav-mobile-close {
+      position: absolute;
+      top: 1.75rem;
+      right: var(--gutter);
+      font-size: 1.5rem;
+      color: var(--gold);
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Curtain reveal -->
+  <div id="curtain" aria-hidden="true"></div>
+
+  <!-- Mobile nav overlay -->
+  <nav class="nav-mobile" id="navMobile" role="navigation" aria-label="Mobile navigation">
+    <span class="nav-mobile-close" id="navMobileClose" aria-label="Close menu" role="button" tabindex="0">Close</span>
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#portfolio" onclick="closeMobileNav()">Work</a>
+    <a href="#process" onclick="closeMobileNav()">Process</a>
+    <a href="#cta-message" onclick="closeMobileNav()">Contact</a>
+  </nav>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Shayne's Designs home">
+      <div class="nav-logo-mark nav-logo-image" aria-hidden="true">
+        <img src="images/shaynesdesigns-shaynes-designs-logo-primary.webp" alt="Shayne's Designs - Premium Static Website Design" class="logo-main">
+        <img src="images/shaynesdesigns-shaynes-designs-logo-1.webp" alt="Shayne's Designs logo" class="logo-hover">
+      </div>
+      <span class="nav-logo-text">Shayne's Designs</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#cta-message">Contact</a></li>
+    </ul>
+    <a href="#cta-message" class="nav-cta btn" aria-label="Message on WhatsApp">Book a Call</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============================================
+       01. HERO
+  ============================================ -->
+  <section id="hero" aria-label="Hero section">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow" aria-hidden="true">Premium Static Website Design</div>
+        <h1 class="hero-headline">
+          Your website<br>
+          should be an <em class="accent">asset.</em><br>
+          Not a burden.
+        </h1>
+        <p class="hero-body">
+          I build premium static websites that look elevated, load in milliseconds, and convert with clarity. Custom HTML, CSS, and JavaScript. Zero frameworks. Zero bloat. Zero maintenance debt.
+        </p>
+        <div class="hero-actions">
+          <a href="#cta-message" class="btn btn-gold" aria-label="Message on WhatsApp">Book a Strategy Call</a>
+          <a href="#process" class="btn btn-outline-gold" aria-label="View our process">View Our Process</a>
+        </div>
+      </div>
+
+      <aside class="hero-stats" aria-label="Performance statistics">
+        <div class="hero-stat">
+          <div class="hero-stat-number">90<span style="font-size:1.2rem">+</span></div>
+          <div class="hero-stat-label">Lighthouse Score</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">100<span class="hero-stat-unit" style="font-size:1.2rem">%</span></div>
+          <div class="hero-stat-label">Core Web Vitals</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">0</div>
+          <div class="hero-stat-label">Plugin Vulnerabilities</div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       02. PROBLEM
+  ============================================ -->
+  <section id="problem" aria-label="The problem with bloated websites">
+    <span class="problem-bg-number" aria-hidden="true">02</span>
+    <div class="problem-inner">
+      <div class="problem-top">
+        <div class="problem-top-left">
+          <div class="section-label light-label reveal">02. The Problem</div>
+          <h2 class="problem-headline reveal reveal-delay-1 heading-reveal">
+            Most <em class="accent">WordPress</em> websites are slow, vulnerable, and expensive to fix.
+          </h2>
+          <p class="problem-sub reveal reveal-delay-2">
+            The average WordPress site carries 80% more code than it needs. Every plugin is a liability. Every update is a risk. Every slow load is a lost client.
+          </p>
+        </div>
+        <div class="problem-top-right reveal reveal-delay-3">
+          <div class="slow-browser">
+            <div class="slow-browser-bar">
+              <div class="slow-browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="slow-browser-url">
+                <div class="slow-browser-url-text"></div>
+              </div>
+            </div>
+            <div class="slow-progress">
+              <div class="slow-progress-bar"></div>
+            </div>
+            <div class="slow-browser-body">
+              <div class="slow-spinner-overlay" id="catSpinner">
+                <div class="slow-spinner"></div>
+                <div class="slow-label">Loading&hellip;</div>
+              </div>
+              <div class="slow-cat-wrap">
+                <img class="slow-cat-img" src="images/shaynesdesigns-shaynes-designs-cat-funny.webp" alt="Humorous illustration of a cat waiting while page loads - Shayne's Designs fast loading times">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-grid" role="list">
+        <div class="problem-card reveal reveal-delay-2" role="listitem">
+          <div class="problem-card-number">5<span class="problem-card-unit">MB</span></div>
+          <div class="problem-card-title">Average WordPress Page Weight</div>
+          <p class="problem-card-text">
+            A typical WordPress site ships 5MB or more of assets on every load. That is five seconds of buffering before your client sees anything.
+          </p>
+        </div>
+        <div class="problem-card reveal reveal-delay-3" role="listitem">
+          <div class="problem-card-number">97<span class="problem-card-unit">%</span></div>
+          <div class="problem-card-title">Of CMS Sites Are Attacked Weekly</div>
+          <p class="problem-card-text">
+            Databases are attack surfaces. Plugins are attack surfaces. A static site has no database, no login portal, and no moving parts to exploit.
+          </p>
+        </div>
+        <div class="problem-card reveal reveal-delay-4" role="listitem">
+          <div class="problem-card-number">53<span class="problem-card-unit">%</span></div>
+          <div class="problem-card-title">Of Users Abandon a 3-Second Load</div>
+          <p class="problem-card-text">
+            More than half of your visitors leave before they see your offer. Speed is not a luxury. It is the highest form of user experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       03. REFRAME
+  ============================================ -->
+  <section id="reframe" aria-label="The strategic reframe">
+    <div class="reframe-inner">
+      <div class="reframe-label reveal">The Reframe</div>
+      <blockquote class="reframe-quote reveal reveal-delay-1">
+        "You don't have a design problem.<br>
+        You have a <em>structure problem.</em>"
+      </blockquote>
+      <p class="reframe-body reveal reveal-delay-2">
+        Premium websites perform when positioning, information hierarchy, messaging clarity, and technical execution work together as a single system. Design alone is not enough. Strategy without implementation is just a document.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       04. SOLUTION
+  ============================================ -->
+  <section id="solution" aria-label="The Shayne's Designs solution">
+    <div class="solution-inner">
+      <div class="solution-left reveal">
+        <div class="section-label light-label">04. The Solution</div>
+        <h2 class="solution-headline">
+          A full website system built for performance.
+        </h2>
+        <p class="solution-body">
+          Shayne's Designs is not just a web design service. It is a complete website system that combines brand strategy, conversion architecture, and precision frontend engineering into a single deliverable.
+        </p>
+        <a href="#cta-message" class="btn btn-outline-navy btn-arrow">Start a Project</a>
+      </div>
+
+      <div class="solution-list" role="list">
+        <div class="solution-item reveal" role="listitem">
+          <span class="solution-item-num">01</span>
+          <div>
+            <div class="solution-item-title">Brand Positioning</div>
+            <p class="solution-item-desc">Clarity on who you are, who you serve, and why they should choose you over everyone else.</p>
+          </div>
+        </div>
+        <div class="solution-item reveal reveal-delay-1" role="listitem">
+          <span class="solution-item-num">02</span>
+          <div>
+            <div class="solution-item-title">Messaging Architecture</div>
+            <p class="solution-item-desc">Every headline and section earns its place. No filler. No generic copy. Just words that convert.</p>
+          </div>
+        </div>
+        <div class="solution-item reveal reveal-delay-2" role="listitem">
+          <span class="solution-item-num">03</span>
+          <div>
+            <div class="solution-item-title">Conversion Structure</div>
+            <p class="solution-item-desc">Strategic CTA placement, qualifying questions, and a flow that guides visitors to take action.</p>
+          </div>
+        </div>
+        <div class="solution-item reveal reveal-delay-3" role="listitem">
+          <span class="solution-item-num">04</span>
+          <div>
+            <div class="solution-item-title">Premium Visual Design</div>
+            <p class="solution-item-desc">Distinctive aesthetics with precision typography, considered spacing, and refined interactions.</p>
+          </div>
+        </div>
+        <div class="solution-item reveal reveal-delay-4" role="listitem">
+          <span class="solution-item-num">05</span>
+          <div>
+            <div class="solution-item-title">Pure Static Build</div>
+            <p class="solution-item-desc">Hand-coded HTML, CSS, and minimal vanilla JavaScript. No frameworks. No bloat. No technical debt.</p>
+          </div>
+        </div>
+        <div class="solution-item reveal reveal-delay-5" role="listitem">
+          <span class="solution-item-num">06</span>
+          <div>
+            <div class="solution-item-title">SEO-Ready Architecture</div>
+            <p class="solution-item-desc">Semantic HTML, structured data, Core Web Vitals compliance, and sub-second TTFB via global CDN.</p>
+          </div>
+        </div>
+        <div class="solution-item reveal reveal-delay-6" role="listitem">
+          <span class="solution-item-num">07</span>
+          <div>
+            <div class="solution-item-title">Refined Motion Design</div>
+            <p class="solution-item-desc">Purposeful animations that signal quality. No cheap effects. Every interaction earns its place.</p>
+          </div>
+        </div>
+        <div class="solution-item reveal" role="listitem">
+          <span class="solution-item-num">08</span>
+          <div>
+            <div class="solution-item-title">Launch-Ready Implementation</div>
+            <p class="solution-item-desc">Deployed, optimised, and handed over with documentation. Ready to generate results from day one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       05. SERVICES
+  ============================================ -->
+  <section id="services" aria-label="Our services">
+    <div class="services-inner">
+      <div class="services-header">
+        <div>
+          <div class="section-label">05. Services</div>
+          <h2 class="services-headline reveal heading-reveal">
+            Two ways we work together.
+          </h2>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-tag">Modernisation</div>
+          <h3 class="service-title">WordPress Migration</h3>
+          <p class="service-desc">
+            You have existing content and an existing audience. What you don't have is a site that reflects where your business actually is. I handle the full migration. You keep your content. You lose the lag, the plugin maintenance, and the vulnerability window.
+          </p>
+          <ul class="service-points" aria-label="Migration benefits">
+            <li>Full content migration and restructure</li>
+            <li>Instant 90+ Lighthouse performance score</li>
+            <li>Zero plugin vulnerabilities from day one</li>
+            <li>Client editing workflow with AI assistance</li>
+            <li>Global CDN deployment included</li>
+          </ul>
+          <div class="service-price">
+            <span class="service-price-amount">$500</span>
+            <span class="service-price-note">starting price. Scoped to your project.</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-tag">New Build</div>
+          <h3 class="service-title">Bespoke New Build</h3>
+          <p class="service-desc">
+            For founders, creators, and businesses launching something new and launching it right. Full strategy-to-build. Positioning, copy direction, visual design, and pure static implementation. A premium digital asset from the ground up.
+          </p>
+          <ul class="service-points" aria-label="New build benefits">
+            <li>Brand positioning and messaging strategy</li>
+            <li>Custom UI/UX designed for conversion</li>
+            <li>Refined motion and interaction design</li>
+            <li>Optimised for mobile-first performance</li>
+            <li>Ongoing partnership available at $300/month</li>
+          </ul>
+          <div class="service-price">
+            <span class="service-price-amount">Custom</span>
+            <span class="service-price-note">scoped after discovery call.</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       06. PROCESS
+  ============================================ -->
+  <section id="process" aria-label="Our three-step process">
+    <div class="process-inner">
+      <div class="process-header">
+        <div class="section-label light-label reveal" style="justify-content:center">06. Process</div>
+        <h2 class="process-headline reveal reveal-delay-1 heading-reveal">Three steps. One exceptional result.</h2>
+      </div>
+
+      <div class="process-steps" role="list">
+        <div class="process-step reveal" role="listitem">
+          <div class="process-step-num" aria-hidden="true">01</div>
+          <h3 class="process-step-title">Strategy and Audit</h3>
+          <p class="process-step-desc">
+            We start with your goals, your market, and your current position. I audit your existing digital presence, identify the structural gaps, and define exactly what the new site needs to achieve.
+          </p>
+          <p class="process-step-desc">
+            Timeline clarity from day one. You'll know the exact project duration, deliverables, and milestones before we start building.
+          </p>
+          <p class="process-step-desc">
+            Competitive analysis included. I research 5+ competitors to position your site for advantage, not just parity.
+          </p>
+          <p class="process-step-desc">
+            Written strategy document. You get a detailed brief outlining messaging hierarchy, user journeys, and conversion goals.
+          </p>
+        </div>
+        <div class="process-step reveal reveal-delay-2" role="listitem">
+          <div class="process-step-num" aria-hidden="true">02</div>
+          <h3 class="process-step-title">Design and Build</h3>
+          <p class="process-step-desc">
+            Messaging architecture first, then visual design, then build. Every section is written, designed, and coded with the same guiding question: does this move the visitor toward action?
+          </p>
+          <p class="process-step-desc">
+            You own the code outright. No vendor lock-in, no proprietary templates. Full transparency and portability.
+          </p>
+          <p class="process-step-desc">
+            Quick turnaround. Streamlined process means your site launches in days, not weeks. Handover includes everything you need to edit and maintain it yourself.
+          </p>
+          <p class="process-step-desc">
+            Performance guaranteed. Every page is tested on real 4G networks. If it doesn't hit targets, we optimise until it does.
+          </p>
+        </div>
+        <div class="process-step reveal reveal-delay-4" role="listitem">
+          <div class="process-step-num" aria-hidden="true">03</div>
+          <h3 class="process-step-title">Launch and Scale</h3>
+          <p class="process-step-desc">
+            Deployed to a global CDN with 90+ Lighthouse scores confirmed. Documentation provided. Ongoing partnership available for clients who want a site that never goes out of date.
+          </p>
+          <p class="process-step-desc">
+            Complete knowledge transfer. Handover documentation explains the architecture, code structure, and any future changes needed.
+          </p>
+          <p class="process-step-desc">
+            Post-launch support included. 30 days of free changes and bug fixes. Ongoing support available on retainer.
+          </p>
+          <p class="process-step-desc">
+            Proven results. Clients see average 30-40% increase in conversions. We track and optimise based on real visitor behaviour.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       07. DELIVERABLES
+  ============================================ -->
+  <section id="deliverables" aria-label="What you receive">
+    <div class="deliverables-inner">
+      <div class="deliverables-header">
+        <div>
+          <div class="section-label light-label reveal">07. Deliverables</div>
+          <h2 class="deliverables-headline reveal reveal-delay-1">What you receive.</h2>
+        </div>
+        <p class="deliverables-sub reveal reveal-delay-2">
+          Every project includes the complete set. No upsells. No hidden costs. Just a premium digital asset ready to represent your business at the level it deserves.
+        </p>
+      </div>
+
+      <div class="deliverables-grid" role="list">
+        <div class="deliverable-item reveal" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Conversion-focused site structure</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-1" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Premium visual direction system</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-1" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Custom page sections and components</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-2" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Pure static HTML/CSS/JS codebase</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-2" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Full mobile optimisation</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-3" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Strategic CTA planning</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-3" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">On-page SEO structure and schema</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-4" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Refined animation and interaction design</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-4" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Clean asset integration</span>
+        </div>
+        <div class="deliverable-item reveal reveal-delay-5" role="listitem">
+          <div class="deliverable-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" stroke-width="1.5" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>
+          </div>
+          <span class="deliverable-text">Future-ready modular structure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       08. PORTFOLIO
+  ============================================ -->
+  <section id="portfolio" aria-label="Selected work">
+    <div class="portfolio-inner">
+      <div class="portfolio-header">
+        <div>
+          <div class="section-label reveal">08. Selected Work</div>
+          <h2 class="portfolio-headline reveal reveal-delay-1 heading-reveal">Built to perform.</h2>
+        </div>
+        <a href="#cta-message" class="btn btn-outline-gold reveal reveal-delay-2">Start Your Project</a>
+      </div>
+
+      <div class="portfolio-grid" role="list">
+        <article class="portfolio-card reveal" role="listitem" aria-label="High Performance Rebuild project">
+          <div class="portfolio-card-visual" aria-hidden="true"></div>
+          <div class="portfolio-card-label" aria-hidden="true">01</div>
+          <div class="portfolio-card-content">
+            <div class="portfolio-card-tag">WordPress Migration</div>
+            <div class="portfolio-card-title">High Performance Rebuild</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal reveal-delay-2" role="listitem" aria-label="Foundation Build project">
+          <div class="portfolio-card-visual" aria-hidden="true"></div>
+          <div class="portfolio-card-label" aria-hidden="true">02</div>
+          <div class="portfolio-card-content">
+            <div class="portfolio-card-tag">New Build</div>
+            <div class="portfolio-card-title">Foundation Build</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal reveal-delay-4" role="listitem" aria-label="Premium Service Brand project">
+          <div class="portfolio-card-visual" aria-hidden="true"></div>
+          <div class="portfolio-card-label" aria-hidden="true">03</div>
+          <div class="portfolio-card-content">
+            <div class="portfolio-card-tag">Brand and Build</div>
+            <div class="portfolio-card-title">Premium Service Brand</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       09. TRUST / AUTHORITY
+  ============================================ -->
+  <section id="trust" aria-label="Why Shayne's Designs">
+    <div class="trust-inner">
+      <div class="reveal">
+        <div class="section-label">09. Why Us</div>
+        <h2 class="trust-headline">
+          Strategy first.<br>
+          <span class="gold">Performance</span> always.
+        </h2>
+        <p class="trust-body">
+          Most web designers build what you ask for. Shayne's Designs builds what you need. Every project starts with a strategic audit. Every decision is tied to a business outcome. Every line of code is justified.
+        </p>
+        <a href="#cta-message" class="btn btn-outline-gold">Book a Discovery Call</a>
+      </div>
+
+      <div class="trust-pillars" role="list">
+        <div class="trust-pillar reveal" role="listitem">
+          <div class="trust-pillar-icon" aria-hidden="true">90+</div>
+          <div class="trust-pillar-title">Lighthouse Performance</div>
+          <p class="trust-pillar-text">Every build is tested against Google Core Web Vitals before delivery.</p>
+        </div>
+        <div class="trust-pillar reveal reveal-delay-1" role="listitem">
+          <div class="trust-pillar-icon" aria-hidden="true">0</div>
+          <div class="trust-pillar-title">Plugin Vulnerabilities</div>
+          <p class="trust-pillar-text">No database. No CMS. No attack surface. A static architecture is secure by default.</p>
+        </div>
+        <div class="trust-pillar reveal reveal-delay-2" role="listitem">
+          <div class="trust-pillar-icon" aria-hidden="true">Under 2 seconds</div>
+          <div class="trust-pillar-title">Lightning Fast Load Time</div>
+          <p class="trust-pillar-text">Every site loads in under 2 seconds on average 4G networks globally.</p>
+        </div>
+        <div class="trust-pillar reveal reveal-delay-3" role="listitem">
+          <div class="trust-pillar-icon" aria-hidden="true">100%</div>
+          <div class="trust-pillar-title">Custom Built</div>
+          <p class="trust-pillar-text">No templates. No page builders. You own the code outright from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       10. FAQ
+  ============================================ -->
+  <section id="faq" aria-label="Frequently asked questions">
+    <div class="faq-inner">
+      <div class="faq-left reveal">
+        <div class="section-label light-label">10. FAQs</div>
+        <h2 class="faq-headline">Common questions, clear answers.</h2>
+        <p class="faq-intro">Strategy-first design means we align on goals before building. Here's what most clients want to know about working with Shayne's Designs.</p>
+
+        <div class="faq-list-left" role="list">
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-header">
+              <span class="faq-toggle">+</span>
+              <h3 class="faq-question">What services does Shayne's Designs offer?</h3>
+            </button>
+            <p class="faq-answer"><span class="faq-answer-text">We specialise in strategy, messaging architecture, conversion design, and custom static website builds using HTML, CSS, and vanilla JavaScript. Our approach combines brand positioning, performance optimisation, and hand-coded development. We also specialise in WordPress migrations to fast, secure static sites.</span></p>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-1" role="listitem">
+            <button class="faq-header">
+              <span class="faq-toggle">+</span>
+              <h3 class="faq-question">How do I get in touch?</h3>
+            </button>
+            <p class="faq-answer"><span class="faq-answer-text">Scroll to the contact section and fill out the enquiry form. It sends directly to WhatsApp at +66 801 202074. Tell me about your project, business, and goals. I respond within 24 hours. We'll have a conversation before any commitment.</span></p>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-2" role="listitem">
+            <button class="faq-header">
+              <span class="faq-toggle">+</span>
+              <h3 class="faq-question">How does the project process work?</h3>
+            </button>
+            <p class="faq-answer"><span class="faq-answer-text">Three phases. (1) Strategy and Audit. We analyse your market, competitors, and goals, then deliver a written strategy. (2) Design and Build. Messaging architecture first, then visual design and code. (3) Launch and Scale. Deployed to global CDN, 30 days of free support, knowledge transfer documentation included.</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-list" role="list">
+
+        <div class="faq-item reveal reveal-delay-3" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">How long does a project take?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">Our streamlined process means your site launches in days, not weeks. The exact timeline depends on project scope and content readiness, but our system is optimised for speed without sacrificing quality. Complex builds take longer, but delivery is always faster than traditional agencies.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-4" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">Can I request revisions to my project?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">We work collaboratively during design and build. Feedback is incorporated into the process. Once launched, you get 30 days of free changes and bug fixes included. Beyond that, ongoing support is available on retainer for clients who want continuous optimisation and updates.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-5" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">Why static instead of WordPress?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">Static sites are faster, more secure, and cheaper to maintain. WordPress adds plugins, databases, and vulnerabilities. A static site loads in milliseconds with zero plugin security risks. If you need a blog or complex content management, we can integrate that smartly without sacrificing performance.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-6" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">Do you guarantee performance?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">Yes. Every site we deliver achieves 90+ Lighthouse scores and 100% Core Web Vitals compliance. If it doesn't hit those marks at launch, we optimise until it does. Performance isn't optional. It's a requirement.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-7" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">How do you price your services?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">We discuss project investment during your discovery call. Pricing is transparent and based on scope, not hours. You'll know the exact cost before we begin. We're upfront about what you're getting and what it costs. No surprises.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-8" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">Do you require an upfront payment?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">Yes. Payment is typically 50% upfront to begin work, 50% upon launch. This protects both parties and ensures commitment. For larger projects, we can structure milestone payments. All terms are discussed and agreed upfront.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-9" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">Do you provide website hosting or domain services?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">You own the code and can host anywhere you want. We deploy to Cloudflare (global CDN) by default, which is included at no extra cost. Domain registration and email hosting are your choice. We'll recommend reliable providers and help you set them up. No lock-in.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-10" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">Will my website be mobile-friendly?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">100%. Every site we build is fully responsive across all devices. Mobile-first design is not optional. Your site performs perfectly on phones, tablets, and desktops. This is one reason we achieve 100% Core Web Vitals compliance and sub-2 second load times on 4G networks.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-11" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">What if I need ongoing support?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">Ongoing partnership is available for clients who want continuous optimisation, feature updates, or content changes. A retainer keeps your site fresh and performing. Or go solo with the documentation we provide. We're here when you need us.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-12" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">Why is this premium pricing?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">You're paying for strategy, not just a design. Every decision is tied to business outcomes. You get sub-2 second load times (competitors typically deliver 5-8s), 100% custom code (no templates), full ownership (no vendor lock-in), and a site built to convert. That's premium because it delivers premium results.</span></p>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-13" role="listitem">
+          <button class="faq-header">
+            <span class="faq-toggle">+</span>
+            <h3 class="faq-question">Can I edit the site myself?</h3>
+          </button>
+          <p class="faq-answer"><span class="faq-answer-text">Yes. You receive complete documentation and the full codebase. If your site is static HTML, CSS, and JavaScript, you can edit it with any text editor. We also provide knowledge transfer so you understand the architecture. For non-technical users, hiring a retainer is a smart choice.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       11. FINAL CTA
+  ============================================ -->
+  <section id="cta" aria-label="Book a strategy call">
+    <div class="cta-inner">
+      <div class="section-label reveal" style="justify-content:center">11. Get Started</div>
+      <h2 class="cta-headline reveal reveal-delay-1">
+        <span class="cta-line">Stop patching pages.</span>
+        Build something <span class="gold-text">that sells.</span>
+      </h2>
+      <p class="cta-sub reveal reveal-delay-2" id="cta-message">
+        Tell me about your project. I'll respond within 24 hours.
+      </p>
+
+      <form class="cta-form reveal reveal-delay-3" action="#" method="post" aria-label="Project enquiry form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="form-name">Your Name</label>
+          <input class="form-input" type="text" id="form-name" name="name" placeholder="Shayne" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-website">Current Website</label>
+          <input class="form-input" type="url" id="form-website" name="website" placeholder="https://yoursite.com" autocomplete="url">
+        </div>
+        <div class="form-group full-width">
+          <label class="form-label" for="form-platform">Is your current site on WordPress?</label>
+          <select class="form-select" id="form-platform" name="platform" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="yes">Yes. I am ready to migrate.</option>
+            <option value="new">No. I need a new build from scratch.</option>
+            <option value="other">Other platform. I need something custom.</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <label class="form-label" for="form-goal">What is the goal for your new site?</label>
+          <textarea class="form-textarea" id="form-goal" name="goal" placeholder="Tell me about your business, your audience, and what you want the site to achieve." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" aria-label="Submit project enquiry">
+          Submit Project Enquiry
+        </button>
+        <p class="form-disclaimer">No spam. No pitch deck. Just a straightforward conversation about your project.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark footer-logo-image" aria-hidden="true">
+              <img src="images/shaynesdesigns-shaynes-designs-logo-primary.webp" alt="Shayne's Designs - Static Website Designer" class="logo-main">
+              <img src="images/shaynesdesigns-shaynes-designs-logo-1.webp" alt="Shayne's Designs footer logo" class="logo-hover">
+            </div>
+            <span class="footer-logo-text">Shayne's Designs</span>
+          </div>
+          <p class="footer-tagline">
+            Premium static websites for brands that want to look sharper and convert better.
+          </p>
+        </div>
+
+        <nav class="footer-nav-groups" aria-label="Footer navigation">
+          <div>
+            <div class="footer-nav-title">Services</div>
+            <ul class="footer-nav-links" role="list">
+              <li><a href="#services">WordPress Migration</a></li>
+              <li><a href="#services">New Custom Build</a></li>
+              <li><a href="#services">Foundation Partnership</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-nav-title">Company</div>
+            <ul class="footer-nav-links" role="list">
+              <li><a href="#process">Our Process</a></li>
+              <li><a href="#portfolio">Selected Work</a></li>
+              <li><a href="#cta-message">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-legal">
+          &copy; 2026 Shayne's Designs. All rights reserved.
+        </p>
+        <div class="footer-perf" aria-label="Performance metrics">
+          <div class="footer-score">
+            <span>Performance</span>
+            <span class="footer-score-num">90+</span>
+          </div>
+          <div class="footer-score">
+            <span>Accessibility</span>
+            <span class="footer-score-num">100</span>
+          </div>
+          <div class="footer-score">
+            <span>Zero Frameworks</span>
+            <span class="footer-score-num">Pure Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT
+  ============================================ -->
+  <script>
+    'use strict';
+
+    // ============================================
+    // CURTAIN REVEAL
+    // ============================================
+    (function() {
+      const curtain = document.getElementById('curtain');
+      if (!curtain) return;
+
+      // Lift curtain after short delay
+      setTimeout(function() {
+        curtain.classList.add('risen');
+      }, 300);
+
+      // Remove from DOM after animation
+      curtain.addEventListener('transitionend', function() {
+        curtain.remove();
+      }, { once: true });
+    })();
+
+    // ============================================
+    // CUSTOM CURSOR
+    // ============================================
+    (function() {
+      const dot = document.getElementById('cursorDot');
+      const ring = document.getElementById('cursorRing');
+      if (!dot || !ring) return;
+
+      let mouseX = 0, mouseY = 0;
+      let ringX = 0, ringY = 0;
+
+      document.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.left = mouseX + 'px';
+        dot.style.top = mouseY + 'px';
+      });
+
+      // Ring follows with lerp
+      function animateRing() {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        ring.style.left = ringX + 'px';
+        ring.style.top = ringY + 'px';
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+
+      // Expand ring on interactive elements
+      const interactables = document.querySelectorAll('a, button, input, select, textarea, .service-card, .portfolio-card');
+      interactables.forEach(function(el) {
+        el.addEventListener('mouseenter', function() {
+          ring.style.width = '60px';
+          ring.style.height = '60px';
+          ring.style.borderColor = 'rgba(194, 170, 105, 0.8)';
+        });
+        el.addEventListener('mouseleave', function() {
+          ring.style.width = '36px';
+          ring.style.height = '36px';
+          ring.style.borderColor = 'rgba(194, 170, 105, 0.5)';
+        });
+      });
+    })();
+
+    // ============================================
+    // NAVIGATION SCROLL STATE
+    // ============================================
+    (function() {
+      const nav = document.getElementById('mainNav');
+      if (!nav) return;
+
+      function handleScroll() {
+        if (window.scrollY > 60) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+    })();
+
+    // ============================================
+    // SCROLL REVEAL (Intersection Observer)
+    // ============================================
+    (function() {
+      var revealEls = document.querySelectorAll('.reveal');
+      if (!revealEls.length) return;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealEls.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    // ============================================
+    // GOLD STANDARD INTERSECTION
+    // Letter-spacing reveal for headings
+    // ============================================
+    (function() {
+      var headings = document.querySelectorAll('.heading-reveal');
+      if (!headings.length) return;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.3
+      });
+
+      headings.forEach(function(h) {
+        observer.observe(h);
+      });
+    })();
+
+    // ============================================
+    // MOBILE NAV
+    // ============================================
+    (function() {
+      var hamburger = document.getElementById('navHamburger');
+      var mobileNav = document.getElementById('navMobile');
+      var closeBtn = document.getElementById('navMobileClose');
+      if (!hamburger || !mobileNav || !closeBtn) return;
+
+      hamburger.addEventListener('click', function() {
+        mobileNav.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', closeMobileNav);
+      closeBtn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') closeMobileNav();
+      });
+
+      // Close on escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMobileNav();
+      });
+    })();
+
+    function closeMobileNav() {
+      var mobileNav = document.getElementById('navMobile');
+      var hamburger = document.getElementById('navHamburger');
+      if (mobileNav) mobileNav.classList.remove('open');
+      if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    // ============================================
+    // SMOOTH SCROLL (fallback for older browsers)
+    // ============================================
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          var target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+
+    // ============================================
+    // FORM HANDLING
+    // ============================================
+    (function() {
+      var form = document.querySelector('.cta-form');
+      if (!form) return;
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var submitBtn = form.querySelector('.form-submit');
+        if (!submitBtn) return;
+
+        var name = document.getElementById('form-name').value || 'Not provided';
+        var website = document.getElementById('form-website').value || 'Not provided';
+        var platform = document.getElementById('form-platform').value || 'Not provided';
+        var goal = document.getElementById('form-goal').value || 'Not provided';
+
+        var message = 'Hi Shayne,%0A%0AI\'d like to discuss a new website project.%0A%0AName: ' + encodeURIComponent(name) + '%0AWebsite: ' + encodeURIComponent(website) + '%0ACurrent Platform: ' + encodeURIComponent(platform) + '%0AGoal: ' + encodeURIComponent(goal);
+
+        var whatsappUrl = 'https://wa.me/66801202074?text=' + message;
+        window.open(whatsappUrl, '_blank');
+      });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var wrap = document.querySelector('.slow-cat-wrap');
+      var spinner = document.getElementById('catSpinner');
+      if (!wrap) return;
+
+      var steps = [
+        { h: '5%',   delay: 1800 },
+        { h: '18%',  delay: 900  },
+        { h: '19%',  delay: 600  },
+        { h: '48%',  delay: 1100 },
+        { h: '51%',  delay: 500  },
+        { h: '60%',  delay: 800  },
+        { h: '61%',  delay: 400  },
+        { h: '100%', delay: 1000 }
+      ];
+
+      function runReveal(startTime, isLast) {
+        var total = startTime;
+        steps.forEach(function(s, i) {
+          total += s.delay;
+          setTimeout(function() {
+            wrap.style.height = s.h;
+            /* fade spinner out only on final last step */
+            if (isLast && i === steps.length - 1 && spinner) {
+              spinner.classList.add('hidden');
+            }
+          }, total);
+        });
+        return total;
+      }
+
+      /* Run reveal 3 times with delays between */
+      var nextStart = 0;
+      nextStart = runReveal(nextStart, false);
+      nextStart += 800; /* pause before replay 1 */
+
+      nextStart = runReveal(nextStart, false);
+      nextStart += 800; /* pause before replay 2 */
+
+      nextStart = runReveal(nextStart, true); /* last one fades spinner */
+    })();
+
+    // ============================================
+    // NAV CTA BUTTON - CURSOR FOLLOW
+    // ============================================
+    (function() {
+      var btn = document.querySelector('.nav-cta');
+      if (!btn) return;
+
+      btn.addEventListener('mousemove', function(e) {
+        var rect = btn.getBoundingClientRect();
+        var centerX = rect.left + rect.width / 2;
+        var centerY = rect.top + rect.height / 2;
+        var deltaX = (e.clientX - centerX) * 0.3;
+        var deltaY = (e.clientY - centerY) * 0.3 - 5;
+
+        btn.style.transform = 'translateX(' + deltaX + 'px) translateY(' + deltaY + 'px) scale(1.08)';
+        btn.style.transition = 'none';
+      });
+
+      btn.addEventListener('mouseleave', function() {
+        btn.style.transition = 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        btn.style.transform = 'translateX(0) translateY(-5px) scale(1.08)';
+      });
+    })();
+
+    // ============================================
+    // FAQ ACCORDION
+    // ============================================
+    (function() {
+      var headers = document.querySelectorAll('.faq-header');
+
+      if (!headers.length) return;
+
+      headers.forEach(function(header) {
+        header.addEventListener('click', function() {
+          var item = header.closest('.faq-item');
+          if (!item) return;
+
+          // Close all other items
+          document.querySelectorAll('.faq-item.active').forEach(function(activeItem) {
+            if (activeItem !== item) {
+              activeItem.classList.remove('active');
+            }
+          });
+
+          // Toggle current item
+          item.classList.toggle('active');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

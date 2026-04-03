@@ -1,0 +1,30 @@
+/* HUMANS.TXT - https://humanstxt.org/ */
+
+/* TEAM */
+Designer/Developer: Shayne
+Role: Founder & Lead Designer
+Website: https://shaynesdesigns.com
+Twitter: @ShaynesDesigns
+Location: Bangkok, Thailand
+
+/* SITE INFO */
+Project Name: Shayne's Designs - Premium Static Websites
+Description: Built to perform. Premium static websites with 90+ Lighthouse scores, zero plugin vulnerabilities, and sub-2 second load times.
+Language: English (en)
+Standards: HTML5, CSS3, Vanilla JavaScript
+Build: Hand-coded, no frameworks, no bloat
+Deployment: Cloudflare (Global CDN)
+
+/* TOOLS & TECHNOLOGIES */
+Editor: Claude Code
+Version Control: Git
+Deployment Platform: Cloudflare
+Performance Target: 90+ Lighthouse, 100% Core Web Vitals
+
+/* THANKS */
+Thanks to:
+- Google for Lighthouse auditing
+- Anthropic for Claude Code
+- Cloudflare for reliable hosting
+
+Last Updated: 2026-04-03

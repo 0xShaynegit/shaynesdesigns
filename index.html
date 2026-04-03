@@ -603,7 +603,7 @@
         </div>
 
         <div class="portfolio-card reveal reveal-delay-2" aria-label="Foundation Build project" role="listitem">
-          <video class="portfolio-video" muted playsinline loading="lazy">
+          <video class="portfolio-video" muted playsinline preload="metadata">
             <source src="./images/globalpetsits.mp4" type="video/mp4">
             <track kind="captions" src="data:text/vtt,WEBVTT%0D%0A%0D%0A00:00:00.000 --> 00:00:05.000%0D%0ANo audio in this video%0D%0A" srclang="en" label="English">
           </video>
@@ -616,7 +616,7 @@
         </div>
 
         <div class="portfolio-card reveal reveal-delay-4" aria-label="Premium Service Brand project" role="listitem">
-          <video class="portfolio-video" muted playsinline loading="lazy">
+          <video class="portfolio-video" muted playsinline preload="metadata">
             <source src="./images/khuncamp.mp4" type="video/mp4">
             <track kind="captions" src="data:text/vtt,WEBVTT%0D%0A%0D%0A00:00:00.000 --> 00:00:05.000%0D%0ANo audio in this video%0D%0A" srclang="en" label="English">
           </video>
@@ -1295,8 +1295,12 @@
       });
     }
 
-    // Defer until well after LCP (3+ seconds)
-    setTimeout(initPortfolioVideos, 3500);
+    // Initialize videos as soon as possible without blocking
+    if (window.requestIdleCallback) {
+      requestIdleCallback(initPortfolioVideos);
+    } else {
+      setTimeout(initPortfolioVideos, 100);
+    }
 
     // ============================================
     // TESTIMONIALS SLIDER

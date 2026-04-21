@@ -1,24 +1,16 @@
-# Robots.txt for Shayne's Designs
-# Allow all search engines to crawl the site
-
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /*.json$
-Disallow: /node_modules/
 
-# Specific search engines
-User-agent: Googlebot
+User-agent: GPTBot
 Allow: /
 
-User-agent: Bingbot
+User-agent: Google-Extended
 Allow: /
 
-User-agent: Slurp
+User-agent: anthropic-ai
 Allow: /
 
-# Crawl delay (in seconds) - be friendly to servers
-Crawl-delay: 1
+User-agent: PerplexityBot
+Allow: /
 
-# Sitemap location
 Sitemap: https://shaynesdesigns.com/sitemap.xml

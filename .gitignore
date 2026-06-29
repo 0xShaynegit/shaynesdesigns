@@ -1,6 +1,12 @@
 # Project-specific
 research/
 .claude/
+_archive/
+CLAUDE.md
+HANDOVER.md
+rules.md
+handover.md
+images/convert-images.js
 
 # Keep fonts directory
 !fonts/

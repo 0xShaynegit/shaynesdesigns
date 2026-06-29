@@ -94,7 +94,7 @@
     .pf-hero-count-label{font-size:.75rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:rgba(249,249,249,0.35);margin-top:.25rem}
 
     /* PROJECT SECTIONS — exactly one viewport, no exceptions */
-    .project{position:relative;height:100vh;overflow:hidden}
+    .project{position:relative;height:calc(75vh + 64px);overflow:hidden}
 
     /* Brand background layer */
     .project-bg{position:absolute;inset:0;z-index:0;transition:transform 8s linear}
@@ -117,8 +117,7 @@
     .shot-above{position:absolute;top:32px;left:calc(25vw + 64px);width:30vw;height:30vh;overflow:hidden;border-radius:5px;border:1px solid rgba(255,255,255,0.08);cursor:pointer;z-index:1}
     .shot-below{position:absolute;top:calc(32px + 15vh);left:calc(25vw + 64px);width:30vw;height:30vh;overflow:hidden;border-radius:5px;border:1px solid rgba(255,255,255,0.08);cursor:pointer;z-index:1}
     .shot-above img,.shot-below img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-    .right-panel{position:absolute;top:32px;left:calc(55vw + 80px);right:32px;height:75vh;background:green;border-radius:5px;z-index:0}
-    .panel-top{position:absolute;top:32px;left:calc(55vw + 80px);width:calc((45vw - 120px) / 2);height:75vh;overflow:hidden;border-radius:5px;z-index:1;cursor:pointer}
+.panel-top{position:absolute;top:32px;left:calc(55vw + 80px);width:calc((45vw - 120px) / 2);height:75vh;overflow:hidden;border-radius:5px;z-index:1;cursor:pointer}
     .panel-top img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
     .panel-bottom{position:absolute;top:32px;left:calc(55vw + 80px + (45vw - 120px) / 2 + 8px);width:calc((45vw - 120px) / 2);height:75vh;overflow:hidden;border-radius:5px;z-index:1;cursor:pointer}
     .panel-bottom img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
@@ -333,8 +332,7 @@
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #EAB308, rgba(234,179,8,0.2), transparent);z-index:10" aria-hidden="true"></div>
 
       <div class="project-inner">
-        <div class="right-panel"></div>
-        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full">
+<div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full">
           <img src="images/portfolio-cma-fullpage-top.jpg" alt="Chiang Mai Ambassador — top half" width="1440" height="3574" loading="eager">
         </div>
         <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full">

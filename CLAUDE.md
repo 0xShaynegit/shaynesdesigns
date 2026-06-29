@@ -1,3 +1,21 @@
+# MANDATORY SESSION START
+
+**Before touching any file:**
+1. Read `rules.md` — project layout system, file structure, client details
+2. Read `handover.md` — current position and next steps
+
+**Behavioural rules that are always active — no exceptions:**
+- Touch ONLY what is explicitly named. If it is not mentioned, do not touch it.
+- When Shayne says "lock it" or "don't touch" — everything is frozen until told otherwise.
+- "commit and push" = do it immediately. No asking.
+- Never use www URLs. Never suggest Vercel. Never run dev servers.
+- Flag visual risks before implementing, not after.
+- Ask ONE question when confused, then execute. No alternatives, no hedging.
+- Never delete files — move to `_archive/`.
+- State exactly what changed: "changed X to Y in file Z." Never say "fixed."
+
+---
+
 # SuperClaude Framework — Global Configuration
 **Claude Code Enhancement System for Australian Developer in Thailand**
 

@@ -65,19 +65,19 @@ function projectHtml(p, index) {
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, ${p.accent}, ${hexAlpha(p.accent, 0.2)}, transparent);z-index:10" aria-hidden="true"></div>
 
       <div class="project-inner">
-        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="${p.slug}-full" data-lightbox-mobile="${p.slug}-full-top" data-cursor-label="EXPAND">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="${p.slug}-full" data-lightbox-mobile="${p.slug}-full-top">
           <img src="${img(p, 'fullpage-top', 'jpg')}" alt="${p.ariaName} — top half" width="${ftDims[0]}" height="${ftDims[1]}" loading="${index === 0 ? 'eager' : 'lazy'}">
         </div>
-        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="${p.slug}-full" data-lightbox-mobile="${p.slug}-full-bottom" data-cursor-label="EXPAND">
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="${p.slug}-full" data-lightbox-mobile="${p.slug}-full-bottom">
           <img src="${img(p, 'fullpage-bottom', 'jpg')}" alt="${p.ariaName} — bottom half" width="${fbDims[0]}" height="${fbDims[1]}" loading="${index === 0 ? 'eager' : 'lazy'}">
         </div>
 
-        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="${p.slug}-hero" data-lightbox-mobile="none" data-cursor-label="EXPAND">
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="${p.slug}-hero" data-lightbox-mobile="none">
           <img src="${img(p, 'shot-hero', 'jpg')}" alt="${p.ariaName} — hero" width="${shotW}" height="${shotH}" loading="${index === 0 ? 'eager' : 'lazy'}">
           <div class="shot-overlay" aria-hidden="true"><div class="shot-expand">${EXPAND_SVG}Expand</div></div>
         </div>
 
-        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="${p.slug}-content" data-lightbox-mobile="none" data-cursor-label="EXPAND">
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="${p.slug}-content" data-lightbox-mobile="none">
           <img src="${img(p, 'shot-content', 'jpg')}" alt="${p.ariaName} — content" width="${shotW}" height="${shotH}" loading="${index === 0 ? 'eager' : 'lazy'}">
           <div class="shot-overlay" aria-hidden="true"><div class="shot-expand">${EXPAND_SVG}Expand</div></div>
         </div>
@@ -91,9 +91,9 @@ function projectHtml(p, index) {
               ${p.category}
             </div>
 
-            <h2 class="project-name reveal reveal-delay-1">${p.nameHtml}</h2>
+            <h2 class="project-name reveal reveal-delay-1"${p.headingFont ? ` style="font-family:'${p.headingFont}',serif"` : ''}>${p.nameHtml}</h2>
 
-            <p class="project-desc reveal reveal-delay-2">
+            <p class="project-desc reveal reveal-delay-2"${p.bodyFont ? ` style="font-family:'${p.bodyFont}',sans-serif"` : ''}>
               ${p.desc}
             </p>
 

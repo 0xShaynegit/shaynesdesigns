@@ -16,6 +16,11 @@
   <link rel="preload" href="./fonts/syne-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/syne-extrabold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/cormorant-garamond-300-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/newsreader-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/libre-baskerville-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/dm-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/playfair-display-variable.woff2" as="font" type="font/woff2" crossorigin>
 
   <style>
     @font-face{font-family:'Syne';src:url('./fonts/syne-regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
@@ -24,6 +29,11 @@
     @font-face{font-family:'Syne';src:url('./fonts/syne-extrabold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
     @font-face{font-family:'Cormorant Garamond';src:url('./fonts/cormorant-garamond-300-italic.woff2') format('woff2');font-weight:300;font-style:italic;font-display:swap}
     @font-face{font-family:'Nunito Sans';src:url('./fonts/nunito-sans-variable.woff2') format('woff2');font-weight:300 900;font-style:normal;font-display:swap}
+    @font-face{font-family:'Newsreader';src:url('./fonts/newsreader-variable.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
+    @font-face{font-family:'Libre Baskerville';src:url('./fonts/libre-baskerville-variable.woff2') format('woff2');font-weight:400 700;font-style:normal;font-display:swap}
+    @font-face{font-family:'DM Sans';src:url('./fonts/dm-sans-variable.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap}
+    @font-face{font-family:'Inter';src:url('./fonts/inter-variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+    @font-face{font-family:'Playfair Display';src:url('./fonts/playfair-display-variable.woff2') format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
 
     :root{
       --navy:#110076;--navy-deep:#0b004f;--navy-mid:#1a0090;
@@ -39,7 +49,7 @@
 
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
-    body{font-family:var(--font-body);font-weight:300;background:var(--darkest);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--font-body);font-weight:300;background:var(--darkest);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;cursor:none}
     a{text-decoration:none;color:inherit}
     img{display:block;max-width:100%}
     ::selection{background:var(--navy);color:var(--gold)}
@@ -64,13 +74,13 @@
     .nav-links a:hover::after,.nav-links a.active::after{width:100%}
     .nav-cta{font-family:var(--font-display);font-size:1.1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--navy-deep);border:1.5px solid var(--gold);padding:.75rem 2rem;transition:transform .4s var(--ease-out-expo),box-shadow .4s ease}
     .nav-cta:hover{transform:translateY(-5px) scale(1.08);box-shadow:0 18px 36px rgba(194,170,105,0.5)}
-    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:0}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px;background:none;border:0}
     .nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--gold);transition:transform .3s ease,opacity .3s ease}
     .nav-mobile{display:none;position:fixed;inset:0;background:var(--navy-deep);z-index:201;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
     .nav-mobile.open{display:flex}
     .nav-mobile a{font-family:var(--font-display);font-weight:700;font-size:2rem;color:rgba(249,249,249,0.75);letter-spacing:-.02em;transition:color .2s ease}
     .nav-mobile a:hover{color:var(--gold)}
-    .nav-mobile-close{position:absolute;top:1.75rem;right:var(--gutter);font-size:1.5rem;color:var(--gold);cursor:pointer;font-family:var(--font-body);font-weight:300;background:none;border:0;line-height:1}
+    .nav-mobile-close{position:absolute;top:1.75rem;right:var(--gutter);font-size:1.5rem;color:var(--gold);cursor:none;font-family:var(--font-body);font-weight:300;background:none;border:0;line-height:1}
 
     /* REVEAL */
     .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease-out-expo),transform .7s var(--ease-out-expo)}
@@ -114,12 +124,12 @@
     .project-info{display:flex;flex-direction:column}
 
     /* Photos: centred horizontally, pinned top and bottom */
-    .shot-above{position:absolute;top:32px;left:calc(25vw + 64px);width:30vw;height:30vh;overflow:hidden;border-radius:5px;border:1px solid rgba(255,255,255,0.08);cursor:pointer;z-index:1}
-    .shot-below{position:absolute;top:calc(32px + 15vh);left:calc(25vw + 64px);width:30vw;height:30vh;overflow:hidden;border-radius:5px;border:1px solid rgba(255,255,255,0.08);cursor:pointer;z-index:1}
+    .shot-above{position:absolute;top:32px;left:calc(25vw + 64px);width:30vw;height:30vh;overflow:hidden;border-radius:5px;border:1px solid rgba(255,255,255,0.08);cursor:none;z-index:1}
+    .shot-below{position:absolute;top:calc(32px + 15vh);left:calc(25vw + 64px);width:30vw;height:30vh;overflow:hidden;border-radius:5px;border:1px solid rgba(255,255,255,0.08);cursor:none;z-index:1}
     .shot-above img,.shot-below img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-.panel-top{position:absolute;top:32px;left:calc(55vw + 80px);width:calc((45vw - 120px) / 2);height:75vh;overflow:hidden;border-radius:5px;z-index:1;cursor:pointer}
+.panel-top{position:absolute;top:32px;left:calc(55vw + 80px);width:calc((45vw - 120px) / 2);height:75vh;overflow:hidden;border-radius:5px;z-index:1;cursor:none}
     .panel-top img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-    .panel-bottom{position:absolute;top:32px;left:calc(55vw + 80px + (45vw - 120px) / 2 + 8px);width:calc((45vw - 120px) / 2);height:75vh;overflow:hidden;border-radius:5px;z-index:1;cursor:pointer}
+    .panel-bottom{position:absolute;top:32px;left:calc(55vw + 80px + (45vw - 120px) / 2 + 8px);width:calc((45vw - 120px) / 2);height:75vh;overflow:hidden;border-radius:5px;z-index:1;cursor:none}
     .panel-bottom img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 
     .project-num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.5rem,5vw,4.5rem);line-height:1;letter-spacing:-.04em;color:rgba(255,255,255,0.06);margin-bottom:-1rem;user-select:none}
@@ -138,7 +148,7 @@
     .btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,0.4)}
     .btn-ghost svg{width:12px;height:12px;stroke:currentColor;fill:none}
 
-    .shot{position:relative;overflow:hidden;cursor:pointer;border-radius:5px;border:1px solid rgba(255,255,255,0.08);background:#0d0d0d;height:30vh;transition:border-color .3s ease}
+    .shot{position:relative;overflow:hidden;cursor:none;border-radius:5px;border:1px solid rgba(255,255,255,0.08);background:#0d0d0d;height:30vh;transition:border-color .3s ease}
     .shot:hover{border-color:rgba(255,255,255,0.22)}
     .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s var(--ease-out-expo)}
     .shot:hover img{transform:scale(1.04)}
@@ -158,12 +168,12 @@
     .browser-dot:nth-child(2){background:#febc2e}
     .browser-dot:nth-child(3){background:#28c840}
     .browser-url{flex:1;background:rgba(255,255,255,0.07);border-radius:4px;padding:.25rem .75rem;font-size:.7rem;font-family:var(--font-body);color:rgba(255,255,255,0.4);letter-spacing:.02em}
-    .browser-content{position:relative;overflow:hidden;cursor:pointer}
+    .browser-content{position:relative;overflow:hidden;cursor:none}
     .browser-content img{width:100%;display:block;transition:transform .5s var(--ease-out-expo)}
     .browser-content:hover img{transform:scale(1.02)}
     .browser-content-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0);transition:background .3s ease;z-index:2}
     .browser-content:hover .browser-content-overlay{background:rgba(0,0,0,0.35)}
-    .browser-preview-btn{opacity:0;transform:scale(0.9);transition:opacity .3s ease,transform .3s var(--ease-out-expo);display:flex;align-items:center;gap:.625rem;font-family:var(--font-display);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.2);padding:.75rem 1.5rem;backdrop-filter:blur(8px);cursor:pointer}
+    .browser-preview-btn{opacity:0;transform:scale(0.9);transition:opacity .3s ease,transform .3s var(--ease-out-expo);display:flex;align-items:center;gap:.625rem;font-family:var(--font-display);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.2);padding:.75rem 1.5rem;backdrop-filter:blur(8px);cursor:none}
     .browser-content:hover .browser-preview-btn{opacity:1;transform:scale(1)}
     .browser-preview-btn svg{width:14px;height:14px;stroke:currentColor;fill:none}
 
@@ -176,7 +186,7 @@
     .project-divider{height:1px;background:rgba(255,255,255,0.05);max-width:var(--max-width);margin:0 auto}
 
     /* FULL-PAGE VIEWPORT — fills entire right column */
-    .shot-full{position:relative;cursor:pointer;border-radius:5px;border:1px solid rgba(255,255,255,0.08);background:#0d0d0d;overflow:hidden;height:100%;transition:border-color .3s ease}
+    .shot-full{position:relative;cursor:none;border-radius:5px;border:1px solid rgba(255,255,255,0.08);background:#0d0d0d;overflow:hidden;height:100%;transition:border-color .3s ease}
     .shot-full:hover{border-color:rgba(255,255,255,0.22)}
     .shot-full img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block;transition:opacity .3s ease}
     .shot-full:hover img{opacity:.85}
@@ -189,13 +199,13 @@
     /* LIGHTBOX */
     .lightbox{position:fixed;inset:0;z-index:500;display:flex;align-items:flex-start;justify-content:center;padding:4rem 2rem 2rem;opacity:0;pointer-events:none;transition:opacity .4s ease}
     .lightbox.open{opacity:1;pointer-events:all}
-    .lightbox-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.92);backdrop-filter:blur(6px);cursor:pointer}
+    .lightbox-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.92);backdrop-filter:blur(6px);cursor:none}
     .lightbox-panel{position:relative;z-index:2;max-width:1320px;width:100%;max-height:calc(100vh - 6rem);overflow-y:auto;background:#111;border-radius:8px;border:1px solid rgba(255,255,255,0.08);scrollbar-width:thin;scrollbar-color:rgba(194,170,105,0.3) transparent}
     .lightbox-panel::-webkit-scrollbar{width:4px}
     .lightbox-panel::-webkit-scrollbar-thumb{background:rgba(194,170,105,0.3);border-radius:2px}
     .lightbox-header{position:sticky;top:0;z-index:10;background:rgba(17,17,17,0.95);backdrop-filter:blur(8px);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.07)}
     .lightbox-header-title{font-family:var(--font-display);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(249,249,249,0.5)}
-    .lightbox-close{background:none;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.6);width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;transition:border-color .2s,color .2s}
+    .lightbox-close{background:none;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.6);width:32px;height:32px;border-radius:50%;cursor:none;display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;transition:border-color .2s,color .2s}
     .lightbox-close:hover{border-color:var(--gold);color:var(--gold)}
     .lightbox-body{padding:0}
     .lightbox-body img{width:100%;display:block}
@@ -212,7 +222,7 @@
     .pf-cta-h2 em{color:var(--gold);font-style:italic;font-family:var(--font-editorial);font-weight:300}
     .pf-cta-sub{font-size:1.0625rem;line-height:1.8;color:rgba(249,249,249,0.55);margin-bottom:3rem}
     .pf-cta-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:.625rem;font-family:var(--font-display);font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border:0;transition:background .3s ease,color .3s ease,transform .1s ease}
+    .btn{display:inline-flex;align-items:center;gap:.625rem;font-family:var(--font-display);font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:none;border:0;transition:background .3s ease,color .3s ease,transform .1s ease}
     .btn:active{transform:scale(0.96)}
     .btn-gold{background:var(--gold);color:var(--navy-deep);padding:1rem 2.25rem}
     .btn-gold:hover{background:var(--gold-light)}
@@ -277,12 +287,13 @@
       .project-num{margin-bottom:0}
       .shot-overlay{display:none}
       .shot-above,.shot-below{cursor:default}
-      #cursorDot,#cursorRing,#cursorLabel{display:none}
+      body{cursor:auto}#cursorDot,#cursorRing,#cursorLabel{display:none}
     }
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}.reveal{opacity:1;transform:none}}
-  .cursor-dot{position:fixed;width:32px;height:32px;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .1s ease,opacity .3s ease}.cursor-dot::before,.cursor-dot::after{content:"";position:absolute;background:var(--gold)}.cursor-dot::before{width:18px;height:1px;left:50%;top:50%;transform:translate(-50%,-50%)}.cursor-dot::after{width:1px;height:18px;left:50%;top:50%;transform:translate(-50%,-50%)}.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(194,170,105,0.5);border-radius:50%;pointer-events:none;z-index:9997;transform:translate3d(0,0,0);transition:transform .25s ease,width .3s ease,height .3s ease,border-color .3s ease}body:hover .cursor-dot{opacity:1}.cursor-label{position:fixed;pointer-events:none;z-index:9999;font-family:var(--font-display);font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(11,0,79,0.85);border:1px solid rgba(194,170,105,0.4);padding:.35rem .75rem;border-radius:100px;opacity:0;transition:opacity .2s ease;white-space:nowrap}.cursor-label.on-dark{color:#0b0053;background:rgba(194,170,105,0.92);border-color:rgba(194,170,105,0.6)}</style>
+  .cursor-dot{position:fixed;width:32px;height:32px;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .1s ease,opacity .3s ease}.cursor-dot::before,.cursor-dot::after{content:"";position:absolute;background:var(--gold)}.cursor-dot::before{width:18px;height:1px;left:50%;top:50%;transform:translate(-50%,-50%)}.cursor-dot::after{width:1px;height:18px;left:50%;top:50%;transform:translate(-50%,-50%)}.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(194,170,105,0.5);border-radius:50%;pointer-events:none;z-index:9997;transform:translate3d(0,0,0);transition:transform .25s ease,width .3s ease,height .3s ease,border-color .3s ease}body:hover .cursor-dot{opacity:1}.cursor-label{position:fixed;pointer-events:none;z-index:9999;font-family:var(--font-display);font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(11,0,79,0.85);border:1px solid rgba(194,170,105,0.4);padding:.35rem .75rem;border-radius:100px;opacity:0;transition:opacity .2s ease;white-space:nowrap}.cursor-label.on-dark{color:#0b0053;background:rgba(194,170,105,0.92);border-color:rgba(194,170,105,0.6)}
+.cursor-spotlight{position:fixed;width:400px;height:400px;pointer-events:none;z-index:98;border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:color-dodge;opacity:.4;filter:blur(40px);transition:background 0.2s ease}</style>
 </head>
-<body><div class="cursor-dot" id="cursorDot" aria-hidden="true"></div><div class="cursor-ring" id="cursorRing" aria-hidden="true"></div><div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
+<body><div class="cursor-spotlight" id="spotlight" aria-hidden="true"></div><div class="cursor-dot" id="cursorDot" aria-hidden="true"></div><div class="cursor-ring" id="cursorRing" aria-hidden="true"></div><div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
 
   <!-- Mobile nav -->
   <nav class="nav-mobile" id="navMobile" role="navigation" aria-label="Mobile navigation">
@@ -328,7 +339,7 @@
           <p class="pf-hero-sub reveal reveal-delay-2">Fifteen live sites across finance, hospitality, content publishing, and personal brands. Custom HTML, CSS, and JavaScript. 90+ Lighthouse scores on every build.</p>
         </div>
         <div class="pf-hero-count reveal reveal-delay-3" aria-hidden="true">
-          <div class="pf-hero-count-num">1</div>
+          <div class="pf-hero-count-num">7</div>
           <div class="pf-hero-count-label">Live projects</div>
         </div>
       </div>
@@ -348,19 +359,19 @@
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #EAB308, rgba(234,179,8,0.2), transparent);z-index:10" aria-hidden="true"></div>
 
       <div class="project-inner">
-        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full" data-lightbox-mobile="cma-full-top" data-cursor-label="EXPAND">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full" data-lightbox-mobile="cma-full-top">
           <img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-fullpage-top.jpg" alt="Chiang Mai Ambassador — top half" width="1440" height="3574" loading="eager">
         </div>
-        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full" data-lightbox-mobile="cma-full-bottom" data-cursor-label="EXPAND">
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full" data-lightbox-mobile="cma-full-bottom">
           <img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-fullpage-bottom.jpg" alt="Chiang Mai Ambassador — bottom half" width="1440" height="3574" loading="eager">
         </div>
 
-        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="cma-hero" data-lightbox-mobile="none" data-cursor-label="EXPAND">
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="cma-hero" data-lightbox-mobile="none">
           <img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-shot-hero.jpg" alt="Chiang Mai Ambassador — hero" width="1440" height="900" loading="eager">
           <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
         </div>
 
-        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="cma-content" data-lightbox-mobile="none" data-cursor-label="EXPAND">
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="cma-content" data-lightbox-mobile="none">
           <img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-shot-content.jpg" alt="Chiang Mai Ambassador — content" width="1440" height="900" loading="eager">
           <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
         </div>
@@ -395,6 +406,420 @@
                 <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
               </a>
               <a href="https://chiangmaiambassador.com" target="_blank" rel="noopener" class="btn-ghost">
+                Full Page Preview
+                <svg viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="project-divider" aria-hidden="true"></div>
+
+    <!-- =============================================
+         PROJECT 02 — CM LOCALS  (generated)
+         ============================================= -->
+    <article class="project" id="proj-cmlocals" aria-label="CM Locals project">
+
+      <div class="project-bg" aria-hidden="true"></div>
+      <div class="project-bg-img" style="background-image:url('images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-hero.webp')" aria-hidden="true"></div>
+      <div class="project-bg-overlay" style="background:linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(26,42,74,0.93) 50%, rgba(15,23,42,0.97) 100%)" aria-hidden="true"></div>
+
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #187E3C, rgba(24,126,60,0.2), transparent);z-index:10" aria-hidden="true"></div>
+
+      <div class="project-inner">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="cmlocals-full" data-lightbox-mobile="cmlocals-full-top">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-fullpage-top.jpg" alt="CM Locals — top half" width="1440" height="4508" loading="lazy">
+        </div>
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="cmlocals-full" data-lightbox-mobile="cmlocals-full-bottom">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-fullpage-bottom.jpg" alt="CM Locals — bottom half" width="1440" height="4507" loading="lazy">
+        </div>
+
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="cmlocals-hero" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-shot-hero.jpg" alt="CM Locals — hero" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="cmlocals-content" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-shot-content.jpg" alt="CM Locals — content" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="project-layout">
+          <div class="project-info">
+            <div class="project-num reveal" aria-hidden="true">02</div>
+
+            <div class="project-category reveal reveal-delay-1" style="color:#187E3C">
+              <span style="background:#187E3C;display:inline-block;width:1.5rem;height:1px"></span>
+              Content / Visa Guidance
+            </div>
+
+            <h2 class="project-name reveal reveal-delay-1" style="font-family:'Newsreader',serif">CM Locals</h2>
+
+            <p class="project-desc reveal reveal-delay-2" style="font-family:'DM Sans',sans-serif">
+              Independent Thai visa guidance for Chiang Mai, built on 16+ years of first-hand experience. Long-stay and tourist extensions, DTV, LTR, Thailand Privilege, and compliance guides kept current for 2026 — a reference site people actually bookmark.
+            </p>
+
+            <div class="project-tags reveal reveal-delay-2">
+              <span class="project-tag">Visa Guides</span>
+              <span class="project-tag">Content Site</span>
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">Current Info</span>
+              <span class="project-tag">Mobile Friendly</span>
+            </div>
+
+            <div class="project-actions reveal reveal-delay-3">
+              <a href="https://www.cmlocals.com" target="_blank" rel="noopener" class="btn-visit" style="background:#187E3C;color:#FFFFFF">
+                Visit Site
+                <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://www.cmlocals.com" target="_blank" rel="noopener" class="btn-ghost">
+                Full Page Preview
+                <svg viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="project-divider" aria-hidden="true"></div>
+
+    <!-- =============================================
+         PROJECT 03 — AMERICAN INTERNATIONAL TAX ADVISERS  (generated)
+         ============================================= -->
+    <article class="project" id="proj-aitaxadvisors" aria-label="American International Tax Advisers project">
+
+      <div class="project-bg" aria-hidden="true"></div>
+      <div class="project-bg-img" style="background-image:url('images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-hero.webp')" aria-hidden="true"></div>
+      <div class="project-bg-overlay" style="background:linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(26,42,74,0.93) 50%, rgba(15,23,42,0.97) 100%)" aria-hidden="true"></div>
+
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #005895, rgba(0,88,149,0.2), transparent);z-index:10" aria-hidden="true"></div>
+
+      <div class="project-inner">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="aitaxadvisors-full" data-lightbox-mobile="aitaxadvisors-full-top">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-fullpage-top.jpg" alt="American International Tax Advisers — top half" width="1440" height="4871" loading="lazy">
+        </div>
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="aitaxadvisors-full" data-lightbox-mobile="aitaxadvisors-full-bottom">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-fullpage-bottom.jpg" alt="American International Tax Advisers — bottom half" width="1440" height="4870" loading="lazy">
+        </div>
+
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="aitaxadvisors-hero" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-shot-hero.jpg" alt="American International Tax Advisers — hero" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="aitaxadvisors-content" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-shot-content.jpg" alt="American International Tax Advisers — content" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="project-layout">
+          <div class="project-info">
+            <div class="project-num reveal" aria-hidden="true">03</div>
+
+            <div class="project-category reveal reveal-delay-1" style="color:#005895">
+              <span style="background:#005895;display:inline-block;width:1.5rem;height:1px"></span>
+              Professional Services / Finance
+            </div>
+
+            <h2 class="project-name reveal reveal-delay-1" style="font-family:'Libre Baskerville',serif">AI Tax<br>Advisors</h2>
+
+            <p class="project-desc reveal reveal-delay-2" style="font-family:'Inter',sans-serif">
+              Asia's leading U.S. tax firm for expats across Thailand and Southeast Asia, listed by the U.S. Embassy. Strategic compliance, planning, and IRS e-filing built into a site that reads as authoritative to a client base making high-stakes financial decisions.
+            </p>
+
+            <div class="project-tags reveal reveal-delay-2">
+              <span class="project-tag">Finance</span>
+              <span class="project-tag">Professional Services</span>
+              <span class="project-tag">Trust Signals</span>
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">Mobile Friendly</span>
+            </div>
+
+            <div class="project-actions reveal reveal-delay-3">
+              <a href="https://www.aitaxadvisors.com" target="_blank" rel="noopener" class="btn-visit" style="background:#005895;color:#FFFFFF">
+                Visit Site
+                <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://www.aitaxadvisors.com" target="_blank" rel="noopener" class="btn-ghost">
+                Full Page Preview
+                <svg viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="project-divider" aria-hidden="true"></div>
+
+    <!-- =============================================
+         PROJECT 04 — MODERN LENDING  (generated)
+         ============================================= -->
+    <article class="project" id="proj-ml1" aria-label="Modern Lending project">
+
+      <div class="project-bg" aria-hidden="true"></div>
+      <div class="project-bg-img" style="background-image:url('images/shaynesdesigns-shaynes-designs-portfolio-ml1-hero.webp')" aria-hidden="true"></div>
+      <div class="project-bg-overlay" style="background:linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(26,42,74,0.93) 50%, rgba(15,23,42,0.97) 100%)" aria-hidden="true"></div>
+
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #0B6B30, rgba(11,107,48,0.2), transparent);z-index:10" aria-hidden="true"></div>
+
+      <div class="project-inner">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="ml1-full" data-lightbox-mobile="ml1-full-top">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-fullpage-top.jpg" alt="Modern Lending — top half" width="1440" height="3182" loading="lazy">
+        </div>
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="ml1-full" data-lightbox-mobile="ml1-full-bottom">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-fullpage-bottom.jpg" alt="Modern Lending — bottom half" width="1440" height="3181" loading="lazy">
+        </div>
+
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="ml1-hero" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-shot-hero.jpg" alt="Modern Lending — hero" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="ml1-content" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-shot-content.jpg" alt="Modern Lending — content" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="project-layout">
+          <div class="project-info">
+            <div class="project-num reveal" aria-hidden="true">04</div>
+
+            <div class="project-category reveal reveal-delay-1" style="color:#0B6B30">
+              <span style="background:#0B6B30;display:inline-block;width:1.5rem;height:1px"></span>
+              Professional Services / Finance
+            </div>
+
+            <h2 class="project-name reveal reveal-delay-1">Modern<br>Lending</h2>
+
+            <p class="project-desc reveal reveal-delay-2">
+              Mortgage broking for Tasmania, built to read as sharp and modern rather than the tired grey-suit template most brokers use. Clear rate positioning, a straightforward enquiry path, and copy that talks like a person instead of a brochure.
+            </p>
+
+            <div class="project-tags reveal reveal-delay-2">
+              <span class="project-tag">Finance</span>
+              <span class="project-tag">Professional Services</span>
+              <span class="project-tag">Mortgage Broker</span>
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">Mobile Friendly</span>
+            </div>
+
+            <div class="project-actions reveal reveal-delay-3">
+              <a href="https://ml1-dkz.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#0B6B30;color:#F5F3EA">
+                Visit Site
+                <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://ml1-dkz.pages.dev/" target="_blank" rel="noopener" class="btn-ghost">
+                Full Page Preview
+                <svg viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="project-divider" aria-hidden="true"></div>
+
+    <!-- =============================================
+         PROJECT 05 — MODERN LENDING VARIANT 2  (generated)
+         ============================================= -->
+    <article class="project" id="proj-ml2" aria-label="Modern Lending Variant 2 project">
+
+      <div class="project-bg" aria-hidden="true"></div>
+      <div class="project-bg-img" style="background-image:url('images/shaynesdesigns-shaynes-designs-portfolio-ml2-hero.webp')" aria-hidden="true"></div>
+      <div class="project-bg-overlay" style="background:linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(26,42,74,0.93) 50%, rgba(15,23,42,0.97) 100%)" aria-hidden="true"></div>
+
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #A3EF04, rgba(163,239,4,0.2), transparent);z-index:10" aria-hidden="true"></div>
+
+      <div class="project-inner">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="ml2-full" data-lightbox-mobile="ml2-full-top">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-fullpage-top.jpg" alt="Modern Lending Variant 2 — top half" width="1440" height="4382" loading="lazy">
+        </div>
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="ml2-full" data-lightbox-mobile="ml2-full-bottom">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-fullpage-bottom.jpg" alt="Modern Lending Variant 2 — bottom half" width="1440" height="4381" loading="lazy">
+        </div>
+
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="ml2-hero" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-shot-hero.jpg" alt="Modern Lending Variant 2 — hero" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="ml2-content" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-shot-content.jpg" alt="Modern Lending Variant 2 — content" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="project-layout">
+          <div class="project-info">
+            <div class="project-num reveal" aria-hidden="true">05</div>
+
+            <div class="project-category reveal reveal-delay-1" style="color:#A3EF04">
+              <span style="background:#A3EF04;display:inline-block;width:1.5rem;height:1px"></span>
+              Professional Services / Finance
+            </div>
+
+            <h2 class="project-name reveal reveal-delay-1">Modern Lending<br>v2</h2>
+
+            <p class="project-desc reveal reveal-delay-2">
+              A second design direction for the same Tasmanian mortgage brokerage, built around a bolder, higher-contrast palette and a more editorial layout for home loan seekers across Hobart and Australia-wide.
+            </p>
+
+            <div class="project-tags reveal reveal-delay-2">
+              <span class="project-tag">Finance</span>
+              <span class="project-tag">Professional Services</span>
+              <span class="project-tag">Mortgage Broker</span>
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">Mobile Friendly</span>
+            </div>
+
+            <div class="project-actions reveal reveal-delay-3">
+              <a href="https://ml2-bmn.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#A3EF04;color:#132400">
+                Visit Site
+                <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://ml2-bmn.pages.dev/" target="_blank" rel="noopener" class="btn-ghost">
+                Full Page Preview
+                <svg viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="project-divider" aria-hidden="true"></div>
+
+    <!-- =============================================
+         PROJECT 06 — CHIANG MAI GYMKHANA CLUB  (generated)
+         ============================================= -->
+    <article class="project" id="proj-chiangmaigymkhana" aria-label="Chiang Mai Gymkhana Club project">
+
+      <div class="project-bg" aria-hidden="true"></div>
+      <div class="project-bg-img" style="background-image:url('images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-hero.webp')" aria-hidden="true"></div>
+      <div class="project-bg-overlay" style="background:linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(26,42,74,0.93) 50%, rgba(15,23,42,0.97) 100%)" aria-hidden="true"></div>
+
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #2D5016, rgba(45,80,22,0.2), transparent);z-index:10" aria-hidden="true"></div>
+
+      <div class="project-inner">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="chiangmaigymkhana-full" data-lightbox-mobile="chiangmaigymkhana-full-top">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-fullpage-top.jpg" alt="Chiang Mai Gymkhana Club — top half" width="1440" height="4345" loading="lazy">
+        </div>
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="chiangmaigymkhana-full" data-lightbox-mobile="chiangmaigymkhana-full-bottom">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-fullpage-bottom.jpg" alt="Chiang Mai Gymkhana Club — bottom half" width="1440" height="4345" loading="lazy">
+        </div>
+
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="chiangmaigymkhana-hero" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-shot-hero.jpg" alt="Chiang Mai Gymkhana Club — hero" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="chiangmaigymkhana-content" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-shot-content.jpg" alt="Chiang Mai Gymkhana Club — content" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="project-layout">
+          <div class="project-info">
+            <div class="project-num reveal" aria-hidden="true">06</div>
+
+            <div class="project-category reveal reveal-delay-1" style="color:#2D5016">
+              <span style="background:#2D5016;display:inline-block;width:1.5rem;height:1px"></span>
+              Content / Sports & Social Club
+            </div>
+
+            <h2 class="project-name reveal reveal-delay-1" style="font-family:'Playfair Display',serif">Chiang Mai<br>Gymkhana Club</h2>
+
+            <p class="project-desc reveal reveal-delay-2" style="font-family:'Inter',sans-serif">
+              A historic sports and social institution in Chiang Mai, dating back over a century. Golf, tennis, cricket, and dining brought into a site that carries the weight of the club's heritage without feeling dated.
+            </p>
+
+            <div class="project-tags reveal reveal-delay-2">
+              <span class="project-tag">Content Site</span>
+              <span class="project-tag">Sports Club</span>
+              <span class="project-tag">Heritage Brand</span>
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">Mobile Friendly</span>
+            </div>
+
+            <div class="project-actions reveal reveal-delay-3">
+              <a href="https://chiangmaigymkhana.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#2D5016;color:#FFFFFF">
+                Visit Site
+                <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://chiangmaigymkhana.com/" target="_blank" rel="noopener" class="btn-ghost">
+                Full Page Preview
+                <svg viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="project-divider" aria-hidden="true"></div>
+
+    <!-- =============================================
+         PROJECT 07 — KEN BROWN FINANCIAL CONSULTANT  (generated)
+         ============================================= -->
+    <article class="project" id="proj-kenbrownfc" aria-label="Ken Brown Financial Consultant project">
+
+      <div class="project-bg" aria-hidden="true"></div>
+      <div class="project-bg-img" style="background-image:url('images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-hero.webp')" aria-hidden="true"></div>
+      <div class="project-bg-overlay" style="background:linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(26,42,74,0.93) 50%, rgba(15,23,42,0.97) 100%)" aria-hidden="true"></div>
+
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #D4A574, rgba(212,165,116,0.2), transparent);z-index:10" aria-hidden="true"></div>
+
+      <div class="project-inner">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="kenbrownfc-full" data-lightbox-mobile="kenbrownfc-full-top">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-fullpage-top.jpg" alt="Ken Brown Financial Consultant — top half" width="1440" height="5341" loading="lazy">
+        </div>
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="kenbrownfc-full" data-lightbox-mobile="kenbrownfc-full-bottom">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-fullpage-bottom.jpg" alt="Ken Brown Financial Consultant — bottom half" width="1440" height="5341" loading="lazy">
+        </div>
+
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="kenbrownfc-hero" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-shot-hero.jpg" alt="Ken Brown Financial Consultant — hero" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="kenbrownfc-content" data-lightbox-mobile="none">
+          <img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-shot-content.jpg" alt="Ken Brown Financial Consultant — content" width="1440" height="900" loading="lazy">
+          <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
+        </div>
+
+        <div class="project-layout">
+          <div class="project-info">
+            <div class="project-num reveal" aria-hidden="true">07</div>
+
+            <div class="project-category reveal reveal-delay-1" style="color:#D4A574">
+              <span style="background:#D4A574;display:inline-block;width:1.5rem;height:1px"></span>
+              Professional Services / Finance
+            </div>
+
+            <h2 class="project-name reveal reveal-delay-1" style="font-family:'Inter',serif">Ken Brown<br>Financial</h2>
+
+            <p class="project-desc reveal reveal-delay-2" style="font-family:'Inter',sans-serif">
+              An American expat financial advisor serving U.S. citizens in Thailand. Cross-border planning explained in plain English, built to earn trust from clients making high-stakes financial decisions far from home.
+            </p>
+
+            <div class="project-tags reveal reveal-delay-2">
+              <span class="project-tag">Finance</span>
+              <span class="project-tag">Professional Services</span>
+              <span class="project-tag">Trust Signals</span>
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">Mobile Friendly</span>
+            </div>
+
+            <div class="project-actions reveal reveal-delay-3">
+              <a href="https://kenbrownfc.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#D4A574;color:#0A192F">
+                Visit Site
+                <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://kenbrownfc.com/" target="_blank" rel="noopener" class="btn-ghost">
                 Full Page Preview
                 <svg viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
@@ -482,6 +907,366 @@
       </div>
       <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-fullpage-bottom.jpg" alt="Chiang Mai Ambassador — bottom half of full page" width="1440" height="3574" loading="lazy"></div>
       <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://chiangmaiambassador.com" target="_blank" rel="noopener" class="btn-visit" style="background:#EAB308;color:#0F172A;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-cmlocals-hero" role="dialog" aria-modal="true" aria-label="CM Locals — hero" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">cmlocals.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-shot-hero.jpg" alt="CM Locals — hero" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://www.cmlocals.com" target="_blank" rel="noopener" class="btn-visit" style="background:#187E3C;color:#FFFFFF;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-cmlocals-content" role="dialog" aria-modal="true" aria-label="CM Locals — content" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">cmlocals.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-shot-content.jpg" alt="CM Locals — content" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://www.cmlocals.com" target="_blank" rel="noopener" class="btn-visit" style="background:#187E3C;color:#FFFFFF;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-cmlocals-full" role="dialog" aria-modal="true" aria-label="CM Locals — full page" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">cmlocals.com — Full page</span>
+        <button class="lightbox-close" aria-label="Close preview">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-fullpage.jpg" alt="CM Locals — full website from hero to footer" width="1440" height="9015" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore the full page</span><a href="https://www.cmlocals.com" target="_blank" rel="noopener" class="btn-visit" style="background:#187E3C;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-cmlocals-full-top" role="dialog" aria-modal="true" aria-label="CM Locals — page top" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">cmlocals.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-fullpage-top.jpg" alt="CM Locals — top half of full page" width="1440" height="4508" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://www.cmlocals.com" target="_blank" rel="noopener" class="btn-visit" style="background:#187E3C;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-cmlocals-full-bottom" role="dialog" aria-modal="true" aria-label="CM Locals — page bottom" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">cmlocals.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-cmlocals-fullpage-bottom.jpg" alt="CM Locals — bottom half of full page" width="1440" height="4507" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://www.cmlocals.com" target="_blank" rel="noopener" class="btn-visit" style="background:#187E3C;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-aitaxadvisors-hero" role="dialog" aria-modal="true" aria-label="American International Tax Advisers — hero" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">aitaxadvisors.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-shot-hero.jpg" alt="American International Tax Advisers — hero" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://www.aitaxadvisors.com" target="_blank" rel="noopener" class="btn-visit" style="background:#005895;color:#FFFFFF;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-aitaxadvisors-content" role="dialog" aria-modal="true" aria-label="American International Tax Advisers — content" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">aitaxadvisors.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-shot-content.jpg" alt="American International Tax Advisers — content" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://www.aitaxadvisors.com" target="_blank" rel="noopener" class="btn-visit" style="background:#005895;color:#FFFFFF;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-aitaxadvisors-full" role="dialog" aria-modal="true" aria-label="American International Tax Advisers — full page" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">aitaxadvisors.com — Full page</span>
+        <button class="lightbox-close" aria-label="Close preview">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-fullpage.jpg" alt="American International Tax Advisers — full website from hero to footer" width="1440" height="9741" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore the full page</span><a href="https://www.aitaxadvisors.com" target="_blank" rel="noopener" class="btn-visit" style="background:#005895;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-aitaxadvisors-full-top" role="dialog" aria-modal="true" aria-label="American International Tax Advisers — page top" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">aitaxadvisors.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-fullpage-top.jpg" alt="American International Tax Advisers — top half of full page" width="1440" height="4871" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://www.aitaxadvisors.com" target="_blank" rel="noopener" class="btn-visit" style="background:#005895;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-aitaxadvisors-full-bottom" role="dialog" aria-modal="true" aria-label="American International Tax Advisers — page bottom" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">aitaxadvisors.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-aitaxadvisors-fullpage-bottom.jpg" alt="American International Tax Advisers — bottom half of full page" width="1440" height="4870" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://www.aitaxadvisors.com" target="_blank" rel="noopener" class="btn-visit" style="background:#005895;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml1-hero" role="dialog" aria-modal="true" aria-label="Modern Lending — hero" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml1-dkz.pages.dev</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-shot-hero.jpg" alt="Modern Lending — hero" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://ml1-dkz.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#0B6B30;color:#F5F3EA;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml1-content" role="dialog" aria-modal="true" aria-label="Modern Lending — content" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml1-dkz.pages.dev</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-shot-content.jpg" alt="Modern Lending — content" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://ml1-dkz.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#0B6B30;color:#F5F3EA;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml1-full" role="dialog" aria-modal="true" aria-label="Modern Lending — full page" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml1-dkz.pages.dev — Full page</span>
+        <button class="lightbox-close" aria-label="Close preview">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-fullpage.jpg" alt="Modern Lending — full website from hero to footer" width="1440" height="6363" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore the full page</span><a href="https://ml1-dkz.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#0B6B30;color:#F5F3EA;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml1-full-top" role="dialog" aria-modal="true" aria-label="Modern Lending — page top" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml1-dkz.pages.dev</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-fullpage-top.jpg" alt="Modern Lending — top half of full page" width="1440" height="3182" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://ml1-dkz.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#0B6B30;color:#F5F3EA;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml1-full-bottom" role="dialog" aria-modal="true" aria-label="Modern Lending — page bottom" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml1-dkz.pages.dev</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml1-fullpage-bottom.jpg" alt="Modern Lending — bottom half of full page" width="1440" height="3181" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://ml1-dkz.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#0B6B30;color:#F5F3EA;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml2-hero" role="dialog" aria-modal="true" aria-label="Modern Lending Variant 2 — hero" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml2-bmn.pages.dev</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-shot-hero.jpg" alt="Modern Lending Variant 2 — hero" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://ml2-bmn.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#A3EF04;color:#132400;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml2-content" role="dialog" aria-modal="true" aria-label="Modern Lending Variant 2 — content" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml2-bmn.pages.dev</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-shot-content.jpg" alt="Modern Lending Variant 2 — content" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://ml2-bmn.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#A3EF04;color:#132400;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml2-full" role="dialog" aria-modal="true" aria-label="Modern Lending Variant 2 — full page" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml2-bmn.pages.dev — Full page</span>
+        <button class="lightbox-close" aria-label="Close preview">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-fullpage.jpg" alt="Modern Lending Variant 2 — full website from hero to footer" width="1440" height="8763" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore the full page</span><a href="https://ml2-bmn.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#A3EF04;color:#132400;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml2-full-top" role="dialog" aria-modal="true" aria-label="Modern Lending Variant 2 — page top" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml2-bmn.pages.dev</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-fullpage-top.jpg" alt="Modern Lending Variant 2 — top half of full page" width="1440" height="4382" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://ml2-bmn.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#A3EF04;color:#132400;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-ml2-full-bottom" role="dialog" aria-modal="true" aria-label="Modern Lending Variant 2 — page bottom" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">ml2-bmn.pages.dev</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-ml2-fullpage-bottom.jpg" alt="Modern Lending Variant 2 — bottom half of full page" width="1440" height="4381" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://ml2-bmn.pages.dev/" target="_blank" rel="noopener" class="btn-visit" style="background:#A3EF04;color:#132400;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-chiangmaigymkhana-hero" role="dialog" aria-modal="true" aria-label="Chiang Mai Gymkhana Club — hero" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">chiangmaigymkhana.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-shot-hero.jpg" alt="Chiang Mai Gymkhana Club — hero" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://chiangmaigymkhana.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#2D5016;color:#FFFFFF;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-chiangmaigymkhana-content" role="dialog" aria-modal="true" aria-label="Chiang Mai Gymkhana Club — content" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">chiangmaigymkhana.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-shot-content.jpg" alt="Chiang Mai Gymkhana Club — content" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://chiangmaigymkhana.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#2D5016;color:#FFFFFF;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-chiangmaigymkhana-full" role="dialog" aria-modal="true" aria-label="Chiang Mai Gymkhana Club — full page" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">chiangmaigymkhana.com — Full page</span>
+        <button class="lightbox-close" aria-label="Close preview">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-fullpage.jpg" alt="Chiang Mai Gymkhana Club — full website from hero to footer" width="1440" height="8690" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore the full page</span><a href="https://chiangmaigymkhana.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#2D5016;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-chiangmaigymkhana-full-top" role="dialog" aria-modal="true" aria-label="Chiang Mai Gymkhana Club — page top" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">chiangmaigymkhana.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-fullpage-top.jpg" alt="Chiang Mai Gymkhana Club — top half of full page" width="1440" height="4345" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://chiangmaigymkhana.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#2D5016;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-chiangmaigymkhana-full-bottom" role="dialog" aria-modal="true" aria-label="Chiang Mai Gymkhana Club — page bottom" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">chiangmaigymkhana.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-chiangmaigymkhana-fullpage-bottom.jpg" alt="Chiang Mai Gymkhana Club — bottom half of full page" width="1440" height="4345" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://chiangmaigymkhana.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#2D5016;color:#FFFFFF;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-kenbrownfc-hero" role="dialog" aria-modal="true" aria-label="Ken Brown Financial Consultant — hero" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">kenbrownfc.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-shot-hero.jpg" alt="Ken Brown Financial Consultant — hero" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://kenbrownfc.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#D4A574;color:#0A192F;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-kenbrownfc-content" role="dialog" aria-modal="true" aria-label="Ken Brown Financial Consultant — content" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">kenbrownfc.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-shot-content.jpg" alt="Ken Brown Financial Consultant — content" width="1440" height="900" loading="lazy"></div>
+      <div class="lightbox-footer"><a href="https://kenbrownfc.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#D4A574;color:#0A192F;font-size:.7rem;padding:.5rem 1.25rem">Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:11px;height:11px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-kenbrownfc-full" role="dialog" aria-modal="true" aria-label="Ken Brown Financial Consultant — full page" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">kenbrownfc.com — Full page</span>
+        <button class="lightbox-close" aria-label="Close preview">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-fullpage.jpg" alt="Ken Brown Financial Consultant — full website from hero to footer" width="1440" height="10682" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore the full page</span><a href="https://kenbrownfc.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#D4A574;color:#0A192F;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-kenbrownfc-full-top" role="dialog" aria-modal="true" aria-label="Ken Brown Financial Consultant — page top" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">kenbrownfc.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-fullpage-top.jpg" alt="Ken Brown Financial Consultant — top half of full page" width="1440" height="5341" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://kenbrownfc.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#D4A574;color:#0A192F;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-kenbrownfc-full-bottom" role="dialog" aria-modal="true" aria-label="Ken Brown Financial Consultant — page bottom" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">kenbrownfc.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-kenbrownfc-fullpage-bottom.jpg" alt="Ken Brown Financial Consultant — bottom half of full page" width="1440" height="5341" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://kenbrownfc.com/" target="_blank" rel="noopener" class="btn-visit" style="background:#D4A574;color:#0A192F;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
     </div>
   </div>
 
@@ -609,8 +1394,31 @@
         });
       }
     });
+
+    // ============================================
+    // CURSOR SPOTLIGHT EFFECT
+    // ============================================
+    (function() {
+      var spotlight = document.getElementById('spotlight');
+      if (!spotlight) return;
+
+      document.addEventListener('mousemove', function(e) {
+        spotlight.style.left = e.clientX + 'px';
+        spotlight.style.top = e.clientY + 'px';
+        spotlight.style.background = 'radial-gradient(circle, rgba(194, 170, 105, 1) 0%, rgba(194, 170, 105, 0) 70%)';
+      });
+
+      // Hide spotlight when mouse leaves window
+      document.addEventListener('mouseleave', function() {
+        spotlight.style.opacity = '0';
+      });
+
+      document.addEventListener('mouseenter', function() {
+        spotlight.style.opacity = '.4';
+      });
+    })();
   </script>
 
-  <script src="/js/cursor.js"></script>
+  <script src="./js/cursor.js"></script>
 </body>
 </html>

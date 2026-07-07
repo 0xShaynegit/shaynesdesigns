@@ -35,7 +35,7 @@
     document.addEventListener('mousemove', function (e) {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      dot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0)';
+      dot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%,-50%)';
       if (label) {
         label.style.transform = 'translate3d(' + (mouseX + 22) + 'px,' + (mouseY - 14) + 'px,0)';
         const el = document.elementFromPoint(e.clientX, e.clientY);
@@ -49,7 +49,7 @@
     function animateRing() {
       ringX += (mouseX - ringX) * 0.15;
       ringY += (mouseY - ringY) * 0.15;
-      ring.style.transform = 'translate3d(' + (ringX - 18) + 'px,' + (ringY - 18) + 'px,0)';
+      ring.style.transform = 'translate3d(' + ringX + 'px,' + ringY + 'px,0) translate(-50%,-50%)';
       requestAnimationFrame(animateRing);
     }
     animateRing();

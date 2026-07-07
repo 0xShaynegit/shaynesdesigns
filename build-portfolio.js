@@ -65,19 +65,19 @@ function projectHtml(p, index) {
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, ${p.accent}, ${hexAlpha(p.accent, 0.2)}, transparent);z-index:10" aria-hidden="true"></div>
 
       <div class="project-inner">
-        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="${p.slug}-full" data-cursor-label="EXPAND">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="${p.slug}-full" data-lightbox-mobile="${p.slug}-full-top" data-cursor-label="EXPAND">
           <img src="${img(p, 'fullpage-top', 'jpg')}" alt="${p.ariaName} — top half" width="${ftDims[0]}" height="${ftDims[1]}" loading="${index === 0 ? 'eager' : 'lazy'}">
         </div>
-        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="${p.slug}-full" data-cursor-label="EXPAND">
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="${p.slug}-full" data-lightbox-mobile="${p.slug}-full-bottom" data-cursor-label="EXPAND">
           <img src="${img(p, 'fullpage-bottom', 'jpg')}" alt="${p.ariaName} — bottom half" width="${fbDims[0]}" height="${fbDims[1]}" loading="${index === 0 ? 'eager' : 'lazy'}">
         </div>
 
-        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="${p.slug}-hero" data-cursor-label="EXPAND">
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="${p.slug}-hero" data-lightbox-mobile="none" data-cursor-label="EXPAND">
           <img src="${img(p, 'shot-hero', 'jpg')}" alt="${p.ariaName} — hero" width="${shotW}" height="${shotH}" loading="${index === 0 ? 'eager' : 'lazy'}">
           <div class="shot-overlay" aria-hidden="true"><div class="shot-expand">${EXPAND_SVG}Expand</div></div>
         </div>
 
-        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="${p.slug}-content" data-cursor-label="EXPAND">
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="${p.slug}-content" data-lightbox-mobile="none" data-cursor-label="EXPAND">
           <img src="${img(p, 'shot-content', 'jpg')}" alt="${p.ariaName} — content" width="${shotW}" height="${shotH}" loading="${index === 0 ? 'eager' : 'lazy'}">
           <div class="shot-overlay" aria-hidden="true"><div class="shot-expand">${EXPAND_SVG}Expand</div></div>
         </div>
@@ -149,7 +149,13 @@ function lightboxHtml(p) {
       visitBtn) +
     box(p.slug + '-full', 'full page',
       `<img src="${img(p, 'fullpage', 'jpg')}" alt="${p.ariaName} — full website from hero to footer" width="${fullDims[0]}" height="${fullDims[1]}" loading="lazy">`,
-      `<span class="lightbox-footer-label">Scroll to explore the full page</span>${visitBtnLg}`)
+      `<span class="lightbox-footer-label">Scroll to explore the full page</span>${visitBtnLg}`) +
+    box(p.slug + '-full-top', 'page top',
+      `<img src="${img(p, 'fullpage-top', 'jpg')}" alt="${p.ariaName} — top half of full page" width="${(p.fullTopDims || [1440, 3574])[0]}" height="${(p.fullTopDims || [1440, 3574])[1]}" loading="lazy">`,
+      `<span class="lightbox-footer-label">Scroll to explore</span>${visitBtnLg}`) +
+    box(p.slug + '-full-bottom', 'page bottom',
+      `<img src="${img(p, 'fullpage-bottom', 'jpg')}" alt="${p.ariaName} — bottom half of full page" width="${(p.fullBottomDims || p.fullTopDims || [1440, 3574])[0]}" height="${(p.fullBottomDims || p.fullTopDims || [1440, 3574])[1]}" loading="lazy">`,
+      `<span class="lightbox-footer-label">Scroll to explore</span>${visitBtnLg}`)
   );
 }
 
@@ -198,7 +204,7 @@ function main() {
     console.log(current === html ? 'No changes.' : 'portfolio.html WOULD change.');
   } else {
     fs.writeFileSync(HTML_FILE, html);
-    console.log('portfolio.html rebuilt: ' + data.projects.length + ' project(s), ' + (data.projects.length * 3) + ' lightboxes.' + (warnings ? ' (' + warnings + ' image warnings)' : ''));
+    console.log('portfolio.html rebuilt: ' + data.projects.length + ' project(s), ' + (data.projects.length * 5) + ' lightboxes.' + (warnings ? ' (' + warnings + ' image warnings)' : ''));
   }
 }
 

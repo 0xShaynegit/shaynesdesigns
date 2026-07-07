@@ -274,6 +274,8 @@
       .panel-top{position:static;order:4;width:auto;height:110vw;max-height:640px;border:1px solid rgba(255,255,255,0.08)}
       .panel-bottom{position:static;order:5;width:auto;height:110vw;max-height:640px;border:1px solid rgba(255,255,255,0.08)}
       .project-num{margin-bottom:0}
+      .shot-overlay{display:none}
+      .shot-above,.shot-below{cursor:default}
     }
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}.reveal{opacity:1;transform:none}}
   .cursor-dot{position:fixed;width:32px;height:32px;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .1s ease,opacity .3s ease}.cursor-dot::before,.cursor-dot::after{content:"";position:absolute;background:var(--gold)}.cursor-dot::before{width:18px;height:1px;left:50%;top:50%;transform:translate(-50%,-50%)}.cursor-dot::after{width:1px;height:18px;left:50%;top:50%;transform:translate(-50%,-50%)}.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(194,170,105,0.5);border-radius:50%;pointer-events:none;z-index:9997;transform:translate3d(0,0,0);transition:transform .25s ease,width .3s ease,height .3s ease,border-color .3s ease}body:hover .cursor-dot{opacity:1}.cursor-label{position:fixed;pointer-events:none;z-index:9999;font-family:var(--font-display);font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(11,0,79,0.85);border:1px solid rgba(194,170,105,0.4);padding:.35rem .75rem;border-radius:100px;opacity:0;transition:opacity .2s ease;white-space:nowrap}.cursor-label.on-dark{color:#0b0053;background:rgba(194,170,105,0.92);border-color:rgba(194,170,105,0.6)}</style>
@@ -344,19 +346,19 @@
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right, #EAB308, rgba(234,179,8,0.2), transparent);z-index:10" aria-hidden="true"></div>
 
       <div class="project-inner">
-        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full" data-cursor-label="EXPAND">
+        <div class="panel-top" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full" data-lightbox-mobile="cma-full-top" data-cursor-label="EXPAND">
           <img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-fullpage-top.jpg" alt="Chiang Mai Ambassador — top half" width="1440" height="3574" loading="eager">
         </div>
-        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full" data-cursor-label="EXPAND">
+        <div class="panel-bottom" role="button" tabindex="0" aria-label="View full page" data-lightbox="cma-full" data-lightbox-mobile="cma-full-bottom" data-cursor-label="EXPAND">
           <img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-fullpage-bottom.jpg" alt="Chiang Mai Ambassador — bottom half" width="1440" height="3574" loading="eager">
         </div>
 
-        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="cma-hero" data-cursor-label="EXPAND">
+        <div class="shot shot-above" role="button" tabindex="0" aria-label="Expand hero screenshot" data-lightbox="cma-hero" data-lightbox-mobile="none" data-cursor-label="EXPAND">
           <img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-shot-hero.jpg" alt="Chiang Mai Ambassador — hero" width="1440" height="900" loading="eager">
           <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
         </div>
 
-        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="cma-content" data-cursor-label="EXPAND">
+        <div class="shot shot-below" role="button" tabindex="0" aria-label="Expand content screenshot" data-lightbox="cma-content" data-lightbox-mobile="none" data-cursor-label="EXPAND">
           <img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-shot-content.jpg" alt="Chiang Mai Ambassador — content" width="1440" height="900" loading="eager">
           <div class="shot-overlay" aria-hidden="true"><div class="shot-expand"><svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</div></div>
         </div>
@@ -457,6 +459,30 @@
     </div>
   </div>
 
+  <div class="lightbox" id="lightbox-cma-full-top" role="dialog" aria-modal="true" aria-label="Chiang Mai Ambassador — page top" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">chiangmaiambassador.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-fullpage-top.jpg" alt="Chiang Mai Ambassador — top half of full page" width="1440" height="3574" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://chiangmaiambassador.com" target="_blank" rel="noopener" class="btn-visit" style="background:#EAB308;color:#0F172A;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox-cma-full-bottom" role="dialog" aria-modal="true" aria-label="Chiang Mai Ambassador — page bottom" hidden>
+    <div class="lightbox-backdrop" aria-hidden="true"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span class="lightbox-header-title">chiangmaiambassador.com</span>
+        <button class="lightbox-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="lightbox-body"><img src="images/shaynesdesigns-shaynes-designs-portfolio-cma-fullpage-bottom.jpg" alt="Chiang Mai Ambassador — bottom half of full page" width="1440" height="3574" loading="lazy"></div>
+      <div class="lightbox-footer"><span class="lightbox-footer-label">Scroll to explore</span><a href="https://chiangmaiambassador.com" target="_blank" rel="noopener" class="btn-visit" style="background:#EAB308;color:#0F172A;font-size:.7rem;padding:.625rem 1.25rem"> Open live site <svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="width:12px;height:12px"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+  </div>
+
     <!-- LIGHTBOXES:END -->
 
   <!-- FOOTER -->
@@ -546,10 +572,17 @@
       setTimeout(function(){ lb.setAttribute('hidden',''); }, 400);
     }
 
-    // Trigger buttons
+    // Trigger buttons. On mobile (<=1024px) data-lightbox-mobile overrides data-lightbox;
+    // a value of "none" disables the lightbox entirely at that size.
+    function lightboxTarget(el){
+      if(window.matchMedia('(max-width:1024px)').matches && el.dataset.lightboxMobile){
+        return el.dataset.lightboxMobile === 'none' ? null : el.dataset.lightboxMobile;
+      }
+      return el.dataset.lightbox;
+    }
     document.querySelectorAll('[data-lightbox]').forEach(function(el){
-      el.addEventListener('click', function(){ openLightbox(el.dataset.lightbox); });
-      el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openLightbox(el.dataset.lightbox); } });
+      el.addEventListener('click', function(){ var t = lightboxTarget(el); if(t) openLightbox(t); });
+      el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); var t = lightboxTarget(el); if(t) openLightbox(t); } });
     });
 
     // Close buttons & backdrop

@@ -2,6 +2,8 @@
 research/
 .claude/
 _archive/
+.md/
+.tokensave/
 CLAUDE.md
 HANDOVER.md
 rules.md

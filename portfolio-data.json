@@ -1,0 +1,22 @@
+{
+  "_readme": "One entry per project, in display order. Run: node build-portfolio.js. Images must exist in images/ named shaynesdesigns-shaynes-designs-portfolio-<slug>-fullpage-top.jpg, -fullpage-bottom.jpg, -fullpage.jpg, -shot-hero.jpg, -shot-content.jpg, -hero.webp. Set any image field to override the convention. nameHtml may contain <br>. accent = brand colour, accentText = text colour on accent buttons, overlay = CSS gradient over the bg image.",
+  "projects": [
+    {
+      "slug": "cma",
+      "nameHtml": "Chiang Mai<br>Ambassador",
+      "ariaName": "Chiang Mai Ambassador",
+      "category": "Content / Expat Resource",
+      "accent": "#EAB308",
+      "accentText": "#0F172A",
+      "overlay": "linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(26,42,74,0.93) 50%, rgba(15,23,42,0.97) 100%)",
+      "desc": "16+ years of lived experience distilled into a comprehensive expat resource. Visa guides, neighbourhood breakdowns, cost of living data, community events, and practical guides for people making Chiang Mai home. Built for speed and depth — a content site that actually ranks.",
+      "tags": ["Visa Guides", "Expat Resource", "Animations", "Current Info", "Helpful Tips", "Mobile Friendly"],
+      "url": "https://chiangmaiambassador.com",
+      "displayUrl": "chiangmaiambassador.com",
+      "shotDims": [1440, 900],
+      "fullTopDims": [1440, 3574],
+      "fullBottomDims": [1440, 3574],
+      "fullDims": [1440, 7479]
+    }
+  ]
+}

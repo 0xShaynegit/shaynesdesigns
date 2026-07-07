@@ -1,5 +1,5 @@
 (function () {
-  if (window.matchMedia('(hover: none)').matches) return;
+  if (window.matchMedia('(hover: none)').matches || window.matchMedia('(max-width: 1024px)').matches) return;
 
   function initCursor() {
     const dot = document.getElementById('cursorDot');

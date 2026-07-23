@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Tell if Your Website is Actually Working</title>
+  <meta name="description" content="Stop guessing. Concrete metrics that prove if your website is performing. Lighthouse, Core Web Vitals, conversion tracking, and what to measure.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaynesdesigns.com/blog/how-to-measure-if-site-works">
+  <link rel="icon" type="image/png" href="../images/shaynesdesigns-shaynes-designs-favicon.png">
+
+  <style>
+    body { font-family: 'Nunito Sans', 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
+    .blog-container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+    header { background: #110076; color: #f9f9f9; padding: 3rem 1.5rem; }
+    header h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0; font-weight: 800; line-height: 1.1; }
+    header p { font-size: 1.125rem; opacity: 0.9; margin: 1rem 0 0 0; max-width: 600px; }
+    .blog-meta { background: #0b004f; color: #f9f9f9; padding: 2rem 1.5rem; }
+    .blog-meta span { font-size: 0.95rem; margin-right: 2rem; }
+    main { background: #f9f9f9; padding: 3rem 1.5rem; }
+    article { max-width: 900px; margin: 0 auto; }
+    h2 { font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #110076; font-weight: 800; }
+    h3 { font-size: 1.3rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #110076; font-weight: 700; }
+    p { margin-bottom: 1rem; line-height: 1.8; }
+    ul, ol { margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8; }
+    li { margin-bottom: 0.75rem; }
+    strong { color: #110076; }
+    .metric-card { background: #fff; border: 2px solid #c2aa69; border-radius: 6px; padding: 1.5rem; margin: 1.5rem 0; }
+    .metric-card h4 { margin-top: 0; color: #110076; }
+    .metric-good { color: #5cb85c; font-weight: 600; }
+    .metric-bad { color: #d9534f; font-weight: 600; }
+    .metric-fair { color: #f0ad4e; font-weight: 600; }
+    .benchmark { background: #f2f0ea; padding: 1.5rem; border-left: 4px solid #c2aa69; margin: 1.5rem 0; border-radius: 4px; }
+    .benchmark h4 { margin-top: 0; color: #110076; }
+    .tool-guide { background: #fff; padding: 1.5rem; border: 1px solid #ddd; border-radius: 6px; margin: 1.5rem 0; }
+    .tool-guide h4 { color: #110076; }
+    .checklist { list-style: none; margin-left: 0; }
+    .checklist li { padding-left: 2rem; position: relative; margin-bottom: 0.75rem; }
+    .checklist li::before { content: '✓'; position: absolute; left: 0; color: #5cb85c; font-weight: bold; font-size: 1.2rem; }
+    .cta-box { background: #110076; color: #f9f9f9; padding: 2.5rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+    .cta-box h3 { color: #f9f9f9; }
+    .cta-button { display: inline-block; background: #c2aa69; color: #110076; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 600; text-decoration: none; margin-top: 1rem; }
+    a { color: #110076; }
+    a:hover { text-decoration: underline; }
+    footer { background: #0b004f; color: #f9f9f9; padding: 2rem 1.5rem; text-align: center; margin-top: 3rem; }
+    footer a { color: #c2aa69; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="blog-container">
+      <h1>How to Tell if Your Website is Actually Working</h1>
+      <p>Stop guessing. Here are the concrete metrics that prove whether your website is performing or wasting your money.</p>
+    </div>
+  </header>
+
+  <div class="blog-meta">
+    <div class="blog-container">
+      <span>✍️ Shayne</span>
+      <span>📅 23 July 2026</span>
+      <span>⏱️ 9 min read</span>
+    </div>
+  </div>
+
+  <main>
+    <article>
+
+      <p><em>Your site looks nice. It gets traffic. But is it actually working?</em></p>
+
+      <p>Most website owners can't answer this question. They don't have a baseline. They don't know what to measure. So they guess based on vague feelings: "I think we're getting more leads" or "Traffic seems down."</p>
+
+      <p>That's not good enough. Here are the metrics that actually matter—and how to measure them.</p>
+
+      <h2>The Three Layers of "Working"</h2>
+
+      <p>A website works on three levels:</p>
+      <ol>
+        <li><strong>Technical layer:</strong> Does it load fast? Is it safe? Can people access it?</li>
+        <li><strong>User layer:</strong> Do people understand it? Can they navigate easily? Do they trust you?</li>
+        <li><strong>Business layer:</strong> Do people take action? Do you get leads, sales, or engagement?</li>
+      </ol>
+
+      <p>Most websites fail on layer 1 or 2 before they ever reach layer 3. Let's measure all three.</p>
+
+      <h2>Layer 1: Technical Performance (Speed & Security)</h2>
+
+      <h3>Metric 1: Lighthouse Score</h3>
+
+      <div class="metric-card">
+        <h4>What it is:</h4>
+        <p>Google's built-in audit tool. It tests your site on performance, accessibility, best practices, and SEO. Gives you a score 0–100.</p>
+
+        <h4>How to check:</h4>
+        <ul>
+          <li>Open your site in Chrome</li>
+          <li>Right-click → Inspect → Lighthouse tab</li>
+          <li>Click "Generate report"</li>
+          <li>Wait 60 seconds for the score</li>
+        </ul>
+
+        <h4>What to aim for:</h4>
+        <table style="width: 100%; margin-top: 1rem;">
+          <tr style="background: #f2f0ea;">
+            <td><strong>90–100</strong></td>
+            <td><span class="metric-good">✓ Excellent</span> — Your site is fast and well-built</td>
+          </tr>
+          <tr>
+            <td><strong>50–89</strong></td>
+            <td><span class="metric-fair">~ Okay</span> — Room for improvement. Users might bounce</td>
+          </tr>
+          <tr style="background: #f2f0ea;">
+            <td><strong>0–49</strong></td>
+            <td><span class="metric-bad">✗ Poor</span> — Your site is slow or broken. Fix this urgently</td>
+          </tr>
+        </table>
+
+        <h4>Why it matters:</h4>
+        <p>Lighthouse scores correlate with real user experience. A 90+ score means people won't bounce from slowness. Google also favors fast sites in rankings.</p>
+
+        <h4>Pro tip:</h4>
+        <p>Test on <strong>mobile</strong>, not just desktop. Mobile scores are usually lower and more realistic for real-world users on 4G networks.</p>
+      </div>
+
+      <h3>Metric 2: Core Web Vitals (Page Speed)</h3>
+
+      <div class="metric-card">
+        <h4>What it is:</h4>
+        <p>Three specific measurements of how fast your site feels to real users:</p>
+        <ul>
+          <li><strong>LCP (Largest Contentful Paint):</strong> How fast does the main content appear? Target: < 2.5 seconds</li>
+          <li><strong>FID (First Input Delay):</strong> How fast does the site respond to clicks? Target: < 100ms</li>
+          <li><strong>CLS (Cumulative Layout Shift):</strong> Do things jump around? Target: < 0.1</li>
+        </ul>
+
+        <h4>How to check:</h4>
+        <p>Visit <a href="https://pagespeed.web.dev" target="_blank">pagespeed.web.dev</a>, enter your URL, and run the test. It shows real user data and lab scores.</p>
+
+        <h4>Why it matters:</h4>
+        <p>These three metrics are Google's primary ranking factors for 2024+. Poor Core Web Vitals = lower rankings + lower conversions.</p>
+
+        <h4>Benchmark:</h4>
+        <div class="benchmark">
+          <p><strong>Good:</strong> All three metrics in green (LCP < 2.5s, FID < 100ms, CLS < 0.1)</p>
+          <p><strong>Needs work:</strong> One or more metrics in yellow or red</p>
+        </div>
+      </div>
+
+      <h2>Layer 2: User Experience (Engagement & Behavior)</h2>
+
+      <h3>Metric 3: Bounce Rate</h3>
+
+      <div class="metric-card">
+        <h4>What it is:</h4>
+        <p>Percentage of visitors who land on your site and leave without taking action (clicking a link, filling a form, viewing another page).</p>
+
+        <h4>How to check:</h4>
+        <p>Google Analytics 4 (GA4) → Reports → Engagement → Bounce rate</p>
+
+        <h4>What to aim for:</h4>
+        <ul>
+          <li><strong>40–50%:</strong> <span class="metric-good">✓ Excellent</span> — People like your site</li>
+          <li><strong>50–70%:</strong> <span class="metric-fair">~ Average</span> — Typical for most sites</li>
+          <li><strong>70%+:</strong> <span class="metric-bad">✗ High</span> — People aren't finding what they want</li>
+        </ul>
+
+        <h4>Why it matters:</h4>
+        <p>High bounce rate means your headline, value proposition, or content doesn't match what people expected. It's a signal your site needs messaging or design work.</p>
+
+        <h4>Pro tip:</h4>
+        <p>Check bounce rate by page. Your homepage might have 60% bounce, but your "Services" page might have 30%. That tells you which content resonates.</p>
+      </div>
+
+      <h3>Metric 4: Time on Page</h3>
+
+      <div class="metric-card">
+        <h4>What it is:</h4>
+        <p>How long (in seconds) visitors spend on your site before leaving.</p>
+
+        <h4>How to check:</h4>
+        <p>GA4 → Reports → Engagement → Pages and screens</p>
+
+        <h4>What to aim for:</h4>
+        <ul>
+          <li><strong>2+ minutes:</strong> <span class="metric-good">✓ Good</span> — People are reading</li>
+          <li><strong>30–120 seconds:</strong> <span class="metric-fair">~ Okay</span> — Quick skim</li>
+          <li><strong>< 30 seconds:</strong> <span class="metric-bad">✗ Too fast</span> — They didn't find what they wanted</li>
+        </ul>
+
+        <h4>Why it matters:</h4>
+        <p>Time on page correlates with engagement. Combined with bounce rate, it tells you if content is resonating or not.</p>
+      </div>
+
+      <h2>Layer 3: Business Results (The Bottom Line)</h2>
+
+      <h3>Metric 5: Conversion Rate</h3>
+
+      <div class="metric-card">
+        <h4>What it is:</h4>
+        <p>Percentage of visitors who complete a desired action (fill a form, make a purchase, book a call, sign up for email).</p>
+
+        <h4>How to check:</h4>
+        <p>GA4 → Admin → Events → Track "form_submit," "purchase," "schedule_call," etc.</p>
+
+        <h4>What to aim for:</h4>
+        <ul>
+          <li><strong>2–5%:</strong> <span class="metric-good">✓ Good</span> — For service businesses, 2% is solid</li>
+          <li><strong>1–2%:</strong> <span class="metric-fair">~ Average</span> — Most websites sit here</li>
+          <li><strong>< 1%:</strong> <span class="metric-bad">✗ Low</span> — Your site has a conversion problem</li>
+        </ul>
+
+        <h4>Why it matters:</h4>
+        <p>This is the #1 metric. You can have 10,000 visitors/month, but if your conversion rate is 0.5%, you're getting 50 leads. If you optimize to 2%, you're getting 200 leads from the same traffic.</p>
+
+        <h4>Pro tip:</h4>
+        <p>Conversion rate is the multiplier. Before you pay for more traffic, optimize your conversion rate first. It's usually cheaper and faster.</p>
+      </div>
+
+      <h3>Metric 6: Cost Per Acquisition (CPA)</h3>
+
+      <div class="metric-card">
+        <h4>What it is:</h4>
+        <p>How much you spend to get one customer or lead.</p>
+
+        <h4>How to calculate:</h4>
+        <p>Total marketing spend / Number of conversions = CPA</p>
+        <p>Example: Spent $1,000/month, got 20 leads = $50 CPA</p>
+
+        <h4>Why it matters:</h4>
+        <p>If your CPA is $50 and each customer is worth $500+, you're winning. If your CPA is $50 and each customer is worth $75, you're losing money.</p>
+
+        <h4>Pro tip:</h4>
+        <p>Track this monthly. If CPA is rising, your site has a problem (broken links, slower performance, weaker messaging). Fix it before it gets worse.</p>
+      </div>
+
+      <h2>Your Website Health Dashboard</h2>
+
+      <div class="tool-guide">
+        <h4>Monthly checklist (takes 15 minutes):</h4>
+        <ul class="checklist">
+          <li>Run Lighthouse (desktop + mobile). Target: both 90+</li>
+          <li>Check Core Web Vitals at pagespeed.web.dev. All green?</li>
+          <li>Review bounce rate in GA4. Is it trending up or down?</li>
+          <li>Check conversion rate. How many leads/sales this month?</li>
+          <li>Calculate CPA. Is it within budget?</li>
+          <li>Spot-check 3–5 pages for broken links, outdated info, typos</li>
+        </ul>
+      </div>
+
+      <h2>Red Flags (When to Take Action)</h2>
+
+      <p>Watch for these signals:</p>
+
+      <ul>
+        <li><strong>Lighthouse drops from 90 to 60:</strong> Something broke. Investigate immediately (usually plugins, images, or scripts)</li>
+        <li><strong>Bounce rate jumps 10+ points:</strong> Your messaging or design stopped resonating. Test changes</li>
+        <li><strong>Conversion rate drops:</strong> Either traffic quality changed or your site has a problem. Investigate</li>
+        <li><strong>Core Web Vitals turn red:</strong> Your site is slow. Users are leaving. Fix urgently</li>
+      </ul>
+
+      <h2>Tools You Need (All Free)</h2>
+
+      <div class="tool-guide">
+        <h4>Google Analytics 4 (GA4)</h4>
+        <p>Free traffic and conversion tracking. Set up goal tracking for forms, purchases, calls, etc.</p>
+        <p>Website: <a href="https://analytics.google.com" target="_blank">analytics.google.com</a></p>
+      </div>
+
+      <div class="tool-guide">
+        <h4>PageSpeed Insights</h4>
+        <p>Free Core Web Vitals and Lighthouse testing with real-world data.</p>
+        <p>Website: <a href="https://pagespeed.web.dev" target="_blank">pagespeed.web.dev</a></p>
+      </div>
+
+      <div class="tool-guide">
+        <h4>Google Search Console (GSC)</h4>
+        <p>Free tool to see how your site performs in Google Search, track rankings, monitor indexing.</p>
+        <p>Website: <a href="https://search.google.com/search-console" target="_blank">search.google.com/search-console</a></p>
+      </div>
+
+      <h2>The Honest Truth</h2>
+
+      <p>Most websites don't measure anything. They just hope traffic turns into customers. That's gambling, not strategy.</p>
+
+      <p>The businesses that win are the ones that:</p>
+
+      <ol>
+        <li>Establish a baseline (measure everything today)</li>
+        <li>Set targets (I want 2% conversion rate, < 2 second load time)</li>
+        <li>Make changes systematically (speed up images, rewrite copy, fix CTAs)</li>
+        <li>Measure impact (did conversion rate improve?)</li>
+        <li>Repeat (continuously optimize)</li>
+      </ol>
+
+      <p>Start this week. Pick three metrics. Measure them today. Then come back in 30 days and measure again.</p>
+
+      <p>You'll be surprised how actionable data becomes when you actually track it.</p>
+
+      <div class="cta-box">
+        <h3>Need Help Setting Up Tracking?</h3>
+        <p>We can audit your analytics setup and show you exactly what to measure. No confusion, just clear metrics.</p>
+        <a href="/#cta-message" class="cta-button">Get an Analytics Audit</a>
+      </div>
+
+      <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd; color: #666;"><em>Questions about your site metrics? <a href="https://wa.me/66801202074">Message us</a> — we're happy to walk you through your numbers.</em></p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shayne's Designs. All rights reserved.</p>
+    <p style="margin-top: 1rem;"><a href="/">Home</a> · <a href="/blog">Blog</a> · <a href="/#cta-message">Contact</a></p>
+  </footer>
+</body>
+</html>

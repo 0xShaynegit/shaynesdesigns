@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Website Design & Development — Shayne's Designs</title>
+  <meta name="description" content="Premium static website design and development. Custom HTML, CSS, JavaScript. Fast, secure, owned by you. For founders, agencies, and growing businesses.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaynesdesigns.com/services-static-websites">
+  <link rel="icon" type="image/png" href="/images/shaynesdesigns-shaynes-designs-favicon.png">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', 'Segoe UI', sans-serif; font-weight: 300; line-height: 1.6; color: #111; background: #f9f9f9; }
+    a { color: #110076; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header { background: #110076; color: #f9f9f9; padding: 3rem 1.5rem; margin-bottom: 2rem; }
+    header h1 { font-size: clamp(1.75rem, 4vw, 3rem); margin-bottom: 0.75rem; font-weight: 800; letter-spacing: -0.02em; }
+    header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; }
+
+    nav { background: #f2f0ea; padding: 1.5rem; margin-bottom: 2rem; text-align: center; }
+    nav a { display: inline-block; margin: 0 1.5rem; font-weight: 600; color: #110076; }
+
+    main { margin-bottom: 4rem; }
+
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.25rem; color: #110076; font-weight: 800; }
+    h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #110076; font-weight: 700; }
+
+    p { margin-bottom: 1rem; line-height: 1.8; }
+    ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .highlight-box { background: #f2f0ea; padding: 2rem; border-left: 4px solid #c2aa69; margin: 2rem 0; }
+
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+    .feature-card { background: #fff; padding: 1.5rem; border: 1px solid #ddd; border-radius: 6px; }
+    .feature-card h4 { color: #110076; font-weight: 700; margin-bottom: 0.75rem; }
+    .feature-card p { margin: 0; font-size: 0.95rem; }
+
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: #fff; }
+    .comparison-table th { background: #110076; color: #f9f9f9; padding: 1rem; text-align: left; font-weight: 700; }
+    .comparison-table td { padding: 1rem; border-bottom: 1px solid #ddd; }
+    .comparison-table tr:nth-child(even) { background: #f9f9f9; }
+
+    .cta-section { background: #110076; color: #f9f9f9; padding: 2.5rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+    .cta-section h2 { color: #f9f9f9; }
+    .cta-button { display: inline-block; background: #c2aa69; color: #110076; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 600; margin-top: 1.5rem; transition: background 0.3s; }
+    .cta-button:hover { background: #d4bc7a; text-decoration: none; }
+
+    .timeline { margin: 2rem 0; }
+    .timeline-item { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; padding-left: 2rem; position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: 0; top: 1.5rem; width: 12px; height: 12px; background: #c2aa69; border-radius: 50%; }
+    .timeline-item h4 { color: #110076; font-weight: 700; margin-bottom: 0.25rem; }
+    .timeline-item p { margin: 0; }
+
+    footer { background: #0b004f; color: #f9f9f9; padding: 2rem 1.5rem; text-align: center; margin-top: 3rem; }
+    footer a { color: #c2aa69; }
+
+    @media(max-width: 768px) {
+      .comparison-table { font-size: 0.9rem; }
+      .comparison-table td, .comparison-table th { padding: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Premium Static Website Design & Development</h1>
+    <p>Hand-coded, custom websites built for founders, agencies, and businesses that want to look elevated and load fast.</p>
+  </header>
+
+  <nav>
+    <a href="/">← Home</a>
+    <a href="/services-wordpress-migration">WordPress Migration</a>
+    <a href="/#cta-message">Contact</a>
+  </nav>
+
+  <main class="container">
+
+    <section>
+      <h2>What is a Static Website?</h2>
+      <p>A static website is built with pure HTML, CSS, and JavaScript—no database, no server-side processing, no plugins. The code is lightweight, auditable, and owned completely by you. It's the fastest, most secure architecture for most businesses.</p>
+      <div class="highlight-box">
+        <strong>Key advantage:</strong> You control everything. No vendor lock-in, no proprietary systems, no frameworks that become outdated.
+      </div>
+    </section>
+
+    <section>
+      <h2>Why Choose a Static Build?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h4>💨 Speed by Design</h4>
+          <p>No database queries, no server processing. Just files. Delivered globally via CDN. Typical load time: under 2 seconds.</p>
+        </div>
+        <div class="feature-card">
+          <h4>🔒 Security First</h4>
+          <p>No database to breach. No plugins to exploit. No back doors. Fewer attack surfaces than WordPress.</p>
+        </div>
+        <div class="feature-card">
+          <h4>👑 Code Ownership</h4>
+          <p>You receive the full source code, documentation, and ability to edit or move your site anytime. No lock-in.</p>
+        </div>
+        <div class="feature-card">
+          <h4>📈 Built for SEO</h4>
+          <p>Clean code that search engines understand. Fast load times improve ranking signals. Simple structure means better crawlability.</p>
+        </div>
+        <div class="feature-card">
+          <h4>💰 No Maintenance Overhead</h4>
+          <p>No plugins to update. No security patches to apply. No hosting bloat. Drastically lower ongoing costs.</p>
+        </div>
+        <div class="feature-card">
+          <h4>🎯 Built for Conversion</h4>
+          <p>Every design choice is intentional. Clear navigation, purposeful animations, strategic CTAs. Designed to convert.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>When is a Static Site the Right Choice?</h2>
+      <p>Static sites work best for:</p>
+      <ul>
+        <li><strong>Service businesses:</strong> Agencies, consultants, boutiques, freelancers</li>
+        <li><strong>E-commerce (smaller scale):</strong> Digital products, limited SKUs, simple checkout</li>
+        <li><strong>Portfolios & creative work:</strong> Design studios, photographers, artists</li>
+        <li><strong>Marketing sites:</strong> Landing pages, campaign sites, product launches</li>
+        <li><strong>Information sites:</strong> Guides, documentation, resource hubs</li>
+        <li><strong>Content platforms:</strong> Blogs, news sites, knowledge bases</li>
+        <li><strong>Community sites:</strong> Local guides, directories, listings</li>
+      </ul>
+
+      <h3>When You Might Want Something Else</h3>
+      <p>A static site isn't ideal if you need:</p>
+      <ul>
+        <li>Users logging in and managing accounts (though we can build static + serverless auth)</li>
+        <li>Real-time data updates (though webhooks can trigger rebuilds)</li>
+        <li>Heavy form processing (though we can handle forms with serverless backend)</li>
+      </ul>
+      <p>Even then, there are solutions. Let's discuss your specific needs.</p>
+    </section>
+
+    <section>
+      <h2>What We Build</h2>
+      <h3>Strategy & Positioning</h3>
+      <p>We start with discovery. Who is your audience? What's your competitive advantage? What should the site accomplish? We align the design and messaging around these answers.</p>
+
+      <h3>Custom Design</h3>
+      <p>No templates. No page builders. Every site is designed for your brand and audience. Distinctive aesthetics, refined typography, purposeful interactions.</p>
+
+      <h3>Hand-Coded Implementation</h3>
+      <p>Pure HTML, CSS, and minimal vanilla JavaScript. No frameworks, no bloat. The code is clean, auditable, and performant.</p>
+
+      <h3>Optimised Delivery</h3>
+      <p>Global CDN deployment. Image optimization. Asset minification. Everything tested and measured before launch.</p>
+
+      <h3>Full Handover</h3>
+      <p>You get the source code, documentation, and training on how to edit and maintain the site yourself. Plus 30 days of free support post-launch.</p>
+    </section>
+
+    <section>
+      <h2>The Build Process</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div>
+            <h4>Phase 1: Discovery (1–2 weeks)</h4>
+            <p>Interviews, research, competitive analysis. We define strategy, positioning, and messaging.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div>
+            <h4>Phase 2: Design (1–2 weeks)</h4>
+            <p>High-fidelity mockups, interactive prototypes. Your feedback shapes the final design.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div>
+            <h4>Phase 3: Development (2–3 weeks)</h4>
+            <p>Hand-coded implementation, testing, optimization. Progressive builds so you see the work.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div>
+            <h4>Phase 4: Launch & Handover (1 week)</h4>
+            <p>Final testing, DNS setup, deployment. You get the code, docs, and training.</p>
+          </div>
+        </div>
+      </div>
+      <p><strong>Typical timeline:</strong> 4–8 weeks from discovery to launch.</p>
+    </section>
+
+    <section>
+      <h2>Investment</h2>
+      <p>Pricing depends on scope, complexity, and timeline. Typical range:</p>
+      <ul>
+        <li><strong>Small brochure site:</strong> $2,500–$4,500</li>
+        <li><strong>Medium business site:</strong> $5,000–$10,000</li>
+        <li><strong>Complex site (e-commerce, custom integrations):</strong> $10,000+</li>
+      </ul>
+      <p>We provide a detailed proposal after discovery that outlines deliverables, timeline, and cost.</p>
+
+      <h3>Ongoing Support (Optional)</h3>
+      <p>After launch, you can choose to work with us on an ongoing basis for updates, monitoring, and optimization at <strong>$300/month</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Static vs. WordPress: A Comparison</h2>
+      <table class="comparison-table">
+        <tr>
+          <th>Aspect</th>
+          <th>Static Site</th>
+          <th>WordPress</th>
+        </tr>
+        <tr>
+          <td><strong>Setup Time</strong></td>
+          <td>Custom build, 4–8 weeks</td>
+          <td>Quick with themes, but customization takes time</td>
+        </tr>
+        <tr>
+          <td><strong>Performance</strong></td>
+          <td>Fast by default, typically 80+ Lighthouse</td>
+          <td>Requires optimization, often 40–60 stock</td>
+        </tr>
+        <tr>
+          <td><strong>Security</strong></td>
+          <td>Minimal attack surface, no database</td>
+          <td>Plugin vulnerabilities, database risks</td>
+        </tr>
+        <tr>
+          <td><strong>Maintenance</strong></td>
+          <td>None beyond content updates</td>
+          <td>Regular plugin, theme, core updates required</td>
+        </tr>
+        <tr>
+          <td><strong>Hosting Cost</strong></td>
+          <td>$0–$100/year (included with us)</td>
+          <td>$50–$500+/year depending on tier</td>
+        </tr>
+        <tr>
+          <td><strong>Code Ownership</strong></td>
+          <td>100% yours, fully portable</td>
+          <td>Locked to WordPress, requires migration to leave</td>
+        </tr>
+        <tr>
+          <td><strong>Customization</strong></td>
+          <td>Anything possible, no limits</td>
+          <td>Limited by plugins and theme architecture</td>
+        </tr>
+        <tr>
+          <td><strong>Editing</strong></td>
+          <td>Direct code editing or with AI assistance</td>
+          <td>Dashboard UI, no technical knowledge needed</td>
+        </tr>
+      </table>
+      <p><small><em>Note:</em> WordPress is still a good choice for sites requiring frequent content management by non-technical users or complex e-commerce. We'll recommend it if it's the better fit for your project.</small></p>
+    </section>
+
+    <section>
+      <h2>Our Promise</h2>
+      <ul>
+        <li>Custom, hand-coded work (no templates)</li>
+        <li>Clean, auditable code you own</li>
+        <li>High performance (typically 90+ Lighthouse)</li>
+        <li>Full support through launch</li>
+        <li>Honest communication about what's possible and what isn't</li>
+      </ul>
+    </section>
+
+    <div class="cta-section">
+      <h2>Ready to Build Something That Performs?</h2>
+      <p>Let's talk about your project. No obligation, no pitch—just a conversation about what you need.</p>
+      <a href="/#cta-message" class="cta-button">Start Your Project</a>
+    </div>
+
+    <section>
+      <h2>Questions?</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/66801202074">+66 801 202074</a><br>
+      <strong>Email:</strong> <a href="mailto:hello@shaynesdesigns.com">hello@shaynesdesigns.com</a></p>
+      <p>Response time: within 24 hours.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shayne's Designs. All rights reserved.</p>
+    <p style="margin-top: 1rem;"><a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
+  </footer>
+</body>
+</html>

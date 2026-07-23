@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress Migration to Static Site — Shayne's Designs</title>
+  <meta name="description" content="Migrate from WordPress to a fast, secure static website. Keep your content, lose the plugins and bloat. SEO preservation, redirects, smooth transition.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaynesdesigns.com/services-wordpress-migration">
+  <link rel="icon" type="image/png" href="/images/shaynesdesigns-shaynes-designs-favicon.png">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', 'Segoe UI', sans-serif; font-weight: 300; line-height: 1.6; color: #111; background: #f9f9f9; }
+    a { color: #110076; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header { background: #110076; color: #f9f9f9; padding: 3rem 1.5rem; margin-bottom: 2rem; }
+    header h1 { font-size: clamp(1.75rem, 4vw, 3rem); margin-bottom: 0.75rem; font-weight: 800; letter-spacing: -0.02em; }
+    header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; }
+
+    nav { background: #f2f0ea; padding: 1.5rem; margin-bottom: 2rem; text-align: center; }
+    nav a { display: inline-block; margin: 0 1.5rem; font-weight: 600; color: #110076; }
+
+    main { margin-bottom: 4rem; }
+
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.25rem; color: #110076; font-weight: 800; }
+    h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #110076; font-weight: 700; }
+
+    p { margin-bottom: 1rem; line-height: 1.8; }
+    ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .highlight-box { background: #f2f0ea; padding: 2rem; border-left: 4px solid #c2aa69; margin: 2rem 0; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+    .benefit-card { background: #fff; padding: 1.5rem; border: 1px solid #ddd; border-radius: 6px; border-top: 3px solid #c2aa69; }
+    .benefit-card h4 { color: #110076; font-weight: 700; margin-bottom: 0.5rem; }
+    .benefit-card p { margin: 0; font-size: 0.95rem; }
+
+    .checklist { list-style: none; margin: 1.5rem 0; }
+    .checklist li { padding-left: 2rem; position: relative; margin-bottom: 0.75rem; }
+    .checklist li::before { content: '✓'; position: absolute; left: 0; color: #5cb85c; font-weight: bold; font-size: 1.2rem; }
+
+    .timeline { margin: 2rem 0; }
+    .timeline-item { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; padding-left: 2rem; position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: 0; top: 1.5rem; width: 12px; height: 12px; background: #c2aa69; border-radius: 50%; }
+    .timeline-item h4 { color: #110076; font-weight: 700; margin-bottom: 0.25rem; }
+    .timeline-item p { margin: 0; font-size: 0.95rem; }
+
+    .cta-section { background: #110076; color: #f9f9f9; padding: 2.5rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+    .cta-section h2 { color: #f9f9f9; }
+    .cta-button { display: inline-block; background: #c2aa69; color: #110076; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 600; margin-top: 1.5rem; transition: background 0.3s; }
+    .cta-button:hover { background: #d4bc7a; text-decoration: none; }
+
+    .faqs { margin: 2rem 0; }
+    .faq-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #ddd; }
+    .faq-item:last-child { border-bottom: 0; }
+    .faq-item h4 { color: #110076; font-weight: 700; margin-bottom: 0.75rem; }
+
+    footer { background: #0b004f; color: #f9f9f9; padding: 2rem 1.5rem; text-align: center; margin-top: 3rem; }
+    footer a { color: #c2aa69; }
+
+    @media(max-width: 768px) {
+      .benefits-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WordPress Migration — Move to a Faster, Simpler Platform</h1>
+    <p>Keep your content and audience. Leave behind the plugins, bloat, and maintenance headaches. Migration from WordPress to static site.</p>
+  </header>
+
+  <nav>
+    <a href="/">← Home</a>
+    <a href="/services-static-websites">Static Websites</a>
+    <a href="/#cta-message">Contact</a>
+  </nav>
+
+  <main class="container">
+
+    <section>
+      <h2>Why Migrate from WordPress?</h2>
+      <p>WordPress is powerful, but it comes with costs: plugin vulnerabilities, database overhead, constant updates, hosting bills, and maintenance burden. A static site eliminates all of that.</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h4>🚀 3–5x Faster</h4>
+          <p>No database queries, no server processing. Your site loads in milliseconds.</p>
+        </div>
+        <div class="benefit-card">
+          <h4>🔒 More Secure</h4>
+          <p>No plugins to exploit. No database to breach. Drastically reduced attack surface.</p>
+        </div>
+        <div class="benefit-card">
+          <h4>⏰ Zero Maintenance</h4>
+          <p>No plugin updates, no security patches. Just your content.</p>
+        </div>
+        <div class="benefit-card">
+          <h4>💰 Lower Costs</h4>
+          <p>No expensive hosting, no plugin subscriptions. Hosting included with us.</p>
+        </div>
+        <div class="benefit-card">
+          <h4>👑 You Own It</h4>
+          <p>Full code ownership, no vendor lock-in, portable anywhere.</p>
+        </div>
+        <div class="benefit-card">
+          <h4>📈 Better SEO</h4>
+          <p>Fast load times, clean code, and proper redirects improve rankings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>The Migration Process</h2>
+
+      <h3>What's Included</h3>
+      <ul class="checklist">
+        <li>Full audit of your current WordPress site</li>
+        <li>Content extraction and restructure</li>
+        <li>HTML/CSS/JavaScript rebuild (not a dump of WordPress markup)</li>
+        <li>Design refresh and modernisation (optional, can keep existing look)</li>
+        <li>All redirects set up to preserve SEO</li>
+        <li>Image optimisation and WebP conversion</li>
+        <li>Global CDN deployment (Vercel)</li>
+        <li>Testing on desktop, tablet, mobile</li>
+        <li>DNS setup and SSL certificate configuration</li>
+        <li>30 days of free post-launch support</li>
+        <li>Full code handover and documentation</li>
+      </ul>
+
+      <h3>Timeline</h3>
+      <p><strong>Typical duration: 2–4 weeks</strong> (depends on site size and complexity)</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div>
+            <h4>Week 1: Audit & Planning</h4>
+            <p>We review your WordPress site, extract content, assess redirects, and plan the architecture.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div>
+            <h4>Week 2–3: Build & Testing</h4>
+            <p>Content is restructured and rebuilt as static HTML/CSS/JS. We test thoroughly and get your feedback.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div>
+            <h4>Week 4: Launch</h4>
+            <p>Final checks, DNS update, 301 redirects activated. Your site goes live.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>SEO Preservation</h3>
+      <p>We take SEO seriously. Here's how:</p>
+      <ul>
+        <li><strong>301 Redirects:</strong> Every old URL redirects to the new equivalent, preserving link equity</li>
+        <li><strong>Metadata Transfer:</strong> Page titles, meta descriptions, and structured data are preserved</li>
+        <li><strong>Canonical Tags:</strong> Properly configured to avoid duplicate content issues</li>
+        <li><strong>Sitemap & Robots.txt:</strong> Updated to reflect the new site structure</li>
+        <li><strong>Google Search Console:</strong> We help you update the property and request re-indexing</li>
+      </ul>
+
+      <h3>What Happens to Your Data</h3>
+      <ul>
+        <li>All content is backed up and transferred securely</li>
+        <li>Old WordPress database is archived (you keep a copy)</li>
+        <li>All images are optimised, converted to WebP, and hosted on the CDN</li>
+        <li>You receive the complete site code and can access it anytime</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Cost & Investment</h2>
+      <div class="highlight-box">
+        <p><strong>Starting at $500–$3,000</strong> depending on site size and complexity.</p>
+        <p>Typical breakdown: small brochure site $500–$1,500 | medium business site $1,500–$3,000 | large site with complex features $3,000+</p>
+        <p>We provide a detailed quote after reviewing your current site.</p>
+      </div>
+
+      <h3>What's Included in the Price</h3>
+      <ul>
+        <li>Full migration and rebuild</li>
+        <li>Content extraction and restructure</li>
+        <li>Design (modern refresh or keep existing aesthetic)</li>
+        <li>SEO setup with redirects</li>
+        <li>Hosting & deployment included for first year</li>
+        <li>30 days post-launch support</li>
+      </ul>
+
+      <h3>Ongoing Support (Optional)</h3>
+      <p>After launch, continue working with us at <strong>$300/month</strong> for updates, monitoring, and optimisation.</p>
+    </section>
+
+    <section>
+      <h2>Common Questions</h2>
+      <div class="faqs">
+
+        <div class="faq-item">
+          <h4>Will I lose my search rankings during migration?</h4>
+          <p>No. We set up 301 redirects for every page, which preserves your existing rankings. Google recognises the redirects and transfers ranking authority to the new URLs. You may see a slight temporary dip, but rankings should recover within weeks.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Can I still edit my site after launch?</h4>
+          <p>Yes. You receive the full source code and can edit it yourself with a text editor. Alternatively, we can teach you how to update content, or you can hire a developer familiar with static sites. For ongoing changes, we offer the $300/month support package.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What if I need a blog?</h4>
+          <p>We build blogs into static sites using HTML and can integrate them with simple CMS solutions if you prefer dashboard editing. We'll recommend the best approach for your needs.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Will everything look different?</h4>
+          <p>Not necessarily. We can preserve your existing design and just improve the performance underneath. Or, if you want a refresh, we can modernise the aesthetics as part of the migration. Your choice.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What if I change my mind after launch?</h4>
+          <p>You own the code 100%. You can take it elsewhere anytime, migrate back to WordPress, or publish it yourself. No lock-in, no penalties.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Does hosting cost extra?</h4>
+          <p>No. Hosting is included in your project price and for the first year after launch. After that, hosting via Vercel is optional but very affordable (typically $20–$50/month depending on traffic, or free for very low traffic sites).</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How do I manage email and domains?</h4>
+          <p>Your domain and email are separate from your website. You can keep your current domain registrar and email provider. We'll help with DNS setup if needed.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What if my WordPress site has custom plugins or complex functionality?</h4>
+          <p>We assess each custom feature. Many plugins can be replaced with simpler solutions or built directly into the static site. If something isn't feasible, we'll let you know upfront and discuss alternatives.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Eligibility Checklist</h2>
+      <p>WordPress migration is ideal if your site:</p>
+      <ul class="checklist">
+        <li>Has stable, well-organized content (pages, blog posts, images)</li>
+        <li>Doesn't require frequent user registrations or account management</li>
+        <li>Doesn't need real-time data or stock inventory management</li>
+        <li>Has reasonable file size (images aren't extremely large or numerous)</li>
+        <li>Uses standard WordPress structure (custom post types are fine but must be scoped)</li>
+      </ul>
+
+      <p>Not sure if your site is a good fit? Let's talk. We'll be honest about what's possible and what isn't.</p>
+    </section>
+
+    <div class="cta-section">
+      <h2>Ready to Migrate?</h2>
+      <p>Let's review your site and provide a clear, detailed quote.</p>
+      <a href="/#cta-message" class="cta-button">Get a Migration Quote</a>
+    </div>
+
+    <section>
+      <h2>Questions Before You Get Started?</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/66801202074">+66 801 202074</a><br>
+      <strong>Email:</strong> <a href="mailto:hello@shaynesdesigns.com">hello@shaynesdesigns.com</a></p>
+      <p>Response time: within 24 hours. We'll answer your questions honestly.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shayne's Designs. All rights reserved.</p>
+    <p style="margin-top: 1rem;"><a href="/">Home</a> · <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
+  </footer>
+</body>
+</html>

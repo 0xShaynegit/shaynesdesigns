@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Project Cost Guide — Shayne's Designs</title>
+  <meta name="description" content="Transparent breakdown of website project costs. What affects pricing, what's included, where your budget goes. For static sites and WordPress migrations.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaynesdesigns.com/guides-website-cost">
+  <link rel="icon" type="image/png" href="/images/shaynesdesigns-shaynes-designs-favicon.png">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', 'Segoe UI', sans-serif; font-weight: 300; line-height: 1.6; color: #111; background: #f9f9f9; }
+    a { color: #110076; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header { background: #110076; color: #f9f9f9; padding: 3rem 1.5rem; margin-bottom: 2rem; }
+    header h1 { font-size: clamp(1.75rem, 4vw, 3rem); margin-bottom: 0.75rem; font-weight: 800; letter-spacing: -0.02em; }
+    header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; }
+
+    nav { background: #f2f0ea; padding: 1.5rem; margin-bottom: 2rem; text-align: center; }
+    nav a { display: inline-block; margin: 0 1.5rem; font-weight: 600; color: #110076; }
+
+    main { margin-bottom: 4rem; }
+
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.25rem; color: #110076; font-weight: 800; }
+    h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #110076; font-weight: 700; }
+
+    p { margin-bottom: 1rem; line-height: 1.8; }
+    ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .price-tier { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 2rem; margin: 1.5rem 0; }
+    .price-tier h3 { margin-top: 0; }
+    .price-tier .price { font-size: 1.8rem; font-weight: 800; color: #c2aa69; margin: 1rem 0; }
+    .price-tier .description { font-size: 0.95rem; color: #666; margin-bottom: 1rem; }
+    .price-tier ul { margin-top: 1rem; }
+    .price-tier li { font-size: 0.95rem; }
+
+    .cost-breakdown { background: #f2f0ea; padding: 2rem; border-radius: 6px; margin: 2rem 0; }
+    .cost-item { display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #ddd; }
+    .cost-item:last-child { border-bottom: 0; margin-bottom: 0; }
+    .cost-label { font-weight: 600; }
+    .cost-value { color: #c2aa69; font-weight: 600; }
+
+    .highlight-box { background: #f2f0ea; padding: 2rem; border-left: 4px solid #c2aa69; margin: 2rem 0; }
+
+    .faq-item { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #ddd; }
+    .faq-item:last-child { border-bottom: 0; }
+    .faq-item h4 { color: #110076; font-weight: 700; margin-bottom: 0.75rem; }
+
+    .cta-section { background: #110076; color: #f9f9f9; padding: 2.5rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+    .cta-section h2 { color: #f9f9f9; }
+    .cta-button { display: inline-block; background: #c2aa69; color: #110076; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 600; margin-top: 1.5rem; transition: background 0.3s; }
+    .cta-button:hover { background: #d4bc7a; text-decoration: none; }
+
+    .factors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .factor-card { background: #fff; padding: 1.5rem; border: 1px solid #ddd; border-radius: 6px; }
+    .factor-card h4 { color: #110076; font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem; }
+    .factor-card p { margin: 0; font-size: 0.9rem; }
+
+    footer { background: #0b004f; color: #f9f9f9; padding: 2rem 1.5rem; text-align: center; margin-top: 3rem; }
+    footer a { color: #c2aa69; }
+
+    @media(max-width: 768px) {
+      .price-tier { margin-bottom: 1.5rem; }
+      .cost-item { flex-direction: column; }
+      .cost-value { margin-top: 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Website Project Cost Guide</h1>
+    <p>Transparent breakdown of what website projects cost and where your budget goes. No surprises.</p>
+  </header>
+
+  <nav>
+    <a href="/">← Home</a>
+    <a href="/services-static-websites">Static Sites</a>
+    <a href="/guides-website-timeline">Timeline Guide</a>
+  </nav>
+
+  <main class="container">
+
+    <section>
+      <h2>The Short Answer</h2>
+      <p>Website costs depend on three things: <strong>scope, complexity, and timeline.</strong></p>
+      <div class="highlight-box">
+        <ul>
+          <li><strong>Small brochure site:</strong> $2,500–$4,500</li>
+          <li><strong>Medium business site:</strong> $5,000–$10,000</li>
+          <li><strong>Complex site (e-commerce, integrations):</strong> $10,000+</li>
+          <li><strong>WordPress migration:</strong> $500–$3,000 (depending on size)</li>
+        </ul>
+        <p style="margin-top: 1rem;"><strong>What's included:</strong> Strategy, design, hand-coded build, testing, deployment, 30 days of free support.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>What Affects Pricing?</h2>
+      <div class="factors-grid">
+        <div class="factor-card">
+          <h4>📄 Number of Pages</h4>
+          <p>5–10 pages: $2–3k. 20+ pages: $5–10k+. Each page requires strategy, design, and code.</p>
+        </div>
+        <div class="factor-card">
+          <h4>🎨 Design Complexity</h4>
+          <p>Simple branding: $2–3k. Custom interactions, animations: +$1–2k. Refining aesthetics takes time.</p>
+        </div>
+        <div class="factor-card">
+          <h4>🔧 Functionality</h4>
+          <p>Contact forms: included. E-commerce, integrations, custom features: +$2–5k+ per feature.</p>
+        </div>
+        <div class="factor-card">
+          <h4>📸 Content & Assets</h4>
+          <p>You provide content/images: included in timeline. Professional copywriting, photography: +$1–3k.</p>
+        </div>
+        <div class="factor-card">
+          <h4>⚡ Performance Optimization</h4>
+          <p>Standard optimization: included. Advanced (image processing, caching, CDN): included in build.</p>
+        </div>
+        <div class="factor-card">
+          <h4>🚀 Timeline Pressure</h4>
+          <p>4–8 weeks: standard rates. Faster turnaround: rush fees apply (+20–50%).</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cost Breakdown: Where Your Money Goes</h2>
+
+      <h3>Small Brochure Site ($3,000)</h3>
+      <div class="cost-breakdown">
+        <div class="cost-item">
+          <span class="cost-label">Discovery & Strategy</span>
+          <span class="cost-value">$400</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Design (mockups, iterations)</span>
+          <span class="cost-value">$600</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Development (6–8 pages)</span>
+          <span class="cost-value">$1,200</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Testing & Launch</span>
+          <span class="cost-value">$400</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Hosting (year 1, included)</span>
+          <span class="cost-value">$400</span>
+        </div>
+      </div>
+
+      <h3>Medium Business Site ($7,500)</h3>
+      <div class="cost-breakdown">
+        <div class="cost-item">
+          <span class="cost-label">Discovery, strategy, competitive analysis</span>
+          <span class="cost-value">$800</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Design (15+ page site, custom interactions)</span>
+          <span class="cost-value">$1,800</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Development (15–20 pages, forms, integrations)</span>
+          <span class="cost-value">$3,000</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Testing, accessibility audit, optimisation</span>
+          <span class="cost-value">$800</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Hosting + deployment setup (year 1)</span>
+          <span class="cost-value">$400</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Documentation & knowledge transfer</span>
+          <span class="cost-value">$300</span>
+        </div>
+      </div>
+
+      <h3>WordPress Migration ($1,500)</h3>
+      <div class="cost-breakdown">
+        <div class="cost-item">
+          <span class="cost-label">Audit & content extraction</span>
+          <span class="cost-value">$300</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Rebuild as static site</span>
+          <span class="cost-value">$700</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">SEO setup (redirects, canonicals)</span>
+          <span class="cost-value">$200</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Testing & launch</span>
+          <span class="cost-value">$200</span>
+        </div>
+        <div class="cost-item">
+          <span class="cost-label">Hosting year 1 (included)</span>
+          <span class="cost-value">$400</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What's Included in All Projects</h2>
+      <ul>
+        <li>Discovery conversation and strategy alignment</li>
+        <li>Custom design (no templates)</li>
+        <li>Hand-coded HTML, CSS, JavaScript (no frameworks)</li>
+        <li>Mobile-responsive design (desktop, tablet, mobile)</li>
+        <li>Image optimization and WebP conversion</li>
+        <li>Performance optimization (Lighthouse score typically 90+)</li>
+        <li>Testing on real devices and browsers</li>
+        <li>Global CDN hosting deployment (Vercel)</li>
+        <li>SSL certificate and HTTPS setup</li>
+        <li>DNS configuration and domain connection</li>
+        <li>30 days of free post-launch support</li>
+        <li>Full source code and documentation</li>
+        <li>4–5 revision rounds (design, copy, layout)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What Costs Extra</h2>
+      <ul>
+        <li><strong>Professional copywriting:</strong> $500–$1,500 (if you want us to write)</li>
+        <li><strong>Professional photography:</strong> varies (if we source it)</li>
+        <li><strong>Content beyond scope:</strong> $60/hour (e.g., migrating 100+ pages, unusual formats)</li>
+        <li><strong>Custom integrations:</strong> depends on complexity ($500–$3,000+ per integration)</li>
+        <li><strong>E-commerce functionality:</strong> $2,000–$5,000+ depending on complexity</li>
+        <li><strong>Rush delivery (< 2 weeks):</strong> 20–50% premium on project cost</li>
+        <li><strong>Revisions beyond included rounds:</strong> $60/hour</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ongoing Costs (After Launch)</h2>
+
+      <h3>Hosting</h3>
+      <p><strong>Year 1:</strong> Included in project price. <strong>Year 2+:</strong> $20–$50/month (or free for very low-traffic sites on Vercel's free tier).</p>
+
+      <h3>Domain & Email</h3>
+      <p><strong>Domain:</strong> $10–$15/year (your registrar). <strong>Email:</strong> $5–$6/month (if using a service like Google Workspace or Mailgun).</p>
+
+      <h3>Optional Ongoing Support</h3>
+      <p><strong>$300/month</strong> for:</p>
+      <ul>
+        <li>Monthly performance monitoring and reporting</li>
+        <li>Up to 10 hours/month of updates and changes</li>
+        <li>Security updates and patches</li>
+        <li>Priority support (24-hour response target)</li>
+      </ul>
+
+      <h3>Total Year 2+ Costs (No Ongoing Support)</h3>
+      <p><strong>Domain + hosting + email ≈ $200–$400/year</strong></p>
+
+      <h3>Total Year 2+ Costs (With Optional Support)</h3>
+      <p><strong>$3,600/year for support + domain + hosting + email</strong></p>
+    </section>
+
+    <section>
+      <h2>Common Questions About Cost</h2>
+
+      <div class="faq-item">
+        <h4>Why does a static site cost more than a WordPress theme?</h4>
+        <p>A WordPress theme is $100–$500 but comes with plugin dependencies, maintenance overhead, and security risks. A custom static site costs more upfront ($2,500+) but requires zero maintenance, zero plugins, and zero ongoing security updates. The real cost of WordPress is the management burden, not the initial theme price. Static sites are simpler, faster, and cheaper over time.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can you build a website for $500?</h4>
+        <p>Not really. $500 is our starting price for WordPress migrations (where we're converting existing content). A new site requires strategy, design, and development—that realistically starts at $2,500. If you see $500 website offers elsewhere, ask what's actually included (usually just a basic template, no support, no customization).</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do I pay for redesigns later if I want to update the look?</h4>
+        <p>Yes, redesigns are new projects. But because you own the code and we provide documentation, you can hire any developer to modify the site. You're not locked into us for changes. A redesign would start at $3,000–$5,000 depending on scope.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What if my project scope changes mid-build?</h4>
+        <p>Changes after the agreement is signed are scoped and quoted separately. Minor changes (copy tweaks, small layout adjustments) within the included revision rounds are free. Major changes (new sections, additional features) are quoted at $60/hour.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I get a discount for a longer engagement or retainer?</h4>
+        <p>Yes. For ongoing partnerships ($300/month support), we prioritise changes, include more revisions, and offer better rates on custom work. Ask about multi-month commitments if that's your plan.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What if the project goes over budget?</h4>
+        <p>It shouldn't—we scope everything upfront. But if scope expands during the project, we notify you with a change order showing the additional cost and timeline impact. You approve before we proceed.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do you offer payment plans?</h4>
+        <p>Our standard is 50% deposit to start, 50% on delivery. For larger projects ($10,000+), we can discuss 3-payment splits (deposit, mid-project, final). Email or WhatsApp to discuss options.</p>
+      </div>
+
+    </section>
+
+    <div class="cta-section">
+      <h2>Ready to Get a Quote?</h2>
+      <p>Every project is unique. Send us details about what you need, and we'll provide a clear, itemized proposal within 24 hours.</p>
+      <a href="/#cta-message" class="cta-button">Get Your Quote</a>
+    </div>
+
+    <section>
+      <h2>Questions?</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/66801202074">+66 801 202074</a><br>
+      <strong>Email:</strong> <a href="mailto:hello@shaynesdesigns.com">hello@shaynesdesigns.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shayne's Designs. All rights reserved.</p>
+    <p style="margin-top: 1rem;"><a href="/">Home</a> · <a href="/about">About</a> · <a href="/guides-website-timeline">Timeline Guide</a> · <a href="/guides-website-cost">Cost Guide</a></p>
+  </footer>
+</body>
+</html>

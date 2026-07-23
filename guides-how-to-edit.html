@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Edit Your Static Website — Shayne's Designs</title>
+  <meta name="description" content="Guide to editing and updating your static HTML/CSS/JavaScript website. No CMS needed. Learn how to change content, images, and styling.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaynesdesigns.com/guides-how-to-edit">
+  <link rel="icon" type="image/png" href="/images/shaynesdesigns-shaynes-designs-favicon.png">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', 'Segoe UI', sans-serif; font-weight: 300; line-height: 1.6; color: #111; background: #f9f9f9; }
+    a { color: #110076; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header { background: #110076; color: #f9f9f9; padding: 3rem 1.5rem; margin-bottom: 2rem; }
+    header h1 { font-size: clamp(1.75rem, 4vw, 3rem); margin-bottom: 0.75rem; font-weight: 800; letter-spacing: -0.02em; }
+    header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; }
+
+    nav { background: #f2f0ea; padding: 1.5rem; margin-bottom: 2rem; text-align: center; }
+    nav a { display: inline-block; margin: 0 1.5rem; font-weight: 600; color: #110076; }
+
+    main { margin-bottom: 4rem; }
+
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.25rem; color: #110076; font-weight: 800; }
+    h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #110076; font-weight: 700; }
+
+    p { margin-bottom: 1rem; line-height: 1.8; }
+    ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .code-block { background: #1e1e1e; color: #d4d4d4; padding: 1.5rem; border-radius: 6px; font-family: 'Monaco', 'Courier New', monospace; font-size: 0.85rem; overflow-x: auto; margin: 1.5rem 0; }
+    .code-block code { line-height: 1.6; }
+
+    .highlight-box { background: #f2f0ea; padding: 2rem; border-left: 4px solid #c2aa69; margin: 2rem 0; }
+
+    .example-section { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1.5rem; margin: 1.5rem 0; }
+    .example-section h4 { color: #110076; font-weight: 700; margin-bottom: 0.75rem; }
+
+    .step-list { counter-reset: step-counter; }
+    .step-list li { counter-increment: step-counter; list-style: none; margin-left: 0; padding-left: 3rem; position: relative; margin-bottom: 1.5rem; }
+    .step-list li::before { content: counter(step-counter); position: absolute; left: 0; top: 0; background: #c2aa69; color: #fff; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; }
+
+    .skill-level { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
+    .beginner { background: #e8f5e9; color: #2e7d32; }
+    .intermediate { background: #fff3e0; color: #e65100; }
+    .advanced { background: #f3e5f5; color: #6a1b9a; }
+
+    .cta-section { background: #110076; color: #f9f9f9; padding: 2.5rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+    .cta-section h2 { color: #f9f9f9; }
+    .cta-button { display: inline-block; background: #c2aa69; color: #110076; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 600; margin-top: 1.5rem; transition: background 0.3s; }
+    .cta-button:hover { background: #d4bc7a; text-decoration: none; }
+
+    footer { background: #0b004f; color: #f9f9f9; padding: 2rem 1.5rem; text-align: center; margin-top: 3rem; }
+    footer a { color: #c2aa69; }
+
+    .tool-card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1.5rem; margin: 1rem 0; }
+    .tool-card h4 { color: #110076; font-weight: 700; margin-bottom: 0.5rem; }
+    .tool-card .price { color: #c2aa69; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>How to Edit Your Static Website</h1>
+    <p>You own your code. Here's how to update content, images, and styling without a CMS. Simple, powerful, and completely under your control.</p>
+  </header>
+
+  <nav>
+    <a href="/">← Home</a>
+    <a href="/guides-website-cost">Cost Guide</a>
+    <a href="/guides-website-timeline">Timeline Guide</a>
+  </nav>
+
+  <main class="container">
+
+    <section>
+      <h2>The Big Picture</h2>
+      <p>Your static website is just code: HTML (structure), CSS (styling), and JavaScript (interactions). You own all of it. No database, no plugins, no vendor lock-in.</p>
+      <p><strong>To make changes:</strong></p>
+      <ol>
+        <li>Edit the code in a text editor (easy for content, copy, images)</li>
+        <li>Test locally to make sure nothing broke</li>
+        <li>Upload the changes to the server</li>
+        <li>Your live site updates instantly</li>
+      </ol>
+      <p>For simple changes (text, images, copy), this takes 15 minutes. For styling or complex changes, you might need a developer—but the code is yours to share with anyone.</p>
+    </section>
+
+    <section>
+      <h2>Skill Levels</h2>
+      <p>This guide covers edits from beginner (change text) to advanced (modify CSS). Find your level:</p>
+      <ul>
+        <li><span class="skill-level beginner">Beginner</span> Change text, update images, modify links</li>
+        <li><span class="skill-level intermediate">Intermediate</span> Add sections, modify HTML structure, edit forms</li>
+        <li><span class="skill-level advanced">Advanced</span> Update CSS styling, modify JavaScript, complex refactoring</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Getting Started: Tools You'll Need</h2>
+
+      <h3><span class="skill-level beginner">Beginner</span> Text Editor</h3>
+      <p>To edit HTML and CSS files, you need a text editor. These are free:</p>
+      <div class="tool-card">
+        <h4>VS Code (Recommended)</h4>
+        <p>Free, powerful, runs on Mac/Windows/Linux. Highlights code, shows errors, includes Git integration.</p>
+        <p>Download: <a href="https://code.visualstudio.com" target="_blank">code.visualstudio.com</a></p>
+        <p class="price">Free</p>
+      </div>
+      <div class="tool-card">
+        <h4>Sublime Text</h4>
+        <p>Lightweight, fast, clean interface. Free to try, $80 license (optional).</p>
+        <p>Download: <a href="https://sublimetext.com" target="_blank">sublimetext.com</a></p>
+        <p class="price">Free / $80</p>
+      </div>
+      <div class="tool-card">
+        <h4>Notepad++ (Windows) / TextEdit (Mac)</h4>
+        <p>Built-in options that work for basic editing. Not ideal for larger projects, but functional.</p>
+        <p class="price">Free</p>
+      </div>
+
+      <h3><span class="skill-level intermediate">Intermediate</span> Git & GitHub</h3>
+      <p>Your site code lives on GitHub (version control). To push changes live:</p>
+      <ol>
+        <li>Edit files locally in your text editor</li>
+        <li>Use Git to commit changes ("save with a message")</li>
+        <li>Push to GitHub (your code syncs online)</li>
+        <li>Vercel automatically deploys (your live site updates)</li>
+      </ol>
+      <p><strong>GitHub Desktop</strong> makes this easier than command line. Download: <a href="https://desktop.github.com" target="_blank">desktop.github.com</a></p>
+
+      <h3><span class="skill-level intermediate">Intermediate</span> Local Server (Optional)</h3>
+      <p>To test changes before uploading, run a local server. This simulates the live environment:</p>
+      <div class="code-block"><code># Using Python (Mac/Linux/Windows)
+python -m http.server 8000
+
+# Then visit: http://localhost:8000 in your browser</code></div>
+      <p>Or use the Live Server extension in VS Code (one-click local preview).</p>
+    </section>
+
+    <section>
+      <h2>Common Edits & How-To</h2>
+
+      <div class="example-section">
+        <h4><span class="skill-level beginner">Beginner</span> Change Text on the Homepage</h4>
+        <p><strong>Task:</strong> Update your tagline or a section heading.</p>
+        <ol class="step-list">
+          <li>Open <code>index.html</code> in your text editor (VS Code, Sublime, etc.)</li>
+          <li>Find the text you want to change (use Ctrl+F to search)</li>
+          <li>Edit the text between the HTML tags</li>
+          <li>Save the file (Ctrl+S)</li>
+          <li>Commit the change to Git and push to GitHub</li>
+          <li>Vercel deploys automatically within 1–2 minutes</li>
+        </ol>
+        <p><strong>Example:</strong></p>
+        <div class="code-block"><code>&lt;!-- Before --&gt;
+&lt;h1&gt;Build something that sells.&lt;/h1&gt;
+
+&lt;!-- After --&gt;
+&lt;h1&gt;Build your digital brand.&lt;/h1&gt;</code></div>
+      </div>
+
+      <div class="example-section">
+        <h4><span class="skill-level beginner">Beginner</span> Update an Image</h4>
+        <p><strong>Task:</strong> Replace a team photo or logo.</p>
+        <ol class="step-list">
+          <li>Prepare your new image (optimize it, preferably WebP format)</li>
+          <li>Upload it to the <code>images/</code> folder in your project</li>
+          <li>Open the HTML file that contains the old image</li>
+          <li>Find the old image filename and replace it with the new one</li>
+          <li>Save, commit, push to GitHub</li>
+        </ol>
+        <p><strong>Example:</strong></p>
+        <div class="code-block"><code>&lt;!-- Before --&gt;
+&lt;img src="images/old-photo.webp" alt="Team photo"&gt;
+
+&lt;!-- After --&gt;
+&lt;img src="images/new-photo.webp" alt="Team photo"&gt;</code></div>
+      </div>
+
+      <div class="example-section">
+        <h4><span class="skill-level intermediate">Intermediate</span> Update a Contact Link or CTA</h4>
+        <p><strong>Task:</strong> Change your email, phone, or WhatsApp number.</p>
+        <p>Find all instances of your old number/email and replace with the new one. Use Ctrl+H (Find & Replace) to do this across the entire project:</p>
+        <div class="code-block"><code>&lt;!-- Before --&gt;
+&lt;a href="https://wa.me/66801202074"&gt;WhatsApp&lt;/a&gt;
+&lt;a href="mailto:old@email.com"&gt;Email&lt;/a&gt;
+
+&lt;!-- After --&gt;
+&lt;a href="https://wa.me/66801234567"&gt;WhatsApp&lt;/a&gt;
+&lt;a href="mailto:new@email.com"&gt;Email&lt;/a&gt;</code></div>
+      </div>
+
+      <div class="example-section">
+        <h4><span class="skill-level intermediate">Intermediate</span> Add a New Blog Post or Page</h4>
+        <p><strong>Task:</strong> Publish a new article or service page.</p>
+        <ol class="step-list">
+          <li>Create a new `.html` file in the appropriate folder (e.g., <code>blog/new-post.html</code>)</li>
+          <li>Copy the structure from an existing page (use it as a template)</li>
+          <li>Update the content, title, meta description, etc.</li>
+          <li>Link to it from the navigation or index page</li>
+          <li>Update the sitemap to include the new URL</li>
+          <li>Save, commit, push</li>
+        </ol>
+        <p><strong>Why this matters:</strong> You own the structure. No CMS, no dashboards, no limitations.</p>
+      </div>
+
+      <div class="example-section">
+        <h4><span class="skill-level advanced">Advanced</span> Change Colors or Styling (CSS)</h4>
+        <p><strong>Task:</strong> Update your brand colors or change a button style.</p>
+        <p>Edit the CSS in your stylesheet (usually in a `<style>` block in the HTML or a separate `.css` file).</p>
+        <div class="code-block"><code>/* Before */
+:root {
+  --gold: #c2aa69;
+  --navy: #110076;
+}
+
+/* After */
+:root {
+  --gold: #d4a574;  /* Lighter gold */
+  --navy: #0a0052;  /* Darker navy */
+}</code></div>
+        <p><strong>Tip:</strong> CSS variables (custom properties) make global changes easy. Change one value and it updates everywhere.</p>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>The Workflow: Edit → Test → Deploy</h2>
+      <div class="highlight-box">
+        <h3>Step 1: Make Your Changes</h3>
+        <p>Edit files in your text editor. Save frequently.</p>
+
+        <h3>Step 2: Test Locally</h3>
+        <p>Run a local server (see tools above) and preview changes in your browser before deploying.</p>
+
+        <h3>Step 3: Commit Changes</h3>
+        <p>Use Git to commit your changes with a message:</p>
+        <div class="code-block" style="margin: 1rem 0;"><code>git commit -m "Update homepage tagline and pricing"</code></div>
+
+        <h3>Step 4: Push to GitHub</h3>
+        <p>Sync your changes to GitHub (GitHub Desktop makes this one click).</p>
+
+        <h3>Step 5: Vercel Deploys Automatically</h3>
+        <p>Within 1–2 minutes, your live site updates automatically. No manual deploy needed.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>When to Ask for Help</h2>
+
+      <h3><span class="skill-level beginner">You can do this yourself:</span></h3>
+      <ul>
+        <li>Update text, copy, or taglines</li>
+        <li>Replace images</li>
+        <li>Change links or contact info</li>
+        <li>Fix typos</li>
+      </ul>
+
+      <h3><span class="skill-level intermediate">Consider professional help for:</span></h3>
+      <ul>
+        <li>Adding new pages or major sections</li>
+        <li>Modifying HTML structure (changing layout)</li>
+        <li>Updating forms or integrations</li>
+        <li>Performance optimisations</li>
+      </ul>
+
+      <h3><span class="skill-level advanced">Definitely ask a developer for:</span></h3>
+      <ul>
+        <li>Significant CSS/design changes</li>
+        <li>Adding new features or integrations</li>
+        <li>Refactoring code or architecture changes</li>
+        <li>Anything that breaks the site and you're unsure how to fix</li>
+      </ul>
+
+      <p><strong>We offer $300/month ongoing support,</strong> which includes up to 10 hours/month of updates and changes. You can also hire us for individual projects at $60/hour.</p>
+    </section>
+
+    <section>
+      <h2>Common Mistakes to Avoid</h2>
+      <ul>
+        <li><strong>Editing without a backup:</strong> Always commit to Git before making changes. This way you can undo if something breaks.</li>
+        <li><strong>Forgetting to update the sitemap:</strong> If you add new pages, update `sitemap.xml` so Google knows about them.</li>
+        <li><strong>Breaking HTML tags:</strong> If you see `&lt;tag&gt;` in your editor, don't delete just one bracket. Keep tags balanced.</li>
+        <li><strong>Not testing locally:</strong> Always preview changes in a local browser before pushing live.</li>
+        <li><strong>Mixing up file paths:</strong> Images and files use relative paths (e.g., `images/photo.webp`). Moving files without updating links breaks images.</li>
+        <li><strong>Pushing without committing:</strong> Git commits are snapshots. Without commits, there's no history to roll back to if needed.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Learning Resources</h2>
+      <p>If you want to learn HTML, CSS, or Git:</p>
+      <ul>
+        <li><strong>HTML basics:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs (HTML)</a></li>
+        <li><strong>CSS basics:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs (CSS)</a></li>
+        <li><strong>Git & GitHub:</strong> <a href="https://github.com/skills" target="_blank">GitHub Skills (free interactive courses)</a></li>
+        <li><strong>Video tutorials:</strong> YouTube has thousands of free HTML/CSS/Git tutorials</li>
+      </ul>
+      <p>You don't need to become an expert—just enough to make small changes and updates.</p>
+    </section>
+
+    <div class="cta-section">
+      <h2>Need Help with Your Site?</h2>
+      <p>Whether it's a simple update or a major change, we're here to help.</p>
+      <a href="/#cta-message" class="cta-button">Get Support</a>
+    </div>
+
+    <section>
+      <h2>Questions?</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/66801202074">+66 801 202074</a><br>
+      <strong>Email:</strong> <a href="mailto:hello@shaynesdesigns.com">hello@shaynesdesigns.com</a></p>
+      <p>We're happy to walk you through edits or handle updates for you.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shayne's Designs. All rights reserved.</p>
+    <p style="margin-top: 1rem;"><a href="/">Home</a> · <a href="/guides-website-cost">Cost Guide</a> · <a href="/guides-website-timeline">Timeline Guide</a></p>
+  </footer>
+</body>
+</html>

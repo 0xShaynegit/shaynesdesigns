@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hosting, Domains & Email Guide — Shayne's Designs</title>
+  <meta name="description" content="Understanding hosting, domain names, and email. What you need, what we include, what you manage. Simple breakdown for non-technical founders.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaynesdesigns.com/guides-hosting-domains-email">
+  <link rel="icon" type="image/png" href="/images/shaynesdesigns-shaynes-designs-favicon.png">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', 'Segoe UI', sans-serif; font-weight: 300; line-height: 1.6; color: #111; background: #f9f9f9; }
+    a { color: #110076; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header { background: #110076; color: #f9f9f9; padding: 3rem 1.5rem; margin-bottom: 2rem; }
+    header h1 { font-size: clamp(1.75rem, 4vw, 3rem); margin-bottom: 0.75rem; font-weight: 800; letter-spacing: -0.02em; }
+    header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; }
+
+    nav { background: #f2f0ea; padding: 1.5rem; margin-bottom: 2rem; text-align: center; }
+    nav a { display: inline-block; margin: 0 1.5rem; font-weight: 600; color: #110076; }
+
+    main { margin-bottom: 4rem; }
+
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.25rem; color: #110076; font-weight: 800; }
+    h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #110076; font-weight: 700; }
+
+    p { margin-bottom: 1rem; line-height: 1.8; }
+    ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .diagram { background: #f2f0ea; padding: 2rem; border-radius: 6px; margin: 2rem 0; }
+    .diagram-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .diagram-label { font-weight: 600; color: #110076; min-width: 120px; }
+    .diagram-value { flex: 1; padding: 0.75rem 1rem; background: #fff; border: 1px solid #ddd; border-radius: 4px; }
+
+    .responsibility-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+    .responsibility-column h4 { color: #110076; font-weight: 700; margin-bottom: 1rem; }
+    .responsibility-column ul { margin-left: 1.5rem; }
+    .responsibility-column li { font-size: 0.95rem; }
+
+    .highlight-box { background: #f2f0ea; padding: 2rem; border-left: 4px solid #c2aa69; margin: 2rem 0; }
+
+    .option-card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 1.5rem; margin: 1rem 0; }
+    .option-card h4 { color: #110076; font-weight: 700; margin-bottom: 0.75rem; }
+    .option-card .price { color: #c2aa69; font-weight: 600; }
+    .option-card p { margin: 0.5rem 0; }
+
+    .faq-item { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #ddd; }
+    .faq-item:last-child { border-bottom: 0; }
+    .faq-item h4 { color: #110076; font-weight: 700; margin-bottom: 0.75rem; }
+
+    .cta-section { background: #110076; color: #f9f9f9; padding: 2.5rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+    .cta-section h2 { color: #f9f9f9; }
+    .cta-button { display: inline-block; background: #c2aa69; color: #110076; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 600; margin-top: 1.5rem; transition: background 0.3s; }
+    .cta-button:hover { background: #d4bc7a; text-decoration: none; }
+
+    footer { background: #0b004f; color: #f9f9f9; padding: 2rem 1.5rem; text-align: center; margin-top: 3rem; }
+    footer a { color: #c2aa69; }
+
+    @media(max-width: 768px) {
+      .responsibility-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hosting, Domains & Email Guide</h1>
+    <p>What you need to know. What we handle. What you manage. Simple breakdown of the pieces that make your site work.</p>
+  </header>
+
+  <nav>
+    <a href="/">← Home</a>
+    <a href="/guides-website-cost">Cost Guide</a>
+    <a href="/guides-how-to-edit">How to Edit</a>
+  </nav>
+
+  <main class="container">
+
+    <section>
+      <h2>The Three Pieces</h2>
+      <p>A working website has three separate components. Here's what each does and who manages it:</p>
+
+      <div class="diagram">
+        <div class="diagram-item">
+          <div class="diagram-label">🌐 Domain Name</div>
+          <div class="diagram-value"><strong>example.com</strong> — Your website address. You own this. You pay $10–$15/year to a registrar (GoDaddy, Namecheap, Google Domains).</div>
+        </div>
+        <div class="diagram-item">
+          <div class="diagram-label">🖥️ Hosting</div>
+          <div class="diagram-value"><strong>Vercel</strong> — The server that stores your website files and serves them to visitors. Included with your project cost for year 1. After that: $20–$50/month or free (depending on traffic).</div>
+        </div>
+        <div class="diagram-item">
+          <div class="diagram-label">✉️ Email</div>
+          <div class="diagram-value"><strong>you@example.com</strong> — Your professional email address. Separate service (Google Workspace, Mailgun, etc.). $5–$6/month for business email.</div>
+        </div>
+      </div>
+
+      <p><strong>These are separate services.</strong> Your domain registrar, hosting provider, and email provider don't have to be the same company (though they can be).</p>
+    </section>
+
+    <section>
+      <h2>What We Include at Launch</h2>
+      <div class="highlight-box">
+        <h3 style="margin-top: 0;">✓ Included in Your Project</h3>
+        <ul>
+          <li><strong>Hosting setup (Year 1):</strong> Your site deployed on Vercel, fully configured, SSL certificate, global CDN</li>
+          <li><strong>Domain connection:</strong> We help connect your domain to Vercel (DNS configuration)</li>
+          <li><strong>Email forwarding setup:</strong> We can set up basic email forwarding (forward@yourdomain.com to your personal email)</li>
+        </ul>
+
+        <h3>✗ NOT Included (You Manage)</h3>
+        <ul>
+          <li><strong>Domain registration:</strong> You buy/renew this yourself ($10–$15/year)</li>
+          <li><strong>Professional email account:</strong> Separate purchase if needed ($5–$6/month for business email)</li>
+          <li><strong>Hosting after Year 1:</strong> Hosting renewal is optional. After year 1, you pay for it directly to Vercel</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Domain Names Explained</h2>
+
+      <h3>What is it?</h3>
+      <p>Your domain name is your website address. <strong>example.com</strong> is a domain. Visitors type it in the browser to reach your site.</p>
+
+      <h3>Who owns it?</h3>
+      <p><strong>You do.</strong> You register it and renew it each year. The registrar (GoDaddy, Namecheap, Google Domains) keeps records of ownership, but you control it.</p>
+
+      <h3>How much does it cost?</h3>
+      <p><strong>$10–$15 per year,</strong> depending on the extension (.com, .co, .io, etc.) and registrar. Some extensions cost more ($40+/year for premium ones).</p>
+
+      <h3>Where do I register a domain?</h3>
+      <div class="option-card">
+        <h4>Google Domains (Recommended)</h4>
+        <p>Simple, transparent pricing, great support. Clean dashboard. $12/year for .com.</p>
+        <p><a href="https://domains.google" target="_blank">domains.google.com</a></p>
+        <p class="price">$10–$15/year</p>
+      </div>
+      <div class="option-card">
+        <h4>Namecheap</h4>
+        <p>Budget-friendly, good for bulk registrations. Lower prices but more upsell temptation.</p>
+        <p><a href="https://namecheap.com" target="_blank">namecheap.com</a></p>
+        <p class="price">$8–$12/year</p>
+      </div>
+      <div class="option-card">
+        <h4>GoDaddy</h4>
+        <p>Popular, lots of features, can be expensive. Aggressive upselling.</p>
+        <p><a href="https://godaddy.com" target="_blank">godaddy.com</a></p>
+        <p class="price">$10–$20/year</p>
+      </div>
+
+      <h3>Connecting Your Domain to Hosting</h3>
+      <p>After you buy your domain, you need to point it to your hosting server (Vercel). We do this by:</p>
+      <ol>
+        <li>Getting your nameservers from Vercel</li>
+        <li>Entering them into your domain registrar</li>
+        <li>Waiting 24–48 hours for DNS to propagate</li>
+        <li>Your domain now points to your site</li>
+      </ol>
+      <p><strong>We handle this for you at launch.</strong> No action needed on your part.</p>
+    </section>
+
+    <section>
+      <h2>Hosting Explained</h2>
+
+      <h3>What is it?</h3>
+      <p>Hosting is the server that stores your website files and serves them to visitors. When someone visits your domain, they're actually requesting files from the hosting server.</p>
+
+      <h3>Our Choice: Vercel</h3>
+      <p>We use Vercel because it's:</p>
+      <ul>
+        <li><strong>Fast:</strong> Global CDN means your site loads quickly everywhere</li>
+        <li><strong>Reliable:</strong> 99.9% uptime guarantee</li>
+        <li><strong>Secure:</strong> Automatic HTTPS, security by default</li>
+        <li><strong>Developer-friendly:</strong> Easy deployments via Git</li>
+        <li><strong>Affordable:</strong> Free for low-traffic sites, scales as you grow</li>
+      </ul>
+
+      <h3>What We Include</h3>
+      <p><strong>Year 1:</strong> Hosting is included in your project price. Year 2 onwards, you can continue with Vercel or move to another host (your code is portable).</p>
+
+      <h3>Hosting Costs After Year 1</h3>
+      <div class="option-card">
+        <h4>Vercel (Recommended)</h4>
+        <p>Continue with us. $20–$50/month depending on traffic, or free for low-traffic sites.</p>
+        <p class="price">Free–$50/month</p>
+      </div>
+      <div class="option-card">
+        <h4>Other Hosts (Optional)</h4>
+        <p>Your code is portable. You can move to Netlify, GitHub Pages, Cloudflare, or any static host.</p>
+        <p class="price">$5–$50+/month</p>
+      </div>
+
+      <h3>Can You Change Hosts?</h3>
+      <p><strong>Yes.</strong> Your code is yours. We don't lock you in. You can take it to any hosting provider that supports static sites. The setup might take a developer a few hours ($60/hour), but it's completely possible.</p>
+    </section>
+
+    <section>
+      <h2>Email Explained</h2>
+
+      <h3>What is it?</h3>
+      <p>Email is separate from your website. <strong>you@example.com</strong> is your professional email. It runs on an email server, not your website host.</p>
+
+      <h3>Options</h3>
+
+      <div class="option-card">
+        <h4>Email Forwarding (Included)</h4>
+        <p>Free with most domain registrars. Forwards incoming mail to your personal email. No sending capability—replies go from your personal email.</p>
+        <p class="price">Free</p>
+      </div>
+
+      <div class="option-card">
+        <h4>Google Workspace (Recommended for Business)</h4>
+        <p>Full Gmail interface, custom domain email, unlimited storage, calendar, docs. Professional standard.</p>
+        <p><a href="https://workspace.google.com" target="_blank">workspace.google.com</a></p>
+        <p class="price">$6/month per user</p>
+      </div>
+
+      <div class="option-card">
+        <h4>Mailgun (Developers)</h4>
+        <p>Email API for developers. Send/receive mail programmatically. Great for automations and custom setups.</p>
+        <p><a href="https://mailgun.com" target="_blank">mailgun.com</a></p>
+        <p class="price">Free–$35/month</p>
+      </div>
+
+      <div class="option-card">
+        <h4>Zoho Mail (Budget Option)</h4>
+        <p>Affordable business email with custom domain. Zoho suite integration.</p>
+        <p><a href="https://zoho.com/mail" target="_blank">zoho.com/mail</a></p>
+        <p class="price">$2–$5/month</p>
+      </div>
+
+      <h3>Our Recommendation</h3>
+      <p><strong>For most small businesses:</strong> Google Workspace ($6/month per user). Professional email with Gmail's interface, calendar, and docs. Worth it.</p>
+      <p><strong>For startups on a budget:</strong> Use email forwarding (free) until you can justify the $6/month. Or try Zoho Mail ($2–$5/month).</p>
+    </section>
+
+    <section>
+      <h2>Your Responsibilities vs. Ours</h2>
+
+      <div class="responsibility-grid">
+        <div class="responsibility-column">
+          <h4>You Handle</h4>
+          <ul>
+            <li>Domain registration & renewal ($10–$15/year)</li>
+            <li>Professional email account ($0–$6/month)</li>
+            <li>Hosting renewal after Year 1 (if using Vercel)</li>
+            <li>Updating your site content</li>
+            <li>Managing your business emails</li>
+          </ul>
+        </div>
+        <div class="responsibility-column">
+          <h4>We Handle</h4>
+          <ul>
+            <li>Connecting domain to hosting</li>
+            <li>SSL certificates & HTTPS</li>
+            <li>Hosting setup (Year 1)</li>
+            <li>Email forwarding setup</li>
+            <li>Performance & security monitoring</li>
+            <li>Deployments & updates (if ongoing support)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Common Questions</h2>
+
+      <div class="faq-item">
+        <h4>Can I move my domain to a different host?</h4>
+        <p>Yes. You own your domain. It's not tied to any host. You can point it at any server you want by updating your DNS nameservers. It takes 24–48 hours to take effect.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What if I don't want to pay for hosting after Year 1?</h4>
+        <p>After Year 1, hosting isn't mandatory. Your domain still works, but you'd need to move it somewhere else. We can help with the migration ($60/hour), or you can leave it offline.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I use Gmail for my business email?</h4>
+        <p>Gmail personally, yes. But for professional <strong>you@yourdomain.com</strong> email, you need Google Workspace ($6/month). Regular Gmail only supports @gmail.com addresses.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Is my email secure?</h4>
+        <p>Yes, if you use a reputable provider (Google Workspace, Zoho, Mailgun). They all use encryption, spam filtering, and security protocols. Use a strong password and enable 2FA.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What if my domain registrar goes out of business?</h4>
+        <p>Your domain is yours. You can always transfer it to another registrar. ICANN (the domain authority) enforces this. No single company can hold your domain hostage.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can you help with any of this?</h4>
+        <p>Yes. We can help set up domains, connect them to hosting, and configure email forwarding. Our optional $300/month support includes ongoing help with these services. Or hire us hourly at $60/hour.</p>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Your First-Year Costs</h2>
+      <div class="highlight-box">
+        <ul>
+          <li><strong>Domain registration:</strong> $10–$15 (you buy this)</li>
+          <li><strong>Hosting:</strong> Included with your project ✓</li>
+          <li><strong>Email (optional):</strong> $0 (forwarding) or $6–$72/year (Google Workspace)</li>
+          <li><strong>SSL certificate:</strong> Included with Vercel ✓</li>
+        </ul>
+        <p style="margin-top: 1rem;"><strong>Total (without professional email):</strong> ~$15/year after your project cost</p>
+        <p><strong>Total (with Google Workspace email):</strong> ~$87/year after your project cost</p>
+      </div>
+    </section>
+
+    <div class="cta-section">
+      <h2>Questions About Setup?</h2>
+      <p>We're happy to walk you through domain registration, hosting, and email setup. It's part of our launch process.</p>
+      <a href="/#cta-message" class="cta-button">Get Help</a>
+    </div>
+
+    <section>
+      <h2>Contact Us</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/66801202074">+66 801 202074</a><br>
+      <strong>Email:</strong> <a href="mailto:hello@shaynesdesigns.com">hello@shaynesdesigns.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shayne's Designs. All rights reserved.</p>
+    <p style="margin-top: 1rem;"><a href="/">Home</a> · <a href="/guides-website-cost">Cost Guide</a> · <a href="/guides-website-timeline">Timeline Guide</a> · <a href="/guides-how-to-edit">How to Edit</a></p>
+  </footer>
+</body>
+</html>

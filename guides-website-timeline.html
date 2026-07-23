@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Long Does a Website Take to Build? — Shayne's Designs</title>
+  <meta name="description" content="Realistic timeline for building a website. Discovery to launch. What to expect at each phase. Why rushing doesn't help.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaynesdesigns.com/guides-website-timeline">
+  <link rel="icon" type="image/png" href="/images/shaynesdesigns-shaynes-designs-favicon.png">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', 'Segoe UI', sans-serif; font-weight: 300; line-height: 1.6; color: #111; background: #f9f9f9; }
+    a { color: #110076; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header { background: #110076; color: #f9f9f9; padding: 3rem 1.5rem; margin-bottom: 2rem; }
+    header h1 { font-size: clamp(1.75rem, 4vw, 3rem); margin-bottom: 0.75rem; font-weight: 800; letter-spacing: -0.02em; }
+    header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; }
+
+    nav { background: #f2f0ea; padding: 1.5rem; margin-bottom: 2rem; text-align: center; }
+    nav a { display: inline-block; margin: 0 1.5rem; font-weight: 600; color: #110076; }
+
+    main { margin-bottom: 4rem; }
+
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.25rem; color: #110076; font-weight: 800; }
+    h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #110076; font-weight: 700; }
+
+    p { margin-bottom: 1rem; line-height: 1.8; }
+    ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .timeline-section { background: #fff; border: 2px solid #c2aa69; border-radius: 8px; padding: 2rem; margin: 2rem 0; position: relative; }
+    .timeline-section h3 { margin-top: 0; }
+    .timeline-label { position: absolute; top: -14px; left: 2rem; background: #f9f9f9; padding: 0 0.5rem; font-size: 0.85rem; font-weight: 700; color: #c2aa69; letter-spacing: 0.1em; text-transform: uppercase; }
+    .timeline-duration { color: #c2aa69; font-weight: 600; font-size: 1.1rem; margin-bottom: 1rem; }
+
+    .timeline-full { margin: 2rem 0; }
+    .timeline-phase { display: flex; gap: 2rem; margin-bottom: 2rem; position: relative; padding-left: 2rem; }
+    .timeline-phase::before { content: ''; position: absolute; left: 0; top: 1.5rem; width: 12px; height: 12px; background: #c2aa69; border-radius: 50%; }
+    .timeline-phase h4 { color: #110076; font-weight: 700; margin-bottom: 0.5rem; }
+    .timeline-phase .duration { color: #666; font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .timeline-phase ul { margin: 0.75rem 0 0 0; }
+    .timeline-phase li { font-size: 0.95rem; }
+
+    .highlight-box { background: #f2f0ea; padding: 2rem; border-left: 4px solid #c2aa69; margin: 2rem 0; }
+
+    .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .comparison-card { background: #fff; padding: 1.5rem; border: 1px solid #ddd; border-radius: 6px; }
+    .comparison-card h4 { color: #110076; font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem; }
+    .comparison-card .duration { font-size: 1.4rem; color: #c2aa69; font-weight: 800; margin: 0.75rem 0; }
+    .comparison-card p { margin: 0; font-size: 0.9rem; }
+
+    .faq-item { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #ddd; }
+    .faq-item:last-child { border-bottom: 0; }
+    .faq-item h4 { color: #110076; font-weight: 700; margin-bottom: 0.75rem; }
+
+    .cta-section { background: #110076; color: #f9f9f9; padding: 2.5rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+    .cta-section h2 { color: #f9f9f9; }
+    .cta-button { display: inline-block; background: #c2aa69; color: #110076; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 600; margin-top: 1.5rem; transition: background 0.3s; }
+    .cta-button:hover { background: #d4bc7a; text-decoration: none; }
+
+    footer { background: #0b004f; color: #f9f9f9; padding: 2rem 1.5rem; text-align: center; margin-top: 3rem; }
+    footer a { color: #c2aa69; }
+
+    @media(max-width: 768px) {
+      .timeline-phase { flex-direction: column; }
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>How Long Does a Website Take to Build?</h1>
+    <p>Realistic timelines from discovery to launch. What happens at each phase. Why rushing websites doesn't work.</p>
+  </header>
+
+  <nav>
+    <a href="/">← Home</a>
+    <a href="/guides-website-cost">Cost Guide</a>
+    <a href="/services-static-websites">Static Sites</a>
+  </nav>
+
+  <main class="container">
+
+    <section>
+      <h2>The Quick Answer</h2>
+      <div class="highlight-box">
+        <ul>
+          <li><strong>Small brochure site (5–10 pages):</strong> 4–6 weeks</li>
+          <li><strong>Medium business site (15–20 pages):</strong> 6–8 weeks</li>
+          <li><strong>WordPress migration:</strong> 2–4 weeks</li>
+          <li><strong>Complex site with integrations:</strong> 8–12 weeks</li>
+        </ul>
+        <p style="margin-top: 1rem;"><em>Timeline assumes clear scope, timely feedback, and no scope creep.</em></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why It Takes This Long (It's Not Wasted Time)</h2>
+      <p>Building a quality website isn't just coding. Here's what's actually happening:</p>
+      <ul>
+        <li><strong>Discovery (1–2 weeks):</strong> Understanding your business, audience, competitive landscape, and strategy</li>
+        <li><strong>Design (1–2 weeks):</strong> Multiple rounds of mockups, feedback, iteration</li>
+        <li><strong>Development (2–3 weeks):</strong> Hand-coding every page, custom interactions, testing</li>
+        <li><strong>Testing & Launch (1 week):</strong> Browser testing, mobile testing, performance testing, DNS setup</li>
+      </ul>
+      <p>Skip any of these and the quality suffers. A site built in 2 weeks is either a template (which we don't use) or missing critical work.</p>
+    </section>
+
+    <section>
+      <h2>The Full Timeline Breakdown</h2>
+
+      <div class="timeline-section">
+        <div class="timeline-label">Phase 1</div>
+        <div class="timeline-duration">1–2 weeks</div>
+        <h3>Discovery & Strategy</h3>
+        <p><strong>What happens:</strong> We interview you about your business, audience, goals, and constraints. We research your competition and define the site strategy.</p>
+        <p><strong>Your input:</strong> 1–2 hours for interviews, feedback on competitive analysis, answers to strategic questions.</p>
+        <p><strong>Deliverables:</strong> Strategy document, messaging framework, site architecture, technical requirements.</p>
+      </div>
+
+      <div class="timeline-section">
+        <div class="timeline-label">Phase 2</div>
+        <div class="timeline-duration">1–2 weeks</div>
+        <h3>Design & Mockups</h3>
+        <p><strong>What happens:</strong> High-fidelity design mockups for key pages. We design desktop and mobile layouts, typography, color application, interactive elements.</p>
+        <p><strong>Your input:</strong> Feedback on visual direction, messaging, layout. Up to 3 rounds of revision included.</p>
+        <p><strong>Deliverables:</strong> Approved design mockups, design system, component library for consistency.</p>
+      </div>
+
+      <div class="timeline-section">
+        <div class="timeline-label">Phase 3</div>
+        <div class="timeline-duration">2–3 weeks</div>
+        <h3>Development & Build</h3>
+        <p><strong>What happens:</strong> Hand-coded HTML, CSS, and JavaScript implementation. Progressive builds so you can see the work weekly.</p>
+        <p><strong>Your input:</strong> Review of development previews, content approval, feedback on functionality.</p>
+        <p><strong>Deliverables:</strong> Fully functional site with all pages, forms, animations, integrations.</p>
+      </div>
+
+      <div class="timeline-section">
+        <div class="timeline-label">Phase 4</div>
+        <div class="timeline-duration">1 week</div>
+        <h3>Testing, Optimisation & Launch</h3>
+        <p><strong>What happens:</strong> Browser testing (Chrome, Firefox, Safari), mobile testing, performance optimisation, security checks, Lighthouse audit, DNS setup, deployment.</p>
+        <p><strong>Your input:</strong> Final approval, domain nameserver update (if needed).</p>
+        <p><strong>Deliverables:</strong> Live website, source code, documentation, training on how to edit the site.</p>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Timeline by Project Type</h2>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h4>Small Brochure Site</h4>
+          <div class="duration">4–6 weeks</div>
+          <p>5–10 pages, simple contact form, no e-commerce. Low complexity = faster timeline.</p>
+        </div>
+        <div class="comparison-card">
+          <h4>Medium Business Site</h4>
+          <div class="duration">6–8 weeks</div>
+          <p>15–20 pages, multiple CTAs, forms, integrations. Moderate scope and testing.</p>
+        </div>
+        <div class="comparison-card">
+          <h4>WordPress Migration</h4>
+          <div class="duration">2–4 weeks</div>
+          <p>Content already exists, just convert to static. Faster because no discovery/design phase.</p>
+        </div>
+        <div class="comparison-card">
+          <h4>Complex/E-Commerce</h4>
+          <div class="duration">8–12 weeks</div>
+          <p>Many pages, custom features, integrations, inventory. More testing and refinement.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>What Affects Timeline?</h2>
+
+      <h3>Things That Speed It Up ✓</h3>
+      <ul>
+        <li><strong>Clear scope upfront:</strong> Knowing exactly what you want saves revision time</li>
+        <li><strong>You provide content:</strong> We don't have to write or source it</li>
+        <li><strong>Quick feedback:</strong> Slow approvals delay every phase</li>
+        <li><strong>Simple design:</strong> Fewer custom interactions = faster development</li>
+        <li><strong>Minimal integrations:</strong> Each API integration adds 1–2 weeks</li>
+        <li><strong>You're decisive:</strong> Clear direction on messaging, design, features</li>
+      </ul>
+
+      <h3>Things That Slow It Down ✗</h3>
+      <ul>
+        <li><strong>Unclear scope:</strong> Scope creep (adding features mid-project) adds weeks</li>
+        <li><strong>You don't have content:</strong> Waiting for copy, images, or product information delays launch</li>
+        <li><strong>Slow approval cycles:</strong> Waiting days for feedback on each phase</li>
+        <li><strong>Complex integrations:</strong> Payment processing, inventory systems, APIs need testing</li>
+        <li><strong>Multiple decision-makers:</strong> Committee review adds 1–2 weeks per round</li>
+        <li><strong>Custom features:</strong> Anything unique takes longer to build and test</li>
+        <li><strong>Last-minute changes:</strong> Redesigns mid-project reset the timeline</li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h2>Can We Go Faster?</h2>
+
+      <h3>Rush Delivery (< 2 weeks)</h3>
+      <p>Technically possible for very small projects (5–7 pages, simple design), but:</p>
+      <ul>
+        <li><strong>Quality suffers:</strong> Less testing, less refinement, less polish</li>
+        <li><strong>Cost increases:</strong> Rush fees add 20–50% to project cost</li>
+        <li><strong>Scope must be tiny:</strong> No room for changes, iterations, or unexpected issues</li>
+      </ul>
+      <p><strong>Our recommendation:</strong> Plan for 4–8 weeks. You get a better site, better testing, and don't sacrifice quality for speed.</p>
+
+    </section>
+
+    <section>
+      <h2>Realistic Expectations</h2>
+      <ul>
+        <li><strong>Week 1–2:</strong> Discovery phase. You're answering questions, we're learning your business.</li>
+        <li><strong>Week 3–4:</strong> Design phase. You see mockups, give feedback, we iterate.</li>
+        <li><strong>Week 5–6:</strong> Development. The site comes together, you see progress weekly.</li>
+        <li><strong>Week 7:</strong> Testing, optimisation, launch preparation.</li>
+        <li><strong>Week 8:</strong> Live. Site launches. You get training and 30 days of free support.</li>
+      </ul>
+      <p><em>This assumes timely feedback and no major scope changes.</em></p>
+    </section>
+
+    <section>
+      <h2>Common Timeline Questions</h2>
+
+      <div class="faq-item">
+        <h4>Can you build a website in 2 weeks?</h4>
+        <p>Only for very small projects (5 pages, simple design, no integrations). Anything larger loses quality. We'd recommend planning for 4+ weeks to get a site you're proud of.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What if I'm in a hurry?</h4>
+        <p>Tell us upfront. For projects with tight timelines, we can compress phases, but it affects cost (rush fees) and potentially quality. We'll be honest about what's realistic.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Why does discovery take 1–2 weeks?</h4>
+        <p>It's worth it. Understanding your business strategy, audience, and goals results in a better site. A site built without strategy is just a pretty template. We need 1–2 weeks to do it right.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I see the website earlier than launch?</h4>
+        <p>Yes. During development (week 5–6), we share progress updates every few days. You can see the site coming together and give feedback as we build.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What if feedback is delayed? Does that extend the timeline?</h4>
+        <p>Yes. If you approve mockups on week 4 instead of week 3, we don't start development until week 4. We can't proceed without your sign-off. Fast feedback = faster launch.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What about revisions after launch?</h4>
+        <p>30 days of free support are included for bug fixes and minor tweaks. After that, changes are billed at $60/hour or included in the optional $300/month support package.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Why not just use a template to launch faster?</h4>
+        <p>Templates are fast but generic. Your site looks like everyone else's. Custom-built sites take longer but are unique, better aligned with your brand, and ultimately perform better. The extra time is worth it.</p>
+      </div>
+
+    </section>
+
+    <div class="cta-section">
+      <h2>Ready to Start?</h2>
+      <p>Let's talk about your project timeline and what's realistic for your needs.</p>
+      <a href="/#cta-message" class="cta-button">Book a Discovery Call</a>
+    </div>
+
+    <section>
+      <h2>Questions?</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/66801202074">+66 801 202074</a><br>
+      <strong>Email:</strong> <a href="mailto:hello@shaynesdesigns.com">hello@shaynesdesigns.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shayne's Designs. All rights reserved.</p>
+    <p style="margin-top: 1rem;"><a href="/">Home</a> · <a href="/guides-website-cost">Cost Guide</a> · <a href="/guides-how-to-edit">How to Edit</a></p>
+  </footer>
+</body>
+</html>

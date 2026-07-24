@@ -1,5 +1,8 @@
 (function () {
-  if (window.matchMedia('(hover: none)').matches || window.matchMedia('(max-width: 1024px)').matches) return;
+  // Disable custom cursor on mobile / touch devices—no pointer to track
+  if (window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window) {
+    return;
+  }
 
   function initCursor() {
     const dot = document.getElementById('cursorDot');

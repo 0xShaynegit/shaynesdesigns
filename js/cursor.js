@@ -1,5 +1,5 @@
 (function () {
-  // Disable custom cursor on mobile / touch devices—no pointer to track
+  // v2: Disable custom cursor on mobile / touch devices—no pointer to track
   if (window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window) {
     return;
   }

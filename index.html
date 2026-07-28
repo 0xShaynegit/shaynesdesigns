@@ -938,7 +938,8 @@
       <form class="cta-form reveal reveal-delay-3" action="#" method="post" aria-label="Project enquiry form" novalidate>
         <div class="form-group">
           <label class="form-label" for="form-name">Your Name</label>
-          <input class="form-input" type="text" id="form-name" name="name" placeholder="Shayne" required autocomplete="name">
+          <input class="form-input" type="text" id="form-name" name="name" placeholder="Your Name" required autocomplete="name">
+          <p class="form-error-msg">Please enter your name.</p>
         </div>
         <div class="form-group">
           <label class="form-label" for="form-website">Current Website</label>
@@ -952,10 +953,12 @@
             <option value="new">No. I need a new build from scratch.</option>
             <option value="other">Other platform. I need something custom.</option>
           </select>
+          <p class="form-error-msg">Please select an option.</p>
         </div>
         <div class="form-group full-width">
           <label class="form-label" for="form-goal">What is the goal for your new site?</label>
           <textarea class="form-textarea" id="form-goal" name="goal" placeholder="Tell me about your business, your audience, and what you want the site to achieve." required></textarea>
+          <p class="form-error-msg">Please describe your goal.</p>
         </div>
         <button type="submit" class="form-submit" aria-label="Submit project enquiry">
           Submit Project Enquiry
@@ -1206,17 +1209,54 @@
       var form = document.querySelector('.cta-form');
       if (!form) return;
 
+      var nameField = document.getElementById('form-name');
+      var platformField = document.getElementById('form-platform');
+      var goalField = document.getElementById('form-goal');
+
+      function validate() {
+        var valid = true;
+        [nameField, platformField, goalField].forEach(function(field) {
+          var group = field.closest('.form-group');
+          if (!field.value || !field.value.trim()) {
+            group.classList.add('has-error');
+            valid = false;
+          } else {
+            group.classList.remove('has-error');
+          }
+        });
+        return valid;
+      }
+
+      [nameField, platformField, goalField].forEach(function(field) {
+        field.addEventListener('input', function() {
+          if (field.value && field.value.trim()) {
+            field.closest('.form-group').classList.remove('has-error');
+          }
+        });
+        field.addEventListener('change', function() {
+          if (field.value && field.value.trim()) {
+            field.closest('.form-group').classList.remove('has-error');
+          }
+        });
+      });
+
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         var submitBtn = form.querySelector('.form-submit');
         var messageEl = document.getElementById('cta-message');
         if (!submitBtn) return;
 
+        if (!validate()) {
+          var firstError = form.querySelector('.has-error');
+          if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
         var payload = {
-          name: document.getElementById('form-name').value,
+          name: nameField.value,
           website: document.getElementById('form-website').value,
-          platform: document.getElementById('form-platform').value,
-          goal: document.getElementById('form-goal').value
+          platform: platformField.value,
+          goal: goalField.value
         };
 
         var originalLabel = submitBtn.textContent;
@@ -1230,9 +1270,9 @@
         })
           .then(function(res) { return res.ok ? res.json() : Promise.reject(res); })
           .then(function() {
-            submitBtn.textContent = 'Sent!';
+            submitBtn.textContent = 'Submitted Successfully';
             form.reset();
-            if (messageEl) messageEl.textContent = "Thanks! I'll respond within 24 hours.";
+            if (messageEl) messageEl.textContent = "Thank you! We'll get back to you shortly.";
           })
           .catch(function() {
             submitBtn.disabled = false;

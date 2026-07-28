@@ -1177,17 +1177,36 @@
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         var submitBtn = form.querySelector('.form-submit');
+        var messageEl = document.getElementById('cta-message');
         if (!submitBtn) return;
 
-        var name = document.getElementById('form-name').value || 'Not provided';
-        var website = document.getElementById('form-website').value || 'Not provided';
-        var platform = document.getElementById('form-platform').value || 'Not provided';
-        var goal = document.getElementById('form-goal').value || 'Not provided';
+        var payload = {
+          name: document.getElementById('form-name').value,
+          website: document.getElementById('form-website').value,
+          platform: document.getElementById('form-platform').value,
+          goal: document.getElementById('form-goal').value
+        };
 
-        var message = 'Hi Shayne,%0A%0AI\'d like to discuss a new website project.%0A%0AName: ' + encodeURIComponent(name) + '%0AWebsite: ' + encodeURIComponent(website) + '%0ACurrent Platform: ' + encodeURIComponent(platform) + '%0AGoal: ' + encodeURIComponent(goal);
+        var originalLabel = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
 
-        var whatsappUrl = 'https://wa.me/66801202074?text=' + message;
-        window.open(whatsappUrl, '_blank');
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+          .then(function(res) { return res.ok ? res.json() : Promise.reject(res); })
+          .then(function() {
+            submitBtn.textContent = 'Sent!';
+            form.reset();
+            if (messageEl) messageEl.textContent = "Thanks! I'll respond within 24 hours.";
+          })
+          .catch(function() {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+            if (messageEl) messageEl.textContent = "Something went wrong. Please email shaynesdomains@gmail.com directly.";
+          });
       });
     })();
   </script>

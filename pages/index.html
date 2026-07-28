@@ -932,6 +932,16 @@
           <p class="form-error-msg">Please enter your name.</p>
         </div>
         <div class="form-group">
+          <label class="form-label" for="form-email">Email Address</label>
+          <input class="form-input" type="email" id="form-email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <p class="form-error-msg">Please enter a valid email address.</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-phone">Phone Number</label>
+          <input class="form-input" type="tel" id="form-phone" name="phone" placeholder="+1 555 123 4567" required autocomplete="tel">
+          <p class="form-error-msg">Please enter your phone number.</p>
+        </div>
+        <div class="form-group">
           <label class="form-label" for="form-website">Current Website</label>
           <input class="form-input" type="url" id="form-website" name="website" placeholder="https://yoursite.com" autocomplete="url">
         </div>
@@ -955,6 +965,15 @@
         </button>
         <p class="form-disclaimer">No spam. No pitch deck. Just a straightforward conversation about your project.</p>
       </form>
+
+      <div class="form-success-overlay" id="form-success-overlay" role="dialog" aria-modal="true" aria-labelledby="form-success-title">
+        <div class="form-success-modal">
+          <div class="form-success-icon" aria-hidden="true">&#10003;</div>
+          <h3 class="form-success-title" id="form-success-title">Enquiry Submitted</h3>
+          <p class="form-success-text">Thank you! I've received your project details and will get back to you within 24 hours.</p>
+          <button type="button" class="form-success-close" id="form-success-close">Close</button>
+        </div>
+      </div>
     </div>
   </section>
   </main>
@@ -1178,14 +1197,20 @@
       if (!form) return;
 
       var nameField = document.getElementById('form-name');
+      var emailField = document.getElementById('form-email');
+      var phoneField = document.getElementById('form-phone');
       var platformField = document.getElementById('form-platform');
       var goalField = document.getElementById('form-goal');
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var requiredFields = [nameField, emailField, phoneField, platformField, goalField];
 
       function validate() {
         var valid = true;
-        [nameField, platformField, goalField].forEach(function(field) {
+        requiredFields.forEach(function(field) {
           var group = field.closest('.form-group');
-          if (!field.value || !field.value.trim()) {
+          var empty = !field.value || !field.value.trim();
+          var invalidEmail = field === emailField && !empty && !emailPattern.test(field.value.trim());
+          if (empty || invalidEmail) {
             group.classList.add('has-error');
             valid = false;
           } else {
@@ -1195,16 +1220,15 @@
         return valid;
       }
 
-      [nameField, platformField, goalField].forEach(function(field) {
-        field.addEventListener('input', function() {
-          if (field.value && field.value.trim()) {
-            field.closest('.form-group').classList.remove('has-error');
-          }
-        });
-        field.addEventListener('change', function() {
-          if (field.value && field.value.trim()) {
-            field.closest('.form-group').classList.remove('has-error');
-          }
+      requiredFields.forEach(function(field) {
+        ['input', 'change'].forEach(function(evt) {
+          field.addEventListener(evt, function() {
+            var empty = !field.value || !field.value.trim();
+            var invalidEmail = field === emailField && !empty && !emailPattern.test(field.value.trim());
+            if (!empty && !invalidEmail) {
+              field.closest('.form-group').classList.remove('has-error');
+            }
+          });
         });
       });
 
@@ -1222,6 +1246,8 @@
 
         var payload = {
           name: nameField.value,
+          email: emailField.value,
+          phone: phoneField.value,
           website: document.getElementById('form-website').value,
           platform: platformField.value,
           goal: goalField.value
@@ -1238,9 +1264,11 @@
         })
           .then(function(res) { return res.ok ? res.json() : Promise.reject(res); })
           .then(function() {
-            submitBtn.textContent = 'Submitted Successfully';
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
             form.reset();
-            if (messageEl) messageEl.textContent = "Thank you! We'll get back to you shortly.";
+            var overlay = document.getElementById('form-success-overlay');
+            if (overlay) overlay.classList.add('is-visible');
           })
           .catch(function() {
             submitBtn.disabled = false;
@@ -1248,6 +1276,20 @@
             if (messageEl) messageEl.textContent = "Something went wrong. Please email shaynesdomains@gmail.com directly.";
           });
       });
+
+      var successOverlay = document.getElementById('form-success-overlay');
+      var successClose = document.getElementById('form-success-close');
+      if (successOverlay && successClose) {
+        successClose.addEventListener('click', function() {
+          successOverlay.classList.remove('is-visible');
+        });
+        successOverlay.addEventListener('click', function(e) {
+          if (e.target === successOverlay) successOverlay.classList.remove('is-visible');
+        });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') successOverlay.classList.remove('is-visible');
+        });
+      }
     })();
   </script>
 

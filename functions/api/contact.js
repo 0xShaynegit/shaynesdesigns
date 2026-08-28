@@ -14,11 +14,27 @@ export async function onRequestPost(context) {
   const website = (data.website || '').toString().trim().slice(0, 300);
   const platform = (data.platform || '').toString().trim().slice(0, 100);
   const goal = (data.goal || '').toString().trim().slice(0, 5000);
+  const turnstileToken = (data.turnstileToken || '').toString();
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!name || !email || !emailPattern.test(email) || !phone || !platform || !goal) {
     return new Response(JSON.stringify({ error: 'Missing required fields' }), { status: 400 });
+  }
+
+  const verifyResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      secret: env.TURNSTILE_SECRET_KEY,
+      response: turnstileToken,
+      remoteip: request.headers.get('CF-Connecting-IP'),
+    }),
+  });
+  const verifyResult = await verifyResponse.json();
+
+  if (!verifyResult.success) {
+    return new Response(JSON.stringify({ error: 'Bot verification failed' }), { status: 403 });
   }
 
   const escapeHtml = (str) =>

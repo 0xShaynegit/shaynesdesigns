@@ -58,3 +58,4 @@ ehthumbs.db
 *.tmp
 *.temp
 .cache/
+manifest.json
